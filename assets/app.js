@@ -146,6 +146,7 @@
 
     const chips = $("chips");
     $("chipsWrap").hidden = sections.length < 2;
+    $("hero").classList.toggle("single", sections.length < 2);
     chips.innerHTML = sections.map((s, i) =>
       `<button type="button" class="chip${i === 0 ? " active" : ""}" data-target="${s.id}">${esc(t(s.title))}</button>`).join("");
 

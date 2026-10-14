@@ -267,3 +267,10 @@ button.photo { cursor: zoom-in; }
   :root { --photo: 108px; }
 }
 .chips-wrap[hidden] { display: none; }
+
+/* отступ между лентой разделов и первым разделом — компактный */
+.content > .section:first-child { padding-top: 6px; }
+/* вкладка с одним разделом (Кальян, Снэки): без линии и пустого места под заголовком */
+.hero.single { padding-bottom: 0; }
+.hero.single::after { display: none; }
+.hero.single + .chips-wrap + .content > .section:first-child { padding-top: 22px; }
