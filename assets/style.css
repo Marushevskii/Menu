@@ -76,7 +76,7 @@ a { color: inherit; }
 .chips {
   position: sticky; top: 0; z-index: 20;
   display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
-  padding: 10px 16px; margin-top: 4px;
+  padding: 4px 16px 8px; margin-top: 4px;
   --stuck: 0;           /* 0 → 1 плавно при прокрутке, меняет app.js */
 }
 /* подложка под лентой: появляется постепенно, без рывка */
@@ -139,7 +139,7 @@ button.photo { cursor: zoom-in; }
 .builder { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; }
 .builder .item-desc { margin: 2px 0 14px; }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.step { display: flex; gap: 12px; align-items: flex-start; }
+.step { display: flex; gap: 12px; align-items: center; }
 .step-num {
   flex: none; width: 28px; height: 28px; border-radius: 50%;
   border: 1px solid rgba(233,168,90,.5); color: var(--amber);
