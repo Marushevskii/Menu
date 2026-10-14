@@ -1,0 +1,80 @@
+{
+  "pageTitle": {
+    "ru": "AIR LOUNGE & BAR — меню",
+    "en": "AIR LOUNGE & BAR — menu",
+    "ka": "AIR LOUNGE & BAR — მენიუ",
+    "tr": "AIR LOUNGE & BAR — menü"
+  },
+  "menu": {
+    "ru": "Меню",
+    "en": "Menu",
+    "ka": "მენიუ",
+    "tr": "Menü"
+  },
+  "language": {
+    "ru": "Язык",
+    "en": "Language",
+    "ka": "ენა",
+    "tr": "Dil"
+  },
+  "priceFrom": {
+    "ru": "от {price}",
+    "en": "from {price}",
+    "ka": "{price}-დან",
+    "tr": "{price}'den başlayan"
+  },
+  "ownDrinks": {
+    "ru": "В заведении запрещено употреблять свои напитки",
+    "en": "Bringing your own drinks is not allowed",
+    "ka": "დაწესებულებაში საკუთარი სასმელების შემოტანა აკრძალულია",
+    "tr": "Dışarıdan içecek getirmek yasaktır"
+  },
+  "orderHint": {
+    "ru": "Чтобы сделать заказ, позовите бармена или кальянного мастера",
+    "en": "To order, please call the bartender or hookah master",
+    "ka": "შეკვეთისთვის მიმართეთ ბარმენს ან ჩილიმის ოსტატს",
+    "tr": "Sipariş için barmeni veya nargile ustasını çağırın"
+  },
+  "wifi": {
+    "ru": "Wi-Fi",
+    "en": "Wi-Fi",
+    "ka": "Wi-Fi",
+    "tr": "Wi-Fi"
+  },
+  "password": {
+    "ru": "Пароль",
+    "en": "Password",
+    "ka": "პაროლი",
+    "tr": "Şifre"
+  },
+  "followUs": {
+    "ru": "Мы в соцсетях",
+    "en": "Follow us",
+    "ka": "გამოგვყევით",
+    "tr": "Bizi takip edin"
+  },
+  "close": {
+    "ru": "Закрыть",
+    "en": "Close",
+    "ka": "დახურვა",
+    "tr": "Kapat"
+  },
+  "unit_ml": {
+    "ru": "мл",
+    "en": "ml",
+    "ka": "მლ",
+    "tr": "ml"
+  },
+  "unit_l": {
+    "ru": "л",
+    "en": "l",
+    "ka": "ლ",
+    "tr": "lt"
+  },
+  "unit_g": {
+    "ru": "г",
+    "en": "g",
+    "ka": "გ",
+    "tr": "gr"
+  }
+}

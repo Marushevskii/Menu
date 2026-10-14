@@ -1,0 +1,111 @@
+{
+  "id": "snacks",
+  "icon": "snack",
+  "title": {
+    "ru": "Снэки",
+    "en": "Snacks",
+    "ka": "სნექები",
+    "tr": "Atıştırmalık"
+  },
+  "sections": [
+    {
+      "id": "snacks",
+      "icon": "snack",
+      "layout": "list",
+      "title": {
+        "ru": "Снэки",
+        "en": "Snacks",
+        "ka": "წასახემსებელი",
+        "tr": "Atıştırmalıklar"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "jerky",
+          "name": {
+            "ru": "Джерки",
+            "en": "Jerky",
+            "ka": "ჯერკი",
+            "tr": "Jerky"
+          },
+          "desc": {
+            "ru": "куриные или свиные на выбор",
+            "en": "chicken or pork, your choice",
+            "ka": "ქათმის ან ღორის, თქვენი არჩევანით",
+            "tr": "tavuk veya domuz, tercihinize göre"
+          },
+          "price": 12,
+          "amount": 50,
+          "unit": "g",
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "nuts",
+          "name": {
+            "ru": "Орешки",
+            "en": "Nuts",
+            "ka": "თხილეული",
+            "tr": "Kuruyemiş"
+          },
+          "desc": {
+            "ru": "арахис",
+            "en": "peanuts",
+            "ka": "არაქისი",
+            "tr": "yer fıstığı"
+          },
+          "price": 7,
+          "amount": 100,
+          "unit": "g",
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "chips",
+          "name": {
+            "ru": "Чипсы",
+            "en": "Chips",
+            "ka": "ჩიფსები",
+            "tr": "Cips"
+          },
+          "desc": {
+            "ru": "по ассортименту",
+            "en": "assorted",
+            "ka": "ასორტიმენტში",
+            "tr": "çeşitli"
+          },
+          "price": 8,
+          "amount": 75,
+          "unit": "g",
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "croutons",
+          "name": {
+            "ru": "Сухарики",
+            "en": "Croutons",
+            "ka": "სუხარიკები",
+            "tr": "Kıtır ekmek"
+          },
+          "desc": {
+            "ru": "по ассортименту",
+            "en": "assorted",
+            "ka": "ასორტიმენტში",
+            "tr": "çeşitli"
+          },
+          "price": 8,
+          "amount": 100,
+          "unit": "g",
+          "photo": "",
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}

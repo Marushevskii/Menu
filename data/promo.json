@@ -1,0 +1,152 @@
+{
+  "id": "promo",
+  "icon": "gift",
+  "title": {
+    "ru": "Акции",
+    "en": "Promotions",
+    "ka": "აქციები",
+    "tr": "Kampanyalar"
+  },
+  "sections": [
+    {
+      "id": "promotions",
+      "icon": "gift",
+      "layout": "promo",
+      "title": {
+        "ru": "Акции",
+        "en": "Promotions",
+        "ka": "აქციები",
+        "tr": "Kampanyalar"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "birthday",
+          "icon": "cake",
+          "name": {
+            "ru": "Скидка 10 % в день рождения",
+            "en": "10% birthday discount",
+            "ka": "10%-იანი ფასდაკლება დაბადების დღეზე",
+            "tr": "Doğum gününe %10 indirim"
+          },
+          "desc": {
+            "ru": "Действует единоразово: за 7 дней до, в день рождения или в течение 7 дней после дня рождения.",
+            "en": "One-time offer: valid 7 days before, on your birthday, or within 7 days after.",
+            "ka": "მოქმედებს ერთჯერადად: დაბადების დღემდე 7 დღით ადრე, დაბადების დღეს ან მისგან 7 დღის განმავლობაში.",
+            "tr": "Tek seferliktir: doğum gününden 7 gün önce, doğum gününüzde veya sonraki 7 gün içinde geçerlidir."
+          },
+          "hidden": false
+        },
+        {
+          "id": "review",
+          "icon": "star",
+          "name": {
+            "ru": "Коктейль за отзыв",
+            "en": "A cocktail for a review",
+            "ka": "კოქტეილი შეფასებისთვის",
+            "tr": "Yoruma kokteyl"
+          },
+          "desc": {
+            "ru": "Оставьте отзыв в Google или Яндекс Картах, покажите его бармену и получите алкогольный или безалкогольный коктейль в подарок.",
+            "en": "Leave a review on Google or Yandex Maps, show it to the bartender and get an alcoholic or non-alcoholic cocktail as a gift.",
+            "ka": "დაგვიტოვეთ შეფასება Google-ის ან Yandex-ის რუკებზე, აჩვენეთ ბარმენს და მიიღეთ ალკოჰოლური ან უალკოჰოლო კოქტეილი საჩუქრად.",
+            "tr": "Google veya Yandex Haritalar'da yorum bırakın, barmene gösterin ve alkollü ya da alkolsüz bir kokteyl hediye alın."
+          },
+          "hidden": false
+        },
+        {
+          "id": "instagram",
+          "icon": "camera",
+          "name": {
+            "ru": "Шот за отметку в Instagram",
+            "en": "A shot for an Instagram tag",
+            "ka": "შოტი Instagram-ზე მონიშვნისთვის",
+            "tr": "Instagram etiketine shot"
+          },
+          "desc": {
+            "ru": "Отметьте наше заведение в Instagram, покажите бармену и получите бесплатный шот в подарок.",
+            "en": "Tag us on Instagram, show it to the bartender and get a free shot.",
+            "ka": "მოგვნიშნეთ Instagram-ზე, აჩვენეთ ბარმენს და მიიღეთ უფასო შოტი საჩუქრად.",
+            "tr": "Bizi Instagram'da etiketleyin, barmene gösterin ve ücretsiz bir shot kazanın."
+          },
+          "hidden": false
+        },
+        {
+          "id": "taxi",
+          "icon": "umbrella",
+          "name": {
+            "ru": "Компенсируем такси в дождь",
+            "en": "Taxi on us when it rains",
+            "ka": "წვიმაში ტაქსის ხარჯს ვანაზღაურებთ",
+            "tr": "Yağmurda taksi bizden"
+          },
+          "desc": {
+            "ru": "До 15 лари на такси вы можете компенсировать за счёт заведения в конце вашего вечера (подробности уточняйте у бармена).",
+            "en": "At the end of your evening we'll cover up to 15 GEL of your taxi fare (ask the bartender for details).",
+            "ka": "საღამოს ბოლოს ტაქსის ხარჯს 15 ლარამდე აგინაზღაურებთ (დეტალები ჰკითხეთ ბარმენს).",
+            "tr": "Akşamın sonunda taksi ücretinizin 15 GEL'ye kadarını karşılıyoruz (detaylar için barmene danışın)."
+          },
+          "hidden": false
+        },
+        {
+          "id": "13th-hookah",
+          "icon": "hookah",
+          "name": {
+            "ru": "Каждый 13-й кальян в подарок",
+            "en": "Every 13th hookah is on the house",
+            "ka": "ყოველი მე-13 ჩილიმი საჩუქრად",
+            "tr": "Her 13. nargile bizden"
+          },
+          "desc": {
+            "ru": "Соберите 12 отметок в приложении AIR LOUNGE & BAR и получите 13-й кальян совершенно бесплатно.",
+            "en": "Collect 12 stamps in the AIR LOUNGE & BAR app and get your 13th hookah completely free.",
+            "ka": "დააგროვეთ 12 ქულა AIR LOUNGE & BAR-ის აპლიკაციაში და მე-13 ჩილიმი სრულიად უფასო იქნება.",
+            "tr": "AIR LOUNGE & BAR uygulamasında 12 puan toplayın, 13. nargileniz tamamen ücretsiz."
+          },
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "vip",
+      "icon": "crown",
+      "layout": "promo",
+      "title": {
+        "ru": "VIP-комната",
+        "en": "VIP room",
+        "ka": "VIP ოთახი",
+        "tr": "VIP oda"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "vip-room",
+          "icon": "crown",
+          "name": {
+            "ru": "Хотите уединения?",
+            "en": "Looking for privacy?",
+            "ka": "გსურთ განმარტოება?",
+            "tr": "Biraz baş başa kalmak mı istersiniz?"
+          },
+          "desc": {
+            "ru": "Наша VIP-комната ждёт вас. Для бронирования действует депозит: минимальный заказ от 25 ₾ за каждый час — будь то кальян, напитки или закуски. Всё, что вы заказываете, идёт в счёт депозита.",
+            "en": "Our VIP room is waiting for you. Booking requires a deposit: a minimum order of 25 ₾ per hour — hookah, drinks or snacks. Everything you order counts towards the deposit.",
+            "ka": "ჩვენი VIP ოთახი გელოდებათ. დასაჯავშნად მოქმედებს დეპოზიტი: მინიმალური შეკვეთა საათში 25 ₾-დან — ჩილიმი, სასმელი თუ წასახემსებელი. ყველაფერი, რასაც შეუკვეთავთ, დეპოზიტში ჩაითვლება.",
+            "tr": "VIP odamız sizi bekliyor. Rezervasyon için depozito gerekir: saat başı en az 25 ₾ sipariş — nargile, içecek ya da atıştırmalık. Tüm siparişleriniz depozitoya sayılır."
+          },
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}

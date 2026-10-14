@@ -1,0 +1,91 @@
+{
+  "id": "hookah",
+  "icon": "hookah",
+  "title": {
+    "ru": "Кальян",
+    "en": "Hookah",
+    "ka": "ჩილიმი",
+    "tr": "Nargile"
+  },
+  "sections": [
+    {
+      "id": "hookahs",
+      "icon": "hookah",
+      "layout": "list",
+      "title": {
+        "ru": "Кальяны",
+        "en": "Hookahs",
+        "ka": "ჩილიმები",
+        "tr": "Nargileler"
+      },
+      "note": {
+        "ru": "Время курения кальяна составляет от 40 до 60 минут. Рекомендуем заказывать 1 кальян на каждые 3–4 человека для комфортного курения каждого.",
+        "en": "A hookah lasts 40 to 60 minutes. We recommend one hookah for every 3–4 people so everyone can smoke comfortably.",
+        "ka": "ჩილიმის მოწევის დრო 40-დან 60 წუთამდეა. გირჩევთ, ყოველ 3–4 ადამიანზე შეუკვეთოთ 1 ჩილიმი, რათა ყველამ კომფორტულად მოწიოს.",
+        "tr": "Bir nargilenin içim süresi 40–60 dakikadır. Herkesin rahat içebilmesi için her 3–4 kişiye 1 nargile öneriyoruz."
+      },
+      "items": [
+        {
+          "id": "hookah-classic",
+          "name": {
+            "ru": "Классический",
+            "en": "Classic",
+            "ka": "კლასიკური",
+            "tr": "Klasik"
+          },
+          "desc": {
+            "ru": "фруктовый, ягодный, тропический, десертный или освежающий",
+            "en": "fruity, berry, tropical, dessert or refreshing",
+            "ka": "ხილის, კენკრის, ტროპიკული, დესერტის ან გამაგრილებელი",
+            "tr": "meyveli, orman meyveli, tropikal, tatlı aromalı veya ferahlatıcı"
+          },
+          "price": 60,
+          "amount": null,
+          "unit": null,
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "hookah-milk",
+          "name": {
+            "ru": "Молочный",
+            "en": "Milk",
+            "ka": "რძიანი",
+            "tr": "Sütlü"
+          },
+          "desc": {
+            "ru": "с добавлением молока в колбу для более мягкого курения",
+            "en": "with milk added to the base for a smoother smoke",
+            "ka": "კოლბაში რძის დამატებით, უფრო რბილი მოწევისთვის",
+            "tr": "daha yumuşak bir içim için hazneye süt eklenir"
+          },
+          "price": 60,
+          "amount": null,
+          "unit": null,
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "hookah-lemonade",
+          "name": {
+            "ru": "Лимонадный",
+            "en": "Lemonade",
+            "ka": "ლიმონათის",
+            "tr": "Limonatalı"
+          },
+          "desc": {
+            "ru": "с добавлением фруктов и фруктовых соков в колбу для более яркого вкуса",
+            "en": "with fruit and fruit juices added to the base for a brighter taste",
+            "ka": "კოლბაში ხილისა და ხილის წვენების დამატებით, უფრო მკვეთრი გემოსთვის",
+            "tr": "daha canlı bir tat için hazneye meyve ve meyve suları eklenir"
+          },
+          "price": 95,
+          "amount": null,
+          "unit": null,
+          "photo": "",
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}

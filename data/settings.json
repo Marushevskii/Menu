@@ -1,0 +1,56 @@
+{
+  "name": "AIR LOUNGE & BAR",
+  "tabs": [
+    "hookah",
+    "bar",
+    "snacks",
+    "promo"
+  ],
+  "defaultLang": "en",
+  "languages": [
+    {
+      "code": "ru",
+      "label": "RU"
+    },
+    {
+      "code": "en",
+      "label": "EN"
+    },
+    {
+      "code": "ka",
+      "label": "GE"
+    },
+    {
+      "code": "tr",
+      "label": "TR"
+    }
+  ],
+  "currency": "₾",
+  "wifi": {
+    "show": true,
+    "name": "AirLounge",
+    "password": "air@2023"
+  },
+  "socials": [
+    {
+      "type": "instagram",
+      "label": "Instagram",
+      "url": ""
+    },
+    {
+      "type": "telegram",
+      "label": "Telegram",
+      "url": ""
+    },
+    {
+      "type": "google",
+      "label": "Google Maps",
+      "url": ""
+    },
+    {
+      "type": "yandex",
+      "label": "Яндекс Карты",
+      "url": ""
+    }
+  ]
+}
