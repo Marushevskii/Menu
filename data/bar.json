@@ -27,29 +27,6 @@
       "icon": "cocktail",
       "items": [
         {
-          "id": "de7f6b781a26",
-          "name": {
-            "ru": "порнстар",
-            "en": "asd",
-            "ka": "sad",
-            "tr": "asd"
-          },
-          "desc": {
-            "ru": "asds",
-            "en": "asdsa",
-            "ka": "asd",
-            "tr": "asd"
-          },
-          "price": 12,
-          "priceFrom": false,
-          "amount": 12,
-          "unit": "ml",
-          "variants": [],
-          "steps": [],
-          "photo": "",
-          "hidden": false
-        },
-        {
           "id": "pi-a-colada",
           "name": {
             "ru": "Пина Колада",
@@ -58,15 +35,15 @@
             "tr": "Piña Colada"
           },
           "desc": {
-            "ru": "сливки, ананас, кокос, ромb and cocs",
+            "ru": "сливки, ананас, кокос, ром",
             "en": "cream, pineapple, coconut, rum",
             "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
             "tr": "krema, ananas, hindistan cevizi, rom"
           },
-          "price": 666,
+          "price": 20,
           "priceFrom": false,
-          "amount": 20,
-          "unit": "g",
+          "amount": null,
+          "unit": "",
           "variants": [],
           "steps": [],
           "photo": "",
