@@ -27,6 +27,29 @@
       "icon": "cocktail",
       "items": [
         {
+          "id": "pi-a-colada",
+          "name": {
+            "ru": "Пина Колада",
+            "en": "Piña Colada",
+            "ka": "პინა კოლადა",
+            "tr": "Piña Colada"
+          },
+          "desc": {
+            "ru": "сливки, ананас, кокос, ромb and cocs",
+            "en": "cream, pineapple, coconut, rum",
+            "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
+            "tr": "krema, ananas, hindistan cevizi, rom"
+          },
+          "price": 666,
+          "priceFrom": false,
+          "amount": 20,
+          "unit": "g",
+          "variants": [],
+          "steps": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
           "id": "gin-and-tonic",
           "name": {
             "ru": "Джин Тоник",
@@ -39,29 +62,6 @@
             "en": "gin, Schweppes, lemon",
             "ka": "ჯინი, შვეპსი, ლიმონი",
             "tr": "cin, Schweppes, limon"
-          },
-          "price": 20,
-          "priceFrom": false,
-          "amount": null,
-          "unit": null,
-          "variants": [],
-          "steps": [],
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "pi-a-colada",
-          "name": {
-            "ru": "Пина Колада",
-            "en": "Piña Colada",
-            "ka": "პინა კოლადა",
-            "tr": "Piña Colada"
-          },
-          "desc": {
-            "ru": "сливки, ананас, кокос, ром",
-            "en": "cream, pineapple, coconut, rum",
-            "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
-            "tr": "krema, ananas, hindistan cevizi, rom"
           },
           "price": 20,
           "priceFrom": false,
