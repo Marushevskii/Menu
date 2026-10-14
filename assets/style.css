@@ -105,7 +105,7 @@ a { color: inherit; }
 .section { padding-top: 26px; scroll-margin-top: 64px; }
 .section-title {
   display: flex; align-items: center; gap: 14px; margin: 0 0 14px;
-  font-family: var(--serif); font-weight: 600; font-size: 24px; letter-spacing: .06em; color: var(--text);
+  font-family: var(--serif); font-weight: 600; font-size: 24px; line-height: 1.15; letter-spacing: .06em; color: var(--text);
 }
 .section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(233,168,90,.5), transparent); }
 .section-note { margin: -6px 0 14px; font-size: 13.5px; color: var(--muted); }
@@ -269,8 +269,8 @@ button.photo { cursor: zoom-in; }
 .chips-wrap[hidden] { display: none; }
 
 /* отступ между лентой разделов и первым разделом — компактный */
-.content > .section:first-child { padding-top: 6px; }
+.content > .section:first-child { padding-top: 7px; }
 /* вкладка с одним разделом (Кальян, Снэки): без линии и пустого места под заголовком */
 .hero.single { padding-bottom: 0; }
 .hero.single::after { display: none; }
-.hero.single + .chips-wrap + .content > .section:first-child { padding-top: 22px; }
+.hero.single + .chips-wrap + .content > .section:first-child { padding-top: 10px; }
