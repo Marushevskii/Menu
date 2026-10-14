@@ -58,7 +58,11 @@
     return new Intl.NumberFormat(lang === "en" ? "en-US" : lang, { maximumFractionDigits: 2 }).format(n);
   }
   function money(p) { return `${num(p)} ${settings.currency}`; }
-  function amount(a, unit) { return a == null || !unit ? "" : `${num(a)} ${u("unit_" + unit)}`; }
+  // пустое поле из админки ("" или null) — значит «не указано»
+  const has = (v) => v !== null && v !== undefined && v !== "";
+  // путь к фото из админки может прийти как "/photos/x.webp" — сайт лежит в подпапке, поэтому без первого "/"
+  const src = (p) => String(p || "").replace(/^\/+/, "");
+  function amount(a, unit) { return !has(a) || !unit ? "" : `${num(a)} ${u("unit_" + unit)}`; }
 
   // ---------------- отрисовка ----------------
   function renderLangs() {
@@ -85,8 +89,8 @@
 
   function photoHtml(it, sec) {
     if (it.photo) {
-      return `<button class="photo" type="button" data-photo="${esc(it.photo)}" data-caption="${esc(t(it.name))}" aria-label="${esc(t(it.name))}">
-        <img src="${esc(it.thumb || it.photo)}" alt="" decoding="async"></button>`;
+      return `<button class="photo" type="button" data-photo="${esc(src(it.photo))}" data-caption="${esc(t(it.name))}" aria-label="${esc(t(it.name))}">
+        <img src="${esc(src(it.thumb || it.photo))}" alt="" decoding="async"></button>`;
     }
     return `<div class="photo">${icon(sec.icon)}</div>`;
   }
@@ -95,9 +99,10 @@
     const desc = t(it.desc);
     const amt = amount(it.amount, it.unit);
     let price = "";
-    if (it.price != null) price = it.priceFrom ? u("priceFrom").replace("{price}", money(it.price)) : money(it.price);
-    const variants = (it.variants || []).length
-      ? `<div class="variants">${it.variants.map((v) => `<span class="variant">${esc(amount(v.amount, v.unit))} <b>${esc(money(v.price))}</b></span>`).join("")}</div>`
+    if (has(it.price)) price = it.priceFrom ? u("priceFrom").replace("{price}", money(it.price)) : money(it.price);
+    const vars = (it.variants || []).filter((v) => has(v.price));
+    const variants = vars.length
+      ? `<div class="variants">${vars.map((v) => `<span class="variant">${esc(amount(v.amount, v.unit))} <b>${esc(money(v.price))}</b></span>`).join("")}</div>`
       : "";
     return `<article class="item">
       ${photoHtml(it, sec)}
@@ -114,7 +119,7 @@
     const steps = (it.steps || []).map((s, i) => `<li class="step"><span class="step-num">${i + 1}</span>
       <div><div class="step-title">${esc(t(s.title))}</div><div class="step-options">${esc(t(s.options))}</div></div></li>`).join("");
     return `<div class="builder">
-      <div class="item-head"><div class="item-name">${esc(t(it.name))}</div>${it.price != null ? `<div class="item-price">${esc(money(it.price))}</div>` : ""}</div>
+      <div class="item-head"><div class="item-name">${esc(t(it.name))}</div>${has(it.price) ? `<div class="item-price">${esc(money(it.price))}</div>` : ""}</div>
       ${t(it.desc) ? `<div class="item-desc">${esc(t(it.desc))}</div>` : ""}
       ${steps ? `<ol class="steps">${steps}</ol>` : ""}
     </div>`;
@@ -133,7 +138,7 @@
 
     $("content").innerHTML = sections.map((s) => {
       let body;
-      if (s.layout === "builder") body = s.items.map((i) => i.steps ? builderHtml(i) : `<div class="items">${itemHtml(i, s)}</div>`).join("");
+      if (s.layout === "builder") body = s.items.map((i) => (i.steps || []).length ? builderHtml(i) : `<div class="items">${itemHtml(i, s)}</div>`).join("");
       else if (s.layout === "promo") body = `<div class="items">${s.items.map(promoHtml).join("")}</div>`;
       else body = `<div class="items">${s.items.map((i) => itemHtml(i, s)).join("")}</div>`;
       const note = t(s.note);
@@ -338,7 +343,9 @@
   }
 
   async function init() {
-    settings = await load("settings");
+    // site.json — техническое (вкладки, языки, валюта), settings.json — то, что правят в админке
+    const [site, edit] = await Promise.all([load("site"), load("settings")]);
+    settings = { ...site, ...edit };
     const [uiData, ...tabData] = await Promise.all([load("ui"), ...settings.tabs.map(load)]);
     ui = uiData;
     tabData.forEach((tb) => { tabs[tb.id] = tb; });

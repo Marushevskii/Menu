@@ -37,4 +37,9 @@
 **Этап 2 (14.10.2026):** репозиторий https://github.com/Marushevskii/Menu (публичный, ветка `main`),
 сайт https://marushevskii.github.io/Menu/ (GitHub Pages из корня `main`, есть `.nojekyll`).
 Вход в GitHub на этом ПК через Git Credential Manager — `git push` работает без вопросов.
-Ждём: проверку турецкого с пользователем, ссылки соцсетей. Далее этап 3 (админка Sveltia CMS).
+**Этап 3 (14.10.2026):** админка `admin/` (Sveltia CMS 0.227.2 с unpkg, настройки `admin/config.yml`,
+вход по fine-grained токену GitHub — «Sign In Using Access Token»; кнопка «Sign In with GitHub» без
+OAuth-посредника не работает). Редактор правит `data/hookah|bar|snacks|promo.json`, `data/settings.json`
+(Wi-Fi, соцсети), `data/ui.json` (тексты). Технические настройки — `data/site.json` (в админке их нет).
+Фото из админки → `photos/` (WebP, до 1400 px). При переезде на другой аккаунт — поменять `repo` в config.yml.
+Ждём: проверку турецкого, ссылки соцсетей. Далее этап 4 (автоперевод: GitHub Action + Google API).

@@ -1,0 +1,284 @@
+# Админка меню AIR LOUNGE & BAR (Sveltia CMS).
+# Правится только то, что видит гость. Технические настройки — в data/site.json, здесь их нет.
+# При переезде на другой аккаунт GitHub поменять строку repo.
+
+backend:
+  name: github
+  repo: Marushevskii/Menu
+  branch: main
+  commit_messages:
+    update: "Админка: изменено «{{slug}}»"
+    uploadMedia: "Админка: загружено фото {{path}}"
+    deleteMedia: "Админка: удалено фото {{path}}"
+
+site_url: https://marushevskii.github.io/Menu/
+display_url: https://marushevskii.github.io/Menu/
+
+# фото позиций: папка photos/, при загрузке сжимаются в WebP
+media_folder: photos
+public_folder: photos
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1400
+          height: 1400
+
+editor:
+  preview: false
+
+# ---------- общие куски полей ----------
+# Текст на 4 языках. Вводить по-русски; остальные языки — перевод (позже будет заполняться сам).
+_langs: &langs
+  - { name: ru, label: "Русский", widget: string, required: false }
+  - { name: en, label: "English", widget: string, required: false }
+  - { name: ka, label: "ქართული (грузинский)", widget: string, required: false }
+  - { name: tr, label: "Türkçe (турецкий)", widget: string, required: false }
+
+_langs_text: &langs_text
+  - { name: ru, label: "Русский", widget: text, required: false }
+  - { name: en, label: "English", widget: text, required: false }
+  - { name: ka, label: "ქართული (грузинский)", widget: text, required: false }
+  - { name: tr, label: "Türkçe (турецкий)", widget: text, required: false }
+
+_unit: &unit
+  name: unit
+  label: "Единица"
+  widget: select
+  required: false
+  options:
+    - { label: "мл", value: ml }
+    - { label: "л", value: l }
+    - { label: "г", value: g }
+
+_icon: &icon
+  name: icon
+  label: "Иконка (пока нет фото)"
+  widget: select
+  default: cocktail
+  options:
+    - { label: "Кальян", value: hookah }
+    - { label: "Коктейль", value: cocktail }
+    - { label: "Шот", value: shot }
+    - { label: "Пиво", value: beer }
+    - { label: "Бутылка (крепкое)", value: spirits }
+    - { label: "Вино", value: wine }
+    - { label: "Лимонад", value: lemonade }
+    - { label: "Банка (газировка)", value: soda }
+    - { label: "Чай", value: tea }
+    - { label: "Шейк", value: milkshake }
+    - { label: "Снэки", value: snack }
+    - { label: "Подарок", value: gift }
+    - { label: "Торт", value: cake }
+    - { label: "Звезда", value: star }
+    - { label: "Камера", value: camera }
+    - { label: "Зонт", value: umbrella }
+    - { label: "Корона", value: crown }
+
+# позиция меню (Кальян, Бар, Снэки)
+_item_fields: &item_fields
+  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+  - { name: name, label: "Название", widget: object, fields: *langs }
+  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, required: false, fields: *langs }
+  - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
+  - { name: priceFrom, label: "Цена «от» (например «от 8 ₾»)", widget: boolean, default: false, required: false }
+  - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
+  - *unit
+  - name: variants
+    label: "Несколько размеров с разной ценой (например лимонады 0,5 л и 1 л)"
+    widget: list
+    required: false
+    collapsed: true
+    summary: "{{fields.amount}} {{fields.unit}} — {{fields.price}} ₾"
+    fields:
+      - { name: amount, label: "Объём / вес", widget: number, value_type: float }
+      - *unit
+      - { name: price, label: "Цена, ₾", widget: number, value_type: float }
+  - { name: photo, label: "Фото", widget: image, required: false }
+  - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
+
+# раздел вкладки (Классические коктейли, Пиво…)
+_section_fields: &section_fields
+  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+  - { name: layout, widget: hidden, default: list }
+  - { name: title, label: "Название раздела", widget: object, fields: *langs }
+  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, required: false, fields: *langs_text }
+  - *icon
+  - name: items
+    label: "Позиции"
+    label_singular: "позицию"
+    widget: list
+    collapsed: true
+    summary: "{{fields.name.ru}}   {{fields.price}} ₾"
+    fields: *item_fields
+
+collections:
+  - name: menu
+    label: "Меню"
+    icon: restaurant_menu
+    format: json
+    files:
+      - name: hookah
+        label: "Кальян"
+        file: data/hookah.json
+        fields:
+          - { name: id, widget: hidden }
+          - { name: icon, widget: hidden }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
+          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
+
+      - name: bar
+        label: "Бар"
+        file: data/bar.json
+        fields:
+          - { name: id, widget: hidden }
+          - { name: icon, widget: hidden }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
+          - name: sections
+            label: "Разделы"
+            label_singular: "раздел"
+            widget: list
+            collapsed: true
+            summary: "{{fields.title.ru}}"
+            fields:
+              - { name: id, widget: hidden, default: "{{uuid_short}}" }
+              - { name: layout, widget: hidden, default: list }
+              - { name: title, label: "Название раздела", widget: object, fields: *langs }
+              - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, required: false, fields: *langs_text }
+              - *icon
+              - name: items
+                label: "Позиции"
+                label_singular: "позицию"
+                widget: list
+                collapsed: true
+                summary: "{{fields.name.ru}}   {{fields.price}} ₾"
+                fields:
+                  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+                  - { name: name, label: "Название", widget: object, fields: *langs }
+                  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, required: false, fields: *langs }
+                  - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
+                  - { name: priceFrom, label: "Цена «от» (например «от 8 ₾»)", widget: boolean, default: false, required: false }
+                  - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
+                  - *unit
+                  - name: variants
+                    label: "Несколько размеров с разной ценой (например лимонады 0,5 л и 1 л)"
+                    widget: list
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.amount}} {{fields.unit}} — {{fields.price}} ₾"
+                    fields:
+                      - { name: amount, label: "Объём / вес", widget: number, value_type: float }
+                      - *unit
+                      - { name: price, label: "Цена, ₾", widget: number, value_type: float }
+                  - name: steps
+                    label: "Шаги конструктора (только для «Коктейль вне меню»)"
+                    widget: list
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.title.ru}}"
+                    fields:
+                      - { name: title, label: "Шаг", widget: object, fields: *langs }
+                      - { name: options, label: "Варианты", widget: object, fields: *langs }
+                  - { name: photo, label: "Фото", widget: image, required: false }
+                  - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
+
+      - name: snacks
+        label: "Снэки"
+        file: data/snacks.json
+        fields:
+          - { name: id, widget: hidden }
+          - { name: icon, widget: hidden }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
+          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
+
+      - name: promo
+        label: "Акции"
+        file: data/promo.json
+        fields:
+          - { name: id, widget: hidden }
+          - { name: icon, widget: hidden }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
+          - name: sections
+            label: "Разделы"
+            label_singular: "раздел"
+            widget: list
+            collapsed: true
+            summary: "{{fields.title.ru}}"
+            fields:
+              - { name: id, widget: hidden, default: "{{uuid_short}}" }
+              - { name: layout, widget: hidden, default: promo }
+              - { name: icon, widget: hidden, default: gift }
+              - { name: title, label: "Название раздела", widget: object, fields: *langs }
+              - name: items
+                label: "Акции"
+                label_singular: "акцию"
+                widget: list
+                collapsed: true
+                summary: "{{fields.name.ru}}"
+                fields:
+                  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+                  - *icon
+                  - { name: name, label: "Заголовок", widget: object, fields: *langs }
+                  - { name: desc, label: "Текст", widget: object, fields: *langs_text }
+                  - { name: hidden, label: "Скрыть с сайта", widget: boolean, default: false, required: false }
+
+  - name: site
+    label: "Настройки сайта"
+    icon: settings
+    format: json
+    files:
+      - name: settings
+        label: "Wi-Fi и соцсети"
+        file: data/settings.json
+        fields:
+          - { name: name, label: "Название заведения (в шапке)", widget: string }
+          - name: wifi
+            label: "Wi-Fi"
+            widget: object
+            fields:
+              - { name: show, label: "Показывать Wi-Fi на сайте", widget: boolean, default: true }
+              - { name: name, label: "Имя сети", widget: string, required: false }
+              - { name: password, label: "Пароль", widget: string, required: false }
+          - name: socials
+            label: "Соцсети и карты (внизу сайта)"
+            label_singular: "ссылку"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - name: type
+                label: "Иконка"
+                widget: select
+                options:
+                  - { label: "Instagram", value: instagram }
+                  - { label: "Telegram", value: telegram }
+                  - { label: "Google Maps", value: google }
+                  - { label: "Яндекс Карты", value: yandex }
+              - { name: label, label: "Подпись", widget: string }
+              - { name: url, label: "Ссылка (пусто — значок серый и не нажимается)", widget: string, required: false }
+
+      - name: ui
+        label: "Тексты сайта"
+        file: data/ui.json
+        fields:
+          - { name: pageTitle, label: "Заголовок вкладки браузера", widget: object, collapsed: true, fields: *langs }
+          - { name: menu, label: "Подпись «Меню» под заголовком вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: language, label: "Слово «Язык»", widget: object, collapsed: true, fields: *langs }
+          - { name: priceFrom, label: "Цена «от» ({price} — место для цены)", widget: object, collapsed: true, fields: *langs }
+          - { name: ownDrinks, label: "Правило про свои напитки (внизу)", widget: object, collapsed: true, fields: *langs }
+          - { name: orderHint, label: "Подсказка, как заказать (внизу)", widget: object, collapsed: true, fields: *langs }
+          - { name: wifi, label: "Слово «Wi-Fi»", widget: object, collapsed: true, fields: *langs }
+          - { name: password, label: "Слово «Пароль»", widget: object, collapsed: true, fields: *langs }
+          - { name: followUs, label: "«Мы в соцсетях»", widget: object, collapsed: true, fields: *langs }
+          - { name: close, label: "Кнопка «Закрыть» (просмотр фото)", widget: object, collapsed: true, fields: *langs }
+          - { name: unit_ml, label: "Единица «мл»", widget: object, collapsed: true, fields: *langs }
+          - { name: unit_l, label: "Единица «л»", widget: object, collapsed: true, fields: *langs }
+          - { name: unit_g, label: "Единица «г»", widget: object, collapsed: true, fields: *langs }

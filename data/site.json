@@ -1,0 +1,28 @@
+{
+  "tabs": [
+    "hookah",
+    "bar",
+    "snacks",
+    "promo"
+  ],
+  "defaultLang": "en",
+  "languages": [
+    {
+      "code": "ru",
+      "label": "RU"
+    },
+    {
+      "code": "en",
+      "label": "EN"
+    },
+    {
+      "code": "ka",
+      "label": "GE"
+    },
+    {
+      "code": "tr",
+      "label": "TR"
+    }
+  ],
+  "currency": "₾"
+}
