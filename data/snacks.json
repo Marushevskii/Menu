@@ -7,6 +7,7 @@
     "ka": "სნექები",
     "tr": "Atıştırmalık"
   },
+  "menuLabel": false,
   "sections": [
     {
       "id": "snacks",

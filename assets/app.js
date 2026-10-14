@@ -78,7 +78,9 @@
   }
 
   function renderHero() {
-    $("hero").innerHTML = `<h1>${esc(t(tabs[currentTab].title))}</h1><span>${esc(u("menu"))}</span>`;
+    const tab = tabs[currentTab];
+    // подпись «Меню» под заголовком — только там, где она уместна (в файле вкладки "menuLabel": false убирает её)
+    $("hero").innerHTML = `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
   }
 
   function photoHtml(it, sec) {

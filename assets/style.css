@@ -65,6 +65,7 @@ a { color: inherit; }
 .hero h1 {
   margin: 0; font-family: var(--serif); font-weight: 500;
   font-size: clamp(38px, 12vw, 56px); line-height: 1; letter-spacing: .14em; text-transform: uppercase;
+  padding-left: .14em; /* компенсирует пробел после последней буквы — слово стоит ровно по центру */
 }
 .hero span { display: block; margin-top: 4px; font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--muted); }
 .hero::after {
