@@ -84,7 +84,7 @@
   function photoHtml(it, sec) {
     if (it.photo) {
       return `<button class="photo" type="button" data-photo="${esc(it.photo)}" data-caption="${esc(t(it.name))}" aria-label="${esc(t(it.name))}">
-        <img src="${esc(it.thumb || it.photo)}" alt="" loading="lazy"></button>`;
+        <img src="${esc(it.thumb || it.photo)}" alt="" decoding="async"></button>`;
     }
     return `<div class="photo">${icon(sec.icon)}</div>`;
   }
@@ -143,11 +143,34 @@
     }).join("");
 
     const chips = $("chips");
-    chips.hidden = sections.length < 2;
+    $("chipsWrap").hidden = sections.length < 2;
     chips.innerHTML = sections.map((s, i) =>
       `<button type="button" class="chip${i === 0 ? " active" : ""}" data-target="${s.id}">${esc(t(s.title))}</button>`).join("");
 
     setupSpy();
+    setupReveal();
+  }
+
+  // Плавное появление: всё, что на первом экране, видно сразу,
+  // а карточки ниже проявляются, когда до них долистали.
+  let revealObs = null;
+  function revealNow(el) { el.classList.add("shown"); el.classList.remove("pre"); }
+  function setupReveal() {
+    if (revealObs) revealObs.disconnect();
+    const els = $("content").querySelectorAll(".item, .promo, .builder, .section-title, .section-note");
+    if (!("IntersectionObserver" in window)) return;
+    revealObs = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { revealNow(e.target); revealObs.unobserve(e.target); }
+    }), { rootMargin: "0px 0px -6% 0px" });
+    els.forEach((el) => {
+      if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add("pre"); revealObs.observe(el); }
+    });
+  }
+  // страховка: если гость прыгнул к разделу, всё, что уже на экране, точно показываем
+  function revealVisible() {
+    document.querySelectorAll(".pre").forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight) revealNow(el);
+    });
   }
 
   function fadeIn() {
@@ -203,6 +226,7 @@
 
   function updateSpy() {
     spyTick = false;
+    revealVisible();
     const secs = [...document.querySelectorAll(".section")];
     if (!secs.length) return;
     if (pinned) return setActiveChip(pinned);
@@ -283,7 +307,10 @@
 
     const chips = $("chips");
     window.addEventListener("scroll", () => {
-      chips.classList.toggle("stuck", chips.getBoundingClientRect().top <= 0 && window.scrollY > 10);
+      // подложка под лентой разделов появляется плавно, по мере прокрутки
+      const hero = $("hero");
+      const start = hero.offsetTop + hero.offsetHeight - 50;
+      $("chipsBg").style.opacity = Math.min(1, Math.max(0, (window.scrollY - start) / 50)).toFixed(3);
       if (!spyTick) { spyTick = true; requestAnimationFrame(updateSpy); }
     }, { passive: true });
 
