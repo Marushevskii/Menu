@@ -45,7 +45,6 @@
           "amount": null,
           "unit": "",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -68,7 +67,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -91,7 +89,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -114,7 +111,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -137,7 +133,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -160,7 +155,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -183,7 +177,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -206,7 +199,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -229,7 +221,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -252,7 +243,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -275,7 +265,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -298,7 +287,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -321,7 +309,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -344,7 +331,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -386,7 +372,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -409,7 +394,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -432,7 +416,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -455,7 +438,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -478,7 +460,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -501,7 +482,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -524,7 +504,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -547,7 +526,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -570,7 +548,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -593,7 +570,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -616,7 +592,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -639,143 +614,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
-          "photo": "",
-          "hidden": false
-        }
-      ]
-    },
-    {
-      "id": "off-menu",
-      "layout": "builder",
-      "title": {
-        "ru": "Коктейль вне меню",
-        "en": "Off-menu cocktail",
-        "ka": "კოქტეილი მენიუს გარეთ",
-        "tr": "Menü dışı kokteyl"
-      },
-      "note": {
-        "ru": "",
-        "en": "",
-        "ka": "",
-        "tr": ""
-      },
-      "icon": "cocktail",
-      "items": [
-        {
-          "id": "custom-cocktail",
-          "name": {
-            "ru": "Коктейль вне меню",
-            "en": "Off-menu cocktail",
-            "ka": "კოქტეილი მენიუს გარეთ",
-            "tr": "Menü dışı kokteyl"
-          },
-          "desc": {
-            "ru": "Почувствуй себя барменом и собери свой коктейль самостоятельно",
-            "en": "Feel like a bartender and build your own cocktail",
-            "ka": "იგრძენით თავი ბარმენად და თავად შეადგინეთ თქვენი კოქტეილი",
-            "tr": "Kendini barmen gibi hisset ve kokteylini kendin oluştur"
-          },
-          "price": 20,
-          "priceFrom": false,
-          "amount": null,
-          "unit": null,
-          "variants": [],
-          "steps": [
-            {
-              "title": {
-                "ru": "База",
-                "en": "Base",
-                "ka": "ბაზა",
-                "tr": "Baz"
-              },
-              "options": {
-                "ru": "водка / джин / ром / текила / виски",
-                "en": "vodka / gin / rum / tequila / whiskey",
-                "ka": "არაყი / ჯინი / რომი / ტეკილა / ვისკი",
-                "tr": "votka / cin / rom / tekila / viski"
-              }
-            },
-            {
-              "title": {
-                "ru": "Вкус",
-                "en": "Flavour",
-                "ka": "გემო",
-                "tr": "Tat"
-              },
-              "options": {
-                "ru": "сладкий / кислый / свежий / фруктовый",
-                "en": "sweet / sour / fresh / fruity",
-                "ka": "ტკბილი / მჟავე / გამაგრილებელი / ხილის",
-                "tr": "tatlı / ekşi / ferah / meyveli"
-              }
-            },
-            {
-              "title": {
-                "ru": "Баланс",
-                "en": "Balance",
-                "ka": "ბალანსი",
-                "tr": "Denge"
-              },
-              "options": {
-                "ru": "кислота или сладость",
-                "en": "sourness or sweetness",
-                "ka": "სიმჟავე ან სიტკბო",
-                "tr": "ekşilik veya tatlılık"
-              }
-            },
-            {
-              "title": {
-                "ru": "Миксер",
-                "en": "Mixer",
-                "ka": "მიქსერი",
-                "tr": "Mikser"
-              },
-              "options": {
-                "ru": "сок / тоник / содовая / кола",
-                "en": "juice / tonic / soda / cola",
-                "ka": "წვენი / ტონიკი / სოდა / კოლა",
-                "tr": "meyve suyu / tonik / soda / kola"
-              }
-            },
-            {
-              "title": {
-                "ru": "Формат",
-                "en": "Format",
-                "ka": "ფორმატი",
-                "tr": "Sunum"
-              },
-              "options": {
-                "ru": "шейк / со льдом / лонг / шорт",
-                "en": "shaken / on the rocks / long / short",
-                "ka": "შეიკი / ყინულით / ლონგი / შორტი",
-                "tr": "shake / buzlu / long / short"
-              }
-            }
-          ],
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "custom-mocktail",
-          "name": {
-            "ru": "Б/А коктейль вне меню",
-            "en": "Off-menu mocktail",
-            "ka": "უალკოჰოლო კოქტეილი მენიუს გარეთ",
-            "tr": "Alkolsüz menü dışı kokteyl"
-          },
-          "desc": {
-            "ru": "А для тех, кто «за рулём», действует специальное предложение",
-            "en": "And for those who are driving, there's a special offer",
-            "ka": "მათთვის, ვინც საჭესთანაა, მოქმედებს სპეციალური შეთავაზება",
-            "tr": "Araç kullananlar için özel bir teklifimiz var"
-          },
-          "price": 12,
-          "priceFrom": false,
-          "amount": null,
-          "unit": null,
-          "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -817,7 +655,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -840,7 +677,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -863,7 +699,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -886,7 +721,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -909,7 +743,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -932,7 +765,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -955,7 +787,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -997,7 +828,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1020,7 +850,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1043,7 +872,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1066,7 +894,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1089,7 +916,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1112,7 +938,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1135,7 +960,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1177,7 +1001,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1200,7 +1023,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1223,7 +1045,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1246,7 +1067,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1269,7 +1089,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1292,7 +1111,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1315,7 +1133,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1338,7 +1155,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1361,7 +1177,6 @@
           "amount": 50,
           "unit": "ml",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1403,7 +1218,6 @@
           "amount": 0.7,
           "unit": "l",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1426,7 +1240,6 @@
           "amount": 0.7,
           "unit": "l",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1449,7 +1262,6 @@
           "amount": 0.7,
           "unit": "l",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1472,7 +1284,6 @@
           "amount": 0.7,
           "unit": "l",
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1525,7 +1336,6 @@
               "price": 20
             }
           ],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1559,7 +1369,6 @@
               "price": 20
             }
           ],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1593,7 +1402,6 @@
               "price": 20
             }
           ],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1627,7 +1435,6 @@
               "price": 20
             }
           ],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1669,7 +1476,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1692,7 +1498,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1715,7 +1520,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1738,7 +1542,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1761,7 +1564,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1784,7 +1586,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1807,7 +1608,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1830,7 +1630,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1853,7 +1652,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1876,7 +1674,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1918,7 +1715,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1941,7 +1737,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1964,7 +1759,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1987,7 +1781,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2010,7 +1803,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2033,7 +1825,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2056,7 +1847,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2098,7 +1888,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2121,7 +1910,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2144,7 +1932,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2167,7 +1954,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2190,7 +1976,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2232,7 +2017,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2255,7 +2039,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2278,7 +2061,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2301,7 +2083,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2324,7 +2105,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2366,7 +2146,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2389,7 +2168,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2412,7 +2190,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2435,7 +2212,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2477,7 +2253,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2500,7 +2275,6 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2523,11 +2297,139 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "steps": [],
           "photo": "",
           "hidden": false
         }
       ]
     }
-  ]
+  ],
+  "offMenu": {
+    "id": "off-menu",
+    "layout": "builder",
+    "title": {
+      "ru": "Коктейль вне меню",
+      "en": "Off-menu cocktail",
+      "ka": "კოქტეილი მენიუს გარეთ",
+      "tr": "Menü dışı kokteyl"
+    },
+    "note": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "tr": ""
+    },
+    "icon": "cocktail",
+    "items": [
+      {
+        "id": "custom-cocktail",
+        "name": {
+          "ru": "Коктейль вне меню",
+          "en": "Off-menu cocktail",
+          "ka": "კოქტეილი მენიუს გარეთ",
+          "tr": "Menü dışı kokteyl"
+        },
+        "desc": {
+          "ru": "Почувствуй себя барменом и собери свой коктейль самостоятельно",
+          "en": "Feel like a bartender and build your own cocktail",
+          "ka": "იგრძენით თავი ბარმენად და თავად შეადგინეთ თქვენი კოქტეილი",
+          "tr": "Kendini barmen gibi hisset ve kokteylini kendin oluştur"
+        },
+        "price": 20,
+        "steps": [
+          {
+            "title": {
+              "ru": "База",
+              "en": "Base",
+              "ka": "ბაზა",
+              "tr": "Baz"
+            },
+            "options": {
+              "ru": "водка / джин / ром / текила / виски",
+              "en": "vodka / gin / rum / tequila / whiskey",
+              "ka": "არაყი / ჯინი / რომი / ტეკილა / ვისკი",
+              "tr": "votka / cin / rom / tekila / viski"
+            }
+          },
+          {
+            "title": {
+              "ru": "Вкус",
+              "en": "Flavour",
+              "ka": "გემო",
+              "tr": "Tat"
+            },
+            "options": {
+              "ru": "сладкий / кислый / свежий / фруктовый",
+              "en": "sweet / sour / fresh / fruity",
+              "ka": "ტკბილი / მჟავე / გამაგრილებელი / ხილის",
+              "tr": "tatlı / ekşi / ferah / meyveli"
+            }
+          },
+          {
+            "title": {
+              "ru": "Баланс",
+              "en": "Balance",
+              "ka": "ბალანსი",
+              "tr": "Denge"
+            },
+            "options": {
+              "ru": "кислота или сладость",
+              "en": "sourness or sweetness",
+              "ka": "სიმჟავე ან სიტკბო",
+              "tr": "ekşilik veya tatlılık"
+            }
+          },
+          {
+            "title": {
+              "ru": "Миксер",
+              "en": "Mixer",
+              "ka": "მიქსერი",
+              "tr": "Mikser"
+            },
+            "options": {
+              "ru": "сок / тоник / содовая / кола",
+              "en": "juice / tonic / soda / cola",
+              "ka": "წვენი / ტონიკი / სოდა / კოლა",
+              "tr": "meyve suyu / tonik / soda / kola"
+            }
+          },
+          {
+            "title": {
+              "ru": "Формат",
+              "en": "Format",
+              "ka": "ფორმატი",
+              "tr": "Sunum"
+            },
+            "options": {
+              "ru": "шейк / со льдом / лонг / шорт",
+              "en": "shaken / on the rocks / long / short",
+              "ka": "შეიკი / ყინულით / ლონგი / შორტი",
+              "tr": "shake / buzlu / long / short"
+            }
+          }
+        ],
+        "photo": "",
+        "hidden": false
+      },
+      {
+        "id": "custom-mocktail",
+        "name": {
+          "ru": "Б/А коктейль вне меню",
+          "en": "Off-menu mocktail",
+          "ka": "უალკოჰოლო კოქტეილი მენიუს გარეთ",
+          "tr": "Alkolsüz menü dışı kokteyl"
+        },
+        "desc": {
+          "ru": "А для тех, кто «за рулём», действует специальное предложение",
+          "en": "And for those who are driving, there's a special offer",
+          "ka": "მათთვის, ვინც საჭესთანაა, მოქმედებს სპეციალური შეთავაზება",
+          "tr": "Araç kullananlar için özel bir teklifimiz var"
+        },
+        "price": 12,
+        "steps": [],
+        "photo": "",
+        "hidden": false
+      }
+    ],
+    "after": "signature-cocktails"
+  }
 }

@@ -132,7 +132,13 @@
 
   function renderTab() {
     const tab = tabs[currentTab];
-    const sections = tab.sections
+    // «Коктейль вне меню» хранится отдельным блоком (в админке у него свои поля) — ставим его после нужного раздела
+    let all = [...(tab.sections || [])];
+    if (tab.offMenu) {
+      const at = all.findIndex((x) => x.id === tab.offMenu.after);
+      all.splice(at >= 0 ? at + 1 : all.length, 0, { ...tab.offMenu, layout: "builder" });
+    }
+    const sections = all
       .map((s) => ({ ...s, items: (s.items || []).filter((i) => !i.hidden) }))
       .filter((s) => s.items.length);
 

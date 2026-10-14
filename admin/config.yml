@@ -143,65 +143,44 @@ collections:
           - { name: icon, widget: hidden }
           - { name: title, label: "Название вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
           - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
-          - name: sections
-            label: "Разделы"
-            label_singular: "раздел"
-            widget: list
-            allow_duplicate: false
+          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, allow_duplicate: false, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
+          # «Коктейль вне меню» — отдельный блок: только здесь есть шаги конструктора
+          - name: offMenu
+            label: "Коктейль вне меню (на сайте — после «Авторских коктейлей»)"
+            widget: object
             collapsed: true
             summary: "{{fields.title.ru}}"
-            # два вида разделов: обычный и «Коктейль вне меню» (с шагами конструктора)
-            typeKey: layout
-            types:
-              - name: list
-                label: "Обычный раздел"
-                summary: "{{fields.title.ru}}"
+            fields:
+              - { name: id, widget: hidden, default: off-menu }
+              - { name: icon, widget: hidden, default: cocktail }
+              - { name: after, widget: hidden, default: signature-cocktails }
+              - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+              - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
+              - name: items
+                label: "Позиции"
+                label_singular: "позицию"
+                widget: list
+                allow_duplicate: false
+                collapsed: true
+                summary: "{{fields.name.ru}}   {{fields.price}} ₾"
                 fields:
                   - { name: id, widget: hidden, default: "{{uuid_short}}" }
-                  - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
-                  - *icon
-                  - name: items
-                    label: "Позиции"
-                    label_singular: "позицию"
+                  - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: desc, label: "Описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
+                  - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
+                  - name: steps
+                    label: "Шаги конструктора (если пусто — обычная карточка)"
+                    label_singular: "шаг"
                     widget: list
                     allow_duplicate: false
+                    required: false
                     collapsed: true
-                    summary: "{{fields.name.ru}}   {{fields.price}} ₾"
-                    fields: *item_fields
-              - name: builder
-                label: "Коктейль вне меню (с шагами)"
-                summary: "{{fields.title.ru}}"
-                fields:
-                  - { name: id, widget: hidden, default: "{{uuid_short}}" }
-                  - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
-                  - *icon
-                  - name: items
-                    label: "Позиции"
-                    label_singular: "позицию"
-                    widget: list
-                    allow_duplicate: false
-                    collapsed: true
-                    summary: "{{fields.name.ru}}   {{fields.price}} ₾"
+                    summary: "{{fields.title.ru}}"
                     fields:
-                      - { name: id, widget: hidden, default: "{{uuid_short}}" }
-                      - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                      - { name: desc, label: "Описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
-                      - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
-                      - name: steps
-                        label: "Шаги конструктора (если пусто — обычная карточка)"
-                        label_singular: "шаг"
-                        widget: list
-                        allow_duplicate: false
-                        required: false
-                        collapsed: true
-                        summary: "{{fields.title.ru}}"
-                        fields:
-                          - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                          - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                      - { name: photo, label: "Фото", widget: image, required: false }
-                      - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
+                      - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                      - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: photo, label: "Фото", widget: image, required: false }
+                  - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
 
       - name: snacks
         label: "Снэки"
