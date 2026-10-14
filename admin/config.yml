@@ -150,50 +150,58 @@ collections:
             allow_duplicate: false
             collapsed: true
             summary: "{{fields.title.ru}}"
-            fields:
-              - { name: id, widget: hidden, default: "{{uuid_short}}" }
-              - { name: layout, widget: hidden, default: list }
-              - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-              - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
-              - *icon
-              - name: items
-                label: "Позиции"
-                label_singular: "позицию"
-                widget: list
-                allow_duplicate: false
-                collapsed: true
-                summary: "{{fields.name.ru}}   {{fields.price}} ₾"
+            # два вида разделов: обычный и «Коктейль вне меню» (с шагами конструктора)
+            typeKey: layout
+            types:
+              - name: list
+                label: "Обычный раздел"
+                summary: "{{fields.title.ru}}"
                 fields:
                   - { name: id, widget: hidden, default: "{{uuid_short}}" }
-                  - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
-                  - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
-                  - { name: priceFrom, label: "Цена «от» (например «от 8 ₾»)", widget: boolean, default: false, required: false }
-                  - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
-                  - *unit
-                  - name: variants
-                    label: "Несколько размеров с разной ценой (например лимонады 0,5 л и 1 л)"
+                  - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
+                  - *icon
+                  - name: items
+                    label: "Позиции"
+                    label_singular: "позицию"
                     widget: list
                     allow_duplicate: false
-                    required: false
                     collapsed: true
-                    summary: "{{fields.amount}} {{fields.unit}} — {{fields.price}} ₾"
-                    fields:
-                      - { name: amount, label: "Объём / вес", widget: number, value_type: float }
-                      - *unit
-                      - { name: price, label: "Цена, ₾", widget: number, value_type: float }
-                  - name: steps
-                    label: "Шаги конструктора (только для «Коктейль вне меню»)"
+                    summary: "{{fields.name.ru}}   {{fields.price}} ₾"
+                    fields: *item_fields
+              - name: builder
+                label: "Коктейль вне меню (с шагами)"
+                summary: "{{fields.title.ru}}"
+                fields:
+                  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+                  - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
+                  - *icon
+                  - name: items
+                    label: "Позиции"
+                    label_singular: "позицию"
                     widget: list
                     allow_duplicate: false
-                    required: false
                     collapsed: true
-                    summary: "{{fields.title.ru}}"
+                    summary: "{{fields.name.ru}}   {{fields.price}} ₾"
                     fields:
-                      - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                      - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
-                  - { name: photo, label: "Фото", widget: image, required: false }
-                  - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
+                      - { name: id, widget: hidden, default: "{{uuid_short}}" }
+                      - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                      - { name: desc, label: "Описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
+                      - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
+                      - name: steps
+                        label: "Шаги конструктора (если пусто — обычная карточка)"
+                        label_singular: "шаг"
+                        widget: list
+                        allow_duplicate: false
+                        required: false
+                        collapsed: true
+                        summary: "{{fields.title.ru}}"
+                        fields:
+                          - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                          - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                      - { name: photo, label: "Фото", widget: image, required: false }
+                      - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
 
       - name: snacks
         label: "Снэки"
