@@ -33,4 +33,7 @@
 Все тексты — объекты `{ru,en,ka,tr}`. У позиции: `id` (латиница, по нему потом фото),
 `price`, `amount`+`unit` (ml/l/g), `variants`, `priceFrom`, `photo`, `hidden`.
 Локальный просмотр: preview «menu» из `.claude/launch.json` (порт 5173).
-Ждём: проверку турецкого с пользователем, ссылки соцсетей. Далее этап 2 (GitHub Pages).
+**Этап 2 (14.10.2026):** репозиторий https://github.com/Marushevskii/Menu (публичный, ветка `main`),
+сайт https://marushevskii.github.io/Menu/ (GitHub Pages из корня `main`, есть `.nojekyll`).
+Вход в GitHub на этом ПК через Git Credential Manager — `git push` работает без вопросов.
+Ждём: проверку турецкого с пользователем, ссылки соцсетей. Далее этап 3 (админка Sveltia CMS).
