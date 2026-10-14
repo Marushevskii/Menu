@@ -83,8 +83,8 @@ _icon: &icon
 # позиция меню (Кальян, Бар, Снэки)
 _item_fields: &item_fields
   - { name: id, widget: hidden, default: "{{uuid_short}}" }
-  - { name: name, label: "Название", widget: object, fields: *langs }
-  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, required: false, fields: *langs }
+  - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
   - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
   - { name: priceFrom, label: "Цена «от» (например «от 8 ₾»)", widget: boolean, default: false, required: false }
   - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
@@ -92,6 +92,7 @@ _item_fields: &item_fields
   - name: variants
     label: "Несколько размеров с разной ценой (например лимонады 0,5 л и 1 л)"
     widget: list
+    allow_duplicate: false
     required: false
     collapsed: true
     summary: "{{fields.amount}} {{fields.unit}} — {{fields.price}} ₾"
@@ -106,13 +107,14 @@ _item_fields: &item_fields
 _section_fields: &section_fields
   - { name: id, widget: hidden, default: "{{uuid_short}}" }
   - { name: layout, widget: hidden, default: list }
-  - { name: title, label: "Название раздела", widget: object, fields: *langs }
-  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, required: false, fields: *langs_text }
+  - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+  - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
   - *icon
   - name: items
     label: "Позиции"
     label_singular: "позицию"
     widget: list
+    allow_duplicate: false
     collapsed: true
     summary: "{{fields.name.ru}}   {{fields.price}} ₾"
     fields: *item_fields
@@ -129,9 +131,9 @@ collections:
         fields:
           - { name: id, widget: hidden }
           - { name: icon, widget: hidden }
-          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
           - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
-          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
+          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, allow_duplicate: false, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
 
       - name: bar
         label: "Бар"
@@ -139,30 +141,32 @@ collections:
         fields:
           - { name: id, widget: hidden }
           - { name: icon, widget: hidden }
-          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
           - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
           - name: sections
             label: "Разделы"
             label_singular: "раздел"
             widget: list
+            allow_duplicate: false
             collapsed: true
             summary: "{{fields.title.ru}}"
             fields:
               - { name: id, widget: hidden, default: "{{uuid_short}}" }
               - { name: layout, widget: hidden, default: list }
-              - { name: title, label: "Название раздела", widget: object, fields: *langs }
-              - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, required: false, fields: *langs_text }
+              - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+              - { name: note, label: "Примечание под названием (необязательно)", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs_text }
               - *icon
               - name: items
                 label: "Позиции"
                 label_singular: "позицию"
                 widget: list
+                allow_duplicate: false
                 collapsed: true
                 summary: "{{fields.name.ru}}   {{fields.price}} ₾"
                 fields:
                   - { name: id, widget: hidden, default: "{{uuid_short}}" }
-                  - { name: name, label: "Название", widget: object, fields: *langs }
-                  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, required: false, fields: *langs }
+                  - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: desc, label: "Состав / описание", widget: object, collapsed: true, summary: "{{fields.ru}}", required: false, fields: *langs }
                   - { name: price, label: "Цена, ₾", widget: number, value_type: float, required: false }
                   - { name: priceFrom, label: "Цена «от» (например «от 8 ₾»)", widget: boolean, default: false, required: false }
                   - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
@@ -170,6 +174,7 @@ collections:
                   - name: variants
                     label: "Несколько размеров с разной ценой (например лимонады 0,5 л и 1 л)"
                     widget: list
+                    allow_duplicate: false
                     required: false
                     collapsed: true
                     summary: "{{fields.amount}} {{fields.unit}} — {{fields.price}} ₾"
@@ -180,12 +185,13 @@ collections:
                   - name: steps
                     label: "Шаги конструктора (только для «Коктейль вне меню»)"
                     widget: list
+                    allow_duplicate: false
                     required: false
                     collapsed: true
                     summary: "{{fields.title.ru}}"
                     fields:
-                      - { name: title, label: "Шаг", widget: object, fields: *langs }
-                      - { name: options, label: "Варианты", widget: object, fields: *langs }
+                      - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                      - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
                   - { name: photo, label: "Фото", widget: image, required: false }
                   - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
 
@@ -195,9 +201,9 @@ collections:
         fields:
           - { name: id, widget: hidden }
           - { name: icon, widget: hidden }
-          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
           - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
-          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
+          - { name: sections, label: "Разделы", label_singular: "раздел", widget: list, allow_duplicate: false, collapsed: true, summary: "{{fields.title.ru}}", fields: *section_fields }
 
       - name: promo
         label: "Акции"
@@ -205,30 +211,32 @@ collections:
         fields:
           - { name: id, widget: hidden }
           - { name: icon, widget: hidden }
-          - { name: title, label: "Название вкладки", widget: object, collapsed: true, fields: *langs }
+          - { name: title, label: "Название вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
           - { name: menuLabel, label: "Подпись «Меню» под заголовком", widget: boolean, default: true, required: false }
           - name: sections
             label: "Разделы"
             label_singular: "раздел"
             widget: list
+            allow_duplicate: false
             collapsed: true
             summary: "{{fields.title.ru}}"
             fields:
               - { name: id, widget: hidden, default: "{{uuid_short}}" }
               - { name: layout, widget: hidden, default: promo }
               - { name: icon, widget: hidden, default: gift }
-              - { name: title, label: "Название раздела", widget: object, fields: *langs }
+              - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
               - name: items
                 label: "Акции"
                 label_singular: "акцию"
                 widget: list
+                allow_duplicate: false
                 collapsed: true
                 summary: "{{fields.name.ru}}"
                 fields:
                   - { name: id, widget: hidden, default: "{{uuid_short}}" }
                   - *icon
-                  - { name: name, label: "Заголовок", widget: object, fields: *langs }
-                  - { name: desc, label: "Текст", widget: object, fields: *langs_text }
+                  - { name: name, label: "Заголовок", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+                  - { name: desc, label: "Текст", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs_text }
                   - { name: hidden, label: "Скрыть с сайта", widget: boolean, default: false, required: false }
 
   - name: site
@@ -252,6 +260,7 @@ collections:
             label: "Соцсети и карты (внизу сайта)"
             label_singular: "ссылку"
             widget: list
+            allow_duplicate: false
             summary: "{{fields.label}}"
             fields:
               - name: type
@@ -269,16 +278,16 @@ collections:
         label: "Тексты сайта"
         file: data/ui.json
         fields:
-          - { name: pageTitle, label: "Заголовок вкладки браузера", widget: object, collapsed: true, fields: *langs }
-          - { name: menu, label: "Подпись «Меню» под заголовком вкладки", widget: object, collapsed: true, fields: *langs }
-          - { name: language, label: "Слово «Язык»", widget: object, collapsed: true, fields: *langs }
-          - { name: priceFrom, label: "Цена «от» ({price} — место для цены)", widget: object, collapsed: true, fields: *langs }
-          - { name: ownDrinks, label: "Правило про свои напитки (внизу)", widget: object, collapsed: true, fields: *langs }
-          - { name: orderHint, label: "Подсказка, как заказать (внизу)", widget: object, collapsed: true, fields: *langs }
-          - { name: wifi, label: "Слово «Wi-Fi»", widget: object, collapsed: true, fields: *langs }
-          - { name: password, label: "Слово «Пароль»", widget: object, collapsed: true, fields: *langs }
-          - { name: followUs, label: "«Мы в соцсетях»", widget: object, collapsed: true, fields: *langs }
-          - { name: close, label: "Кнопка «Закрыть» (просмотр фото)", widget: object, collapsed: true, fields: *langs }
-          - { name: unit_ml, label: "Единица «мл»", widget: object, collapsed: true, fields: *langs }
-          - { name: unit_l, label: "Единица «л»", widget: object, collapsed: true, fields: *langs }
-          - { name: unit_g, label: "Единица «г»", widget: object, collapsed: true, fields: *langs }
+          - { name: pageTitle, label: "Заголовок вкладки браузера", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: menu, label: "Подпись «Меню» под заголовком вкладки", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: language, label: "Слово «Язык»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: priceFrom, label: "Цена «от» ({price} — место для цены)", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: ownDrinks, label: "Правило про свои напитки (внизу)", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: orderHint, label: "Подсказка, как заказать (внизу)", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: wifi, label: "Слово «Wi-Fi»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: password, label: "Слово «Пароль»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: followUs, label: "«Мы в соцсетях»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: close, label: "Кнопка «Закрыть» (просмотр фото)", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: unit_ml, label: "Единица «мл»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: unit_l, label: "Единица «л»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
+          - { name: unit_g, label: "Единица «г»", widget: object, collapsed: true, summary: "{{fields.ru}}", fields: *langs }
