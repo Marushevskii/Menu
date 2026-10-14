@@ -7,10 +7,10 @@
     "ka": "ბარი",
     "tr": "Bar"
   },
+  "menuLabel": true,
   "sections": [
     {
       "id": "classic-cocktails",
-      "icon": "cocktail",
       "layout": "list",
       "title": {
         "ru": "Классические коктейли",
@@ -24,27 +24,8 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "cocktail",
       "items": [
-        {
-          "id": "pi-a-colada",
-          "name": {
-            "ru": "Пина Колада",
-            "en": "Piña Colada",
-            "ka": "პინა კოლადა",
-            "tr": "Piña Colada"
-          },
-          "desc": {
-            "ru": "сливки, ананас, кокос, ром",
-            "en": "cream, pineapple, coconut, rum",
-            "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
-            "tr": "krema, ananas, hindistan cevizi, rom"
-          },
-          "price": 20,
-          "amount": null,
-          "unit": null,
-          "photo": "",
-          "hidden": false
-        },
         {
           "id": "gin-and-tonic",
           "name": {
@@ -60,8 +41,34 @@
             "tr": "cin, Schweppes, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "pi-a-colada",
+          "name": {
+            "ru": "Пина Колада",
+            "en": "Piña Colada",
+            "ka": "პინა კოლადა",
+            "tr": "Piña Colada"
+          },
+          "desc": {
+            "ru": "сливки, ананас, кокос, ром",
+            "en": "cream, pineapple, coconut, rum",
+            "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
+            "tr": "krema, ananas, hindistan cevizi, rom"
+          },
+          "price": 20,
+          "priceFrom": false,
+          "amount": null,
+          "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -80,8 +87,11 @@
             "tr": "votka, tekila, triple sec, rom, cin, kola, limon, misket limonu"
           },
           "price": 25,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -100,8 +110,11 @@
             "tr": "rom, kola, limon, misket limonu"
           },
           "price": 19,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -120,8 +133,11 @@
             "tr": "tekila, triple sec, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -140,8 +156,11 @@
             "tr": "rom, triple sec, badem, misket limonu, limon"
           },
           "price": 22,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -160,8 +179,11 @@
             "tr": "Campari, cin, Martini Rosso, portakal"
           },
           "price": 22,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -180,8 +202,11 @@
             "tr": "tekila, portakal, ananas, ahududu, nar, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -200,8 +225,11 @@
             "tr": "krema, votka, kahve likörü"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -220,8 +248,11 @@
             "tr": "bitter, burbon"
           },
           "price": 22,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -240,8 +271,11 @@
             "tr": "viski, bitter, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -260,8 +294,11 @@
             "tr": "kırmızı vermut, cin, portakal likörü, nar, limon"
           },
           "price": 22,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -280,8 +317,11 @@
             "tr": "burbon, Campari, Rosso"
           },
           "price": 22,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -300,8 +340,11 @@
             "tr": "votka, şeftali likörü, ananas suyu, orman meyvesi suyu"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -309,7 +352,6 @@
     },
     {
       "id": "signature-cocktails",
-      "icon": "cocktail",
       "layout": "list",
       "title": {
         "ru": "Авторские коктейли",
@@ -323,6 +365,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "cocktail",
       "items": [
         {
           "id": "pink-cactus",
@@ -339,8 +382,11 @@
             "tr": "Aperol, cin, aloe vera, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -359,8 +405,11 @@
             "tr": "krema likörü, muz, krema, süt, kahve, tarçın"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -379,8 +428,11 @@
             "tr": "rom, Blue Curaçao, mango, limon, siyah frenk üzümü"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -399,8 +451,11 @@
             "tr": "limoncello, Schweppes, soda, portakal, Martini"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -419,8 +474,11 @@
             "tr": "nane likörü, kahve likörü, krema"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -439,8 +497,11 @@
             "tr": "Advocaat likörü, limon, vanilya şurubu, tarçın"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -459,8 +520,11 @@
             "tr": "ahududu, çarkıfelek, votka, vanilya, limon"
           },
           "price": 23,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -479,8 +543,11 @@
             "tr": "votka, kahve likörü, espresso, vanilya"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -499,8 +566,11 @@
             "tr": "espresso, tonik, rom"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -519,8 +589,11 @@
             "tr": "Jägermeister, rom, zencefil, badem, limon"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -539,8 +612,11 @@
             "tr": "Aperol, Schweppes, soda, portakal, Martini"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -559,8 +635,11 @@
             "tr": "rom, portakal, kahve, karamel"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -568,7 +647,6 @@
     },
     {
       "id": "off-menu",
-      "icon": "cocktail",
       "layout": "builder",
       "title": {
         "ru": "Коктейль вне меню",
@@ -582,6 +660,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "cocktail",
       "items": [
         {
           "id": "custom-cocktail",
@@ -598,10 +677,10 @@
             "tr": "Kendini barmen gibi hisset ve kokteylini kendin oluştur"
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
-          "photo": "",
-          "hidden": false,
+          "variants": [],
           "steps": [
             {
               "title": {
@@ -673,7 +752,9 @@
                 "tr": "shake / buzlu / long / short"
               }
             }
-          ]
+          ],
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "custom-mocktail",
@@ -690,8 +771,11 @@
             "tr": "Araç kullananlar için özel bir teklifimiz var"
           },
           "price": 12,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -699,7 +783,6 @@
     },
     {
       "id": "shots",
-      "icon": "shot",
       "layout": "list",
       "title": {
         "ru": "Шоты",
@@ -713,6 +796,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "shot",
       "items": [
         {
           "id": "shot-raspberry-scandal",
@@ -729,8 +813,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -749,8 +836,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -769,8 +859,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -789,8 +882,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -809,8 +905,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -829,8 +928,11 @@
             "tr": ""
           },
           "price": 6,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -849,8 +951,11 @@
             "tr": "farklı aromalarda 6 shot"
           },
           "price": 30,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -858,7 +963,6 @@
     },
     {
       "id": "beer",
-      "icon": "beer",
       "layout": "list",
       "title": {
         "ru": "Пиво",
@@ -872,6 +976,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "beer",
       "items": [
         {
           "id": "beer-wheat",
@@ -888,8 +993,11 @@
             "tr": ""
           },
           "price": 10,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -908,8 +1016,11 @@
             "tr": ""
           },
           "price": 12,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -928,8 +1039,11 @@
             "tr": ""
           },
           "price": 12,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -948,8 +1062,11 @@
             "tr": ""
           },
           "price": 10,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -968,8 +1085,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -988,8 +1108,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1008,17 +1131,18 @@
             "tr": "Yeni ürünler + sevilen içeceklerin dönüşü. Çeşitler için barmene danışın"
           },
           "price": 8,
+          "priceFrom": true,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
-          "hidden": false,
-          "priceFrom": true
+          "hidden": false
         }
       ]
     },
     {
       "id": "spirits",
-      "icon": "spirits",
       "layout": "list",
       "title": {
         "ru": "Крепкий алкоголь",
@@ -1032,6 +1156,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "spirits",
       "items": [
         {
           "id": "justerini-and-brooks",
@@ -1048,8 +1173,11 @@
             "tr": ""
           },
           "price": 12,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1068,8 +1196,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1088,8 +1219,11 @@
             "tr": ""
           },
           "price": 10,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1108,8 +1242,11 @@
             "tr": ""
           },
           "price": 12,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1128,8 +1265,11 @@
             "tr": ""
           },
           "price": 12,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1148,8 +1288,11 @@
             "tr": ""
           },
           "price": 10,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1168,8 +1311,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1188,8 +1334,11 @@
             "tr": ""
           },
           "price": 10,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1208,8 +1357,11 @@
             "tr": ""
           },
           "price": 9,
+          "priceFrom": false,
           "amount": 50,
           "unit": "ml",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1217,7 +1369,6 @@
     },
     {
       "id": "wine",
-      "icon": "wine",
       "layout": "list",
       "title": {
         "ru": "Вино",
@@ -1231,6 +1382,7 @@
         "ka": "ფასი 0,7 ლ ბოთლზე",
         "tr": "Fiyat 0,7 lt şişe içindir"
       },
+      "icon": "wine",
       "items": [
         {
           "id": "wine-kindzmarauli",
@@ -1247,8 +1399,11 @@
             "tr": "kırmızı, yarı tatlı"
           },
           "price": 45,
+          "priceFrom": false,
           "amount": 0.7,
           "unit": "l",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1267,8 +1422,11 @@
             "tr": "kırmızı, sek"
           },
           "price": 45,
+          "priceFrom": false,
           "amount": 0.7,
           "unit": "l",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1287,8 +1445,11 @@
             "tr": "beyaz, yarı tatlı"
           },
           "price": 45,
+          "priceFrom": false,
           "amount": 0.7,
           "unit": "l",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1307,8 +1468,11 @@
             "tr": "beyaz, sek"
           },
           "price": 45,
+          "priceFrom": false,
           "amount": 0.7,
           "unit": "l",
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1316,7 +1480,6 @@
     },
     {
       "id": "lemonades",
-      "icon": "lemonade",
       "layout": "list",
       "title": {
         "ru": "Лимонады",
@@ -1330,6 +1493,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "lemonade",
       "items": [
         {
           "id": "lemonade-berry",
@@ -1346,10 +1510,9 @@
             "tr": ""
           },
           "price": null,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
-          "photo": "",
-          "hidden": false,
           "variants": [
             {
               "amount": 0.5,
@@ -1361,7 +1524,10 @@
               "unit": "l",
               "price": 20
             }
-          ]
+          ],
+          "steps": [],
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "lemonade-fruit",
@@ -1378,10 +1544,9 @@
             "tr": ""
           },
           "price": null,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
-          "photo": "",
-          "hidden": false,
           "variants": [
             {
               "amount": 0.5,
@@ -1393,7 +1558,10 @@
               "unit": "l",
               "price": 20
             }
-          ]
+          ],
+          "steps": [],
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "lemonade-tropical",
@@ -1410,10 +1578,9 @@
             "tr": ""
           },
           "price": null,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
-          "photo": "",
-          "hidden": false,
           "variants": [
             {
               "amount": 0.5,
@@ -1425,7 +1592,10 @@
               "unit": "l",
               "price": 20
             }
-          ]
+          ],
+          "steps": [],
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "lemonade-citrus",
@@ -1442,10 +1612,9 @@
             "tr": ""
           },
           "price": null,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
-          "photo": "",
-          "hidden": false,
           "variants": [
             {
               "amount": 0.5,
@@ -1457,13 +1626,15 @@
               "unit": "l",
               "price": 20
             }
-          ]
+          ],
+          "steps": [],
+          "photo": "",
+          "hidden": false
         }
       ]
     },
     {
       "id": "cold-drinks",
-      "icon": "soda",
       "layout": "list",
       "title": {
         "ru": "Холодные напитки",
@@ -1477,6 +1648,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "soda",
       "items": [
         {
           "id": "coca-cola",
@@ -1493,8 +1665,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1513,8 +1688,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1533,8 +1711,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1553,8 +1734,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1573,8 +1757,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1593,8 +1780,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1613,8 +1803,11 @@
             "tr": ""
           },
           "price": 5,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1633,8 +1826,11 @@
             "tr": ""
           },
           "price": 8,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1653,8 +1849,11 @@
             "tr": ""
           },
           "price": 8,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1673,8 +1872,11 @@
             "tr": ""
           },
           "price": 8,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1682,7 +1884,6 @@
     },
     {
       "id": "tea-classic",
-      "icon": "tea",
       "layout": "list",
       "title": {
         "ru": "Чаи классические",
@@ -1696,6 +1897,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "tea",
       "items": [
         {
           "id": "tea-sencha",
@@ -1712,8 +1914,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1732,8 +1937,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1752,8 +1960,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1772,8 +1983,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1792,8 +2006,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1812,8 +2029,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1832,8 +2052,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1841,7 +2064,6 @@
     },
     {
       "id": "tea-herbal",
-      "icon": "tea",
       "layout": "list",
       "title": {
         "ru": "Чаи травяные",
@@ -1855,6 +2077,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "tea",
       "items": [
         {
           "id": "tea-buckwheat",
@@ -1871,8 +2094,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1891,8 +2117,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1911,8 +2140,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1931,8 +2163,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -1951,8 +2186,11 @@
             "tr": ""
           },
           "price": 15,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -1960,7 +2198,6 @@
     },
     {
       "id": "tea-signature",
-      "icon": "tea",
       "layout": "list",
       "title": {
         "ru": "Чаи фирменные",
@@ -1974,6 +2211,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "tea",
       "items": [
         {
           "id": "tea-forest-tale",
@@ -1990,8 +2228,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2010,8 +2251,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2030,8 +2274,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2050,8 +2297,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2070,8 +2320,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2079,7 +2332,6 @@
     },
     {
       "id": "milkshakes",
-      "icon": "milkshake",
       "layout": "list",
       "title": {
         "ru": "Милкшейки",
@@ -2093,6 +2345,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "milkshake",
       "items": [
         {
           "id": "milkshake-banana",
@@ -2109,8 +2362,11 @@
             "tr": ""
           },
           "price": 18,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2129,8 +2385,11 @@
             "tr": ""
           },
           "price": 18,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2149,8 +2408,11 @@
             "tr": ""
           },
           "price": 18,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2169,8 +2431,11 @@
             "tr": ""
           },
           "price": 18,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
@@ -2178,7 +2443,6 @@
     },
     {
       "id": "protein-shakes",
-      "icon": "milkshake",
       "layout": "list",
       "title": {
         "ru": "Протеиновые шейки",
@@ -2192,6 +2456,7 @@
         "ka": "",
         "tr": ""
       },
+      "icon": "milkshake",
       "items": [
         {
           "id": "protein-vanilla",
@@ -2208,8 +2473,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2228,8 +2496,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         },
@@ -2248,8 +2519,11 @@
             "tr": ""
           },
           "price": 20,
+          "priceFrom": false,
           "amount": null,
           "unit": null,
+          "variants": [],
+          "steps": [],
           "photo": "",
           "hidden": false
         }
