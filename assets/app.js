@@ -85,6 +85,20 @@
     const tab = tabs[currentTab];
     // подпись «Меню» под заголовком — только там, где она уместна (в файле вкладки "menuLabel": false убирает её)
     $("hero").innerHTML = `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
+    fitHero();
+  }
+
+  // длинный заголовок (например «PROMOTIONS») уменьшаем, чтобы он целиком помещался в ширину экрана
+  function fitHero() {
+    const h = $("hero").querySelector("h1");
+    if (!h) return;
+    h.style.fontSize = "";
+    const avail = $("hero").clientWidth - 32;
+    const need = h.scrollWidth;
+    if (need > avail) {
+      const size = parseFloat(getComputedStyle(h).fontSize);
+      h.style.fontSize = Math.floor(size * avail / need) + "px";
+    }
   }
 
   function photoHtml(it, sec) {
@@ -318,6 +332,8 @@
     ["touchstart", "wheel", "keydown"].forEach((ev) => window.addEventListener(ev, unpin, { passive: true }));
 
     window.addEventListener("hashchange", () => setTab(location.hash.slice(1), true));
+    window.addEventListener("resize", fitHero);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero); // шрифт догрузился — пересчитать
 
     const chips = $("chips");
     window.addEventListener("scroll", () => {

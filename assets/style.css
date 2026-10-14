@@ -14,6 +14,8 @@
   --faint: rgba(244,232,216,.12);
   --card: rgba(255,236,214,.045);
   --card-line: rgba(255,226,196,.09);
+  --item-bg: rgba(255,236,214,.009);  /* подложка карточек позиций и акций (почти прозрачная) */
+  --item-line: rgba(255,226,196,.065);
 
   --font: "Noto Sans", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif;
@@ -63,7 +65,7 @@ a { color: inherit; }
 /* ---------- заголовок вкладки ---------- */
 .hero { text-align: center; padding: 26px 16px 14px; }
 .hero h1 {
-  margin: 0; font-family: var(--serif); font-weight: 500;
+  margin: 0; display: inline-block; white-space: nowrap; font-family: var(--serif); font-weight: 500;
   font-size: clamp(38px, 12vw, 56px); line-height: 1; letter-spacing: .14em; text-transform: uppercase;
   padding-left: .14em; /* компенсирует пробел после последней буквы — слово стоит ровно по центру */
 }
@@ -114,7 +116,7 @@ a { color: inherit; }
 .items { display: grid; gap: 8px; }
 .item {
   display: flex; gap: 12px; align-items: center;
-  background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 5px 9px 5px 5px;
+  background: var(--item-bg); border: 1px solid var(--item-line); border-radius: 14px; padding: 5px 9px 5px 5px;
 }
 .photo {
   flex: none; width: var(--photo); height: var(--photo); border-radius: 10px; overflow: hidden;
@@ -150,7 +152,7 @@ button.photo { cursor: zoom-in; }
 .step-options { font-size: 14px; color: var(--muted); }
 
 /* ---------- акции ---------- */
-.promo { display: flex; gap: 14px; align-items: center; background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 16px; }
+.promo { display: flex; gap: 14px; align-items: center; background: var(--item-bg); border: 1px solid var(--item-line); border-radius: var(--radius); padding: 16px; }
 .promo-icon {
   flex: none; width: 48px; height: 48px; border-radius: 14px; color: var(--amber);
   display: grid; place-items: center;

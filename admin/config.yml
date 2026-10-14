@@ -103,6 +103,7 @@ _item_fields: &item_fields
       - *unit
       - { name: price, label: "Цена, ₾", widget: number, value_type: float }
   - { name: photo, label: "Фото", widget: image, required: false }
+  - { name: thumb, widget: hidden }
   - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
 
 # раздел вкладки (Классические коктейли, Пиво…)
@@ -182,6 +183,7 @@ collections:
                       - { name: title, label: "Шаг", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
                       - { name: options, label: "Варианты", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
                   - { name: photo, label: "Фото", widget: image, required: false }
+                  - { name: thumb, widget: hidden }
                   - { name: hidden, label: "Скрыть с сайта (закончилось)", widget: boolean, default: false, required: false }
 
       - name: snacks
