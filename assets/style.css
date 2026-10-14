@@ -18,7 +18,7 @@
   --font: "Noto Sans", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif;
   --radius: 18px;
-  --photo: 92px;
+  --photo: 64px;
   --tabbar-h: 66px;
 }
 /* ========================================================================== */
@@ -111,13 +111,13 @@ a { color: inherit; }
 .section-note { margin: -6px 0 14px; font-size: 13.5px; color: var(--muted); }
 
 /* ---------- карточка позиции ---------- */
-.items { display: grid; gap: 10px; }
+.items { display: grid; gap: 8px; }
 .item {
-  display: flex; gap: 14px; align-items: center;
-  background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 12px;
+  display: flex; gap: 12px; align-items: center;
+  background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 5px 9px 5px 5px;
 }
 .photo {
-  flex: none; width: var(--photo); height: var(--photo); border-radius: 14px; overflow: hidden;
+  flex: none; width: var(--photo); height: var(--photo); border-radius: 10px; overflow: hidden;
   display: grid; place-items: center; color: var(--amber);
   background: radial-gradient(circle at 30% 25%, rgba(233,168,90,.22), transparent 60%),
               linear-gradient(145deg, rgba(110,33,25,.55), rgba(74,42,26,.45));
@@ -126,14 +126,14 @@ a { color: inherit; }
 .photo svg { width: 40%; height: 40%; opacity: .75; }
 .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 button.photo { cursor: zoom-in; }
-.item-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.item-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; padding-right: 4px; }
 .item-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-.item-name { font-size: 17px; font-weight: 500; line-height: 1.25; }
-.item-price { flex: none; font-size: 17px; font-weight: 600; color: var(--amber); white-space: nowrap; }
-.item-desc { font-size: 14px; color: var(--muted); }
-.item-amount { font-size: 13px; color: var(--muted); }
+.item-name { font-size: 15.5px; font-weight: 500; line-height: 1.25; }
+.item-price { flex: none; font-size: 15.5px; font-weight: 600; color: var(--amber); white-space: nowrap; }
+.item-desc { font-size: 13px; line-height: 1.35; color: var(--muted); }
+.item-amount { font-size: 12px; color: var(--muted); }
 .variants { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-.variant { display: inline-flex; gap: 8px; align-items: baseline; padding: 6px 11px; border-radius: 11px; background: var(--faint); font-size: 14px; }
+.variant { display: inline-flex; gap: 6px; align-items: baseline; padding: 3px 9px; border-radius: 9px; background: var(--faint); font-size: 13px; }
 .variant b { color: var(--amber); font-weight: 600; }
 
 /* ---------- конструктор коктейля ---------- */
@@ -264,7 +264,7 @@ button.photo { cursor: zoom-in; }
 }
 
 @media (min-width: 600px) {
-  :root { --photo: 108px; }
+  :root { --photo: 76px; }
 }
 .chips-wrap[hidden] { display: none; }
 
