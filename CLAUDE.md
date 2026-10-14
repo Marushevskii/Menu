@@ -42,4 +42,9 @@
 OAuth-посредника не работает). Редактор правит `data/hookah|bar|snacks|promo.json`, `data/settings.json`
 (Wi-Fi, соцсети), `data/ui.json` (тексты). Технические настройки — `data/site.json` (в админке их нет).
 Фото из админки → `photos/` (WebP, до 1400 px). При переезде на другой аккаунт — поменять `repo` в config.yml.
-Ждём: проверку турецкого, ссылки соцсетей. Далее этап 4 (автоперевод: GitHub Action + Google API).
+**Этап 4 (14.10.2026):** `.github/workflows/publish.yml` — на каждый push в main: `tools/translate.py`
+(сравнивает с `github.event.before`, переводит только изменённые RU-поля через Google Translate v2,
+format=html, ключ — секрет `GOOGLE_TRANSLATE_KEY`), коммитит переводы, деплоит Pages (источник Pages —
+**GitHub Actions**). Метка `"auto": "🔄 изменено"` в языковом объекте, видна в сводках админки, сайт её
+игнорирует. Словарь «не переводить» — `data/glossary.json`. Проверка без Google: `python tools/translate.py --base HEAD --fake`.
+Ждём: проверку турецкого, ссылки соцсетей. Далее этап 5 (пакетная загрузка фото).

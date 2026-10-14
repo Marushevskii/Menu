@@ -1,0 +1,275 @@
+{
+  "_comment": "Слова, которые машинный перевод не трогает: подставляется готовый вариант для каждого языка. Длинные фразы проверяются раньше коротких.",
+  "terms": [
+    {
+      "ru": "AIR LOUNGE & BAR",
+      "en": "AIR LOUNGE & BAR",
+      "ka": "AIR LOUNGE & BAR",
+      "tr": "AIR LOUNGE & BAR"
+    },
+    {
+      "ru": "Швепс",
+      "en": "Schweppes",
+      "ka": "შვეპსი",
+      "tr": "Schweppes"
+    },
+    {
+      "ru": "Кампари",
+      "en": "Campari",
+      "ka": "კამპარი",
+      "tr": "Campari"
+    },
+    {
+      "ru": "Апероль",
+      "en": "Aperol",
+      "ka": "აპეროლი",
+      "tr": "Aperol"
+    },
+    {
+      "ru": "Мартини Россо",
+      "en": "Martini Rosso",
+      "ka": "მარტინი როსო",
+      "tr": "Martini Rosso"
+    },
+    {
+      "ru": "Мартини",
+      "en": "Martini",
+      "ka": "მარტინი",
+      "tr": "Martini"
+    },
+    {
+      "ru": "Егермейстер",
+      "en": "Jägermeister",
+      "ka": "იაგერმაისტერი",
+      "tr": "Jägermeister"
+    },
+    {
+      "ru": "Лимончелло",
+      "en": "limoncello",
+      "ka": "ლიმონჩელო",
+      "tr": "limoncello"
+    },
+    {
+      "ru": "трипл сек",
+      "en": "triple sec",
+      "ka": "ტრიპლ სეკი",
+      "tr": "triple sec"
+    },
+    {
+      "ru": "блю кюрасао",
+      "en": "Blue Curaçao",
+      "ka": "ბლუ კიურასაო",
+      "tr": "Blue Curaçao"
+    },
+    {
+      "ru": "ликёр Адвокат",
+      "en": "Advocaat liqueur",
+      "ka": "ადვოკაატის ლიქიორი",
+      "tr": "Advocaat likörü"
+    },
+    {
+      "ru": "Сникерс",
+      "en": "Snickers",
+      "ka": "სნიკერსი",
+      "tr": "Snickers"
+    },
+    {
+      "ru": "Кока-Кола Зеро",
+      "en": "Coca-Cola Zero",
+      "ka": "კოკა-კოლა ზერო",
+      "tr": "Coca-Cola Zero"
+    },
+    {
+      "ru": "Кока-Кола",
+      "en": "Coca-Cola",
+      "ka": "კოკა-კოლა",
+      "tr": "Coca-Cola"
+    },
+    {
+      "ru": "Фанта",
+      "en": "Fanta",
+      "ka": "ფანტა",
+      "tr": "Fanta"
+    },
+    {
+      "ru": "Спрайт",
+      "en": "Sprite",
+      "ka": "სპრაიტი",
+      "tr": "Sprite"
+    },
+    {
+      "ru": "CHILLZ",
+      "en": "CHILLZ",
+      "ka": "CHILLZ",
+      "tr": "CHILLZ"
+    },
+    {
+      "ru": "Яндекс Карты",
+      "en": "Yandex Maps",
+      "ka": "Yandex-ის რუკები",
+      "tr": "Yandex Haritalar"
+    },
+    {
+      "ru": "Instagram",
+      "en": "Instagram",
+      "ka": "Instagram",
+      "tr": "Instagram"
+    },
+    {
+      "ru": "Telegram",
+      "en": "Telegram",
+      "ka": "Telegram",
+      "tr": "Telegram"
+    },
+    {
+      "ru": "Пина Колада",
+      "en": "Piña Colada",
+      "ka": "პინა კოლადა",
+      "tr": "Piña Colada"
+    },
+    {
+      "ru": "Джин Тоник",
+      "en": "Gin & Tonic",
+      "ka": "ჯინ-ტონიკი",
+      "tr": "Cin Tonik"
+    },
+    {
+      "ru": "Лонг Айленд",
+      "en": "Long Island",
+      "ka": "ლონგ აილენდი",
+      "tr": "Long Island"
+    },
+    {
+      "ru": "Куба Либре",
+      "en": "Cuba Libre",
+      "ka": "კუბა ლიბრე",
+      "tr": "Cuba Libre"
+    },
+    {
+      "ru": "Маргарита",
+      "en": "Margarita",
+      "ka": "მარგარიტა",
+      "tr": "Margarita"
+    },
+    {
+      "ru": "Май Тай",
+      "en": "Mai Tai",
+      "ka": "მაი თაი",
+      "tr": "Mai Tai"
+    },
+    {
+      "ru": "Негрони",
+      "en": "Negroni",
+      "ka": "ნეგრონი",
+      "tr": "Negroni"
+    },
+    {
+      "ru": "Текила Санрайз",
+      "en": "Tequila Sunrise",
+      "ka": "ტეკილა სანრაიზი",
+      "tr": "Tequila Sunrise"
+    },
+    {
+      "ru": "Белый русский",
+      "en": "White Russian",
+      "ka": "თეთრი რუსი",
+      "tr": "White Russian"
+    },
+    {
+      "ru": "Олд фешн",
+      "en": "Old Fashioned",
+      "ka": "ოლდ ფეშენი",
+      "tr": "Old Fashioned"
+    },
+    {
+      "ru": "Виски сауэр",
+      "en": "Whiskey Sour",
+      "ka": "ვისკი საუერი",
+      "tr": "Whiskey Sour"
+    },
+    {
+      "ru": "Лимон Дроп",
+      "en": "Lemon Drop",
+      "ka": "ლემონ დროპი",
+      "tr": "Lemon Drop"
+    },
+    {
+      "ru": "Бульвардье",
+      "en": "Boulevardier",
+      "ka": "ბულვარდიე",
+      "tr": "Boulevardier"
+    },
+    {
+      "ru": "Секс на пляже",
+      "en": "Sex on the Beach",
+      "ka": "სექსი პლაჟზე",
+      "tr": "Sex on the Beach"
+    },
+    {
+      "ru": "Порн стар мартини",
+      "en": "Pornstar Martini",
+      "ka": "პორნსტარ მარტინი",
+      "tr": "Pornstar Martini"
+    },
+    {
+      "ru": "Эспрессо мартини",
+      "en": "Espresso Martini",
+      "ka": "ესპრესო მარტინი",
+      "tr": "Espresso Martini"
+    },
+    {
+      "ru": "Апероль Шприц",
+      "en": "Aperol Spritz",
+      "ka": "აპეროლ სპრიცი",
+      "tr": "Aperol Spritz"
+    },
+    {
+      "ru": "Лимончелло Шприц",
+      "en": "Limoncello Spritz",
+      "ka": "ლიმონჩელო სპრიცი",
+      "tr": "Limoncello Spritz"
+    },
+    {
+      "ru": "Киндзмараули",
+      "en": "Kindzmarauli",
+      "ka": "ქინძმარაული",
+      "tr": "Kindzmarauli"
+    },
+    {
+      "ru": "Саперави",
+      "en": "Saperavi",
+      "ka": "საფერავი",
+      "tr": "Saperavi"
+    },
+    {
+      "ru": "Цинандали",
+      "en": "Tsinandali",
+      "ka": "წინანდალი",
+      "tr": "Tsinandali"
+    },
+    {
+      "ru": "Киси",
+      "en": "Kisi",
+      "ka": "ქისი",
+      "tr": "Kisi"
+    },
+    {
+      "ru": "биттер",
+      "en": "bitters",
+      "ka": "ბიტერი",
+      "tr": "bitter"
+    },
+    {
+      "ru": "Квас",
+      "en": "kvass",
+      "ka": "კვასი",
+      "tr": "kvas"
+    },
+    {
+      "ru": "Медовуха",
+      "en": "Mead",
+      "ka": "მედოვუხა",
+      "tr": "Bal şarabı"
+    }
+  ]
+}

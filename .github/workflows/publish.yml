@@ -1,0 +1,71 @@
+# Публикация сайта: при каждом сохранении (из админки или от Claude)
+# 1) переводит изменённые русские тексты на EN/KA/TR (tools/translate.py),
+# 2) сохраняет переводы в репозиторий,
+# 3) выкладывает сайт на GitHub Pages.
+name: Публикация
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      fill_empty:
+        description: "Заполнить все пустые переводы во всём меню"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Автоперевод
+        env:
+          GOOGLE_TRANSLATE_KEY: ${{ secrets.GOOGLE_TRANSLATE_KEY }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "${{ inputs.fill_empty }}" = "true" ]; then
+            python tools/translate.py --fill-empty
+          elif [ -n "$BEFORE" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            python tools/translate.py --base "$BEFORE"
+          else
+            python tools/translate.py --base HEAD~1
+          fi
+
+      - name: Сохранить переводы
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "Автоперевод"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data
+            git commit -m "Автоперевод: EN / KA / TR"
+            git pull --rebase
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
