@@ -44,12 +44,12 @@ a { color: inherit; }
 .bg {
   position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: -1;
   /* два слоя: сверху тонкие линии (вектор — всегда чёткие), под ними картинка с дымкой и складками */
-  background: url("bg-lines.svg?v=5") center top / cover no-repeat,
-              url("bg.webp?v=5") center top / cover no-repeat var(--bg);
+  background: url("bg-lines.svg?v=6") center top / cover no-repeat,
+              url("bg.webp?v=6") center top / cover no-repeat var(--bg);
   transform: translateZ(0);
 }
 /* на широких экранах (компьютер) — отдельная горизонтальная картинка, чтобы не растягивать телефонную */
-@media (min-aspect-ratio: 1/1) { .bg { background-image: url("bg-wide-lines.svg?v=5"), url("bg-wide.webp?v=5"); background-position: center, center; } }
+@media (min-aspect-ratio: 1/1) { .bg { background-image: url("bg-wide-lines.svg?v=6"), url("bg-wide.webp?v=6"); background-position: center, center; } }
 
 /* ---------- шапка ---------- */
 .topbar {

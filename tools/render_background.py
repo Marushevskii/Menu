@@ -1,6 +1,6 @@
 """Рисует фон сайта (дымка + шёлковые волны + зерно) в готовые картинки:
-  assets/bg.webp       — вертикальная, для телефонов (1440×2880)
-  assets/bg-wide.webp  — горизонтальная, для компьютеров (2560×1440)
+  assets/bg.webp       — вертикальная, для телефонов (1080×2160)
+  assets/bg-wide.webp  — горизонтальная, для компьютеров (1920×1080)
 
 Зачем: если рисовать это прямо на странице (SVG-фильтры, размытие, анимация),
 iPhone тормозит. Готовая картинка показывается мгновенно.
@@ -97,11 +97,18 @@ def render(W, H, out):
     # тонкая яркая линия рассыпается «лесенкой», а вектор телефон рисует идеально ровно
 
     # ---------- зерно: прячет «ступеньки» в плавных переходах ----------
-    rng = np.random.default_rng(7)
-    img += rng.normal(0, 2.0, (H, W, 1)).astype(np.float32)
+    # Сжатие БЕЗ потерь + упорядоченное сглаживание (матрица Байера 8×8): плавные тёмные переходы
+    # не превращаются ни в квадраты (как при обычном сжатии), ни в ступеньки (как без сглаживания).
+    b2 = np.array([[0, 2], [3, 1]])
+    bayer = b2
+    for _ in range(2):
+        bayer = np.block([[4 * bayer, 4 * bayer + 2], [4 * bayer + 3, 4 * bayer + 1]])
+    bayer = (bayer + 0.5) / 64 - 0.5                       # от −0,5 до +0,5 оттенка
+    dither = np.tile(bayer, (H // 8 + 1, W // 8 + 1))[:H, :W, None]
+    out_img = np.clip(np.floor(img + 0.5 + dither), 0, 255).astype(np.uint8)
 
     path_out = os.path.join(ASSETS, out)
-    Image.fromarray(np.clip(np.round(img), 0, 255).astype(np.uint8)).save(path_out, "WEBP", quality=86, method=6)
+    Image.fromarray(out_img).save(path_out, "WEBP", lossless=True, quality=100, method=6)
     print("saved", out, f"{W}x{H}", os.path.getsize(path_out) // 1024, "KB")
     write_lines(W, H, out.replace(".webp", "-lines.svg"))
 
@@ -145,5 +152,5 @@ def write_lines(W, H, out):
 
 
 if __name__ == "__main__":
-    render(1440, 2880, "bg.webp")
-    render(2560, 1440, "bg-wide.webp")
+    render(1080, 2160, "bg.webp")
+    render(1920, 1080, "bg-wide.webp")
