@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2880" viewBox="0 0 1440 2880">
+<defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1440" y2="0">
+<stop offset="0" stop-color="#ece8e0" stop-opacity="0"/><stop offset=".3" stop-color="#e8e2d6" stop-opacity=".95"/>
+<stop offset=".7" stop-color="#ddd3c3" stop-opacity=".6"/><stop offset="1" stop-color="#d6cab6" stop-opacity="0"/>
+</linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-linecap="round">
+<path d="M1620.0 252.0 C1224.0 540.0 1152.0 1080.0 648.0 1242.0 S-36.0 1188.0 -216.0 1656.0" stroke-width="3.60" stroke-opacity="0.160"/>
+<path d="M1620.0 284.4 C1224.0 572.4 1152.0 1112.4 648.0 1274.4 S-36.0 1220.4 -216.0 1688.4" stroke-width="2.16" stroke-opacity="0.110"/>
+<path d="M1620.0 324.0 C1224.0 612.0 1152.0 1152.0 648.0 1314.0 S-36.0 1260.0 -216.0 1728.0" stroke-width="1.80" stroke-opacity="0.075"/>
+<path d="M-216.0 1962.0 C180.0 1782.0 504.0 2268.0 882.0 2340.0 S1386.0 2106.0 1692.0 2484.0" stroke-width="4.68" stroke-opacity="0.375"/>
+<path d="M-216.0 1990.8 C180.0 1810.8 504.0 2296.8 882.0 2368.8 S1386.0 2134.8 1692.0 2512.8" stroke-width="2.88" stroke-opacity="0.250"/>
+<path d="M-216.0 2026.8 C180.0 1846.8 504.0 2332.8 882.0 2404.8 S1386.0 2170.8 1692.0 2548.8" stroke-width="2.16" stroke-opacity="0.175"/>
+<path d="M-216.0 2073.6 C180.0 1893.6 504.0 2379.6 882.0 2451.6 S1386.0 2217.6 1692.0 2595.6" stroke-width="1.44" stroke-opacity="0.125"/>
+<path d="M540.0 3132.0 C864.0 2772.0 1152.0 2574.0 1692.0 2646.0" stroke-width="3.60" stroke-opacity="0.275"/>
+<path d="M540.0 3168.0 C864.0 2808.0 1152.0 2610.0 1692.0 2682.0" stroke-width="2.16" stroke-opacity="0.175"/>
+</g></svg>

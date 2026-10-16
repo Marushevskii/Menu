@@ -93,10 +93,8 @@ def render(W, H, out):
         over("#8f8576", SILK * op * band_fade * stroke(WAVES[k], w, 16))
     for k, w, op, dy in (("w1", 6, .12, -14), ("w2", 8, .4, -18)):                    # блик вдоль складки
         over(line_color, SILK * op * line_fade * stroke(WAVES[k], w, 4, dy))
-    for k, w, op, dy in (("w1", 1, .32, 0), ("w1", .6, .22, 9), ("w1", .5, .15, 20),  # тонкие линии
-                         ("w2", 1.3, .75, 0), ("w2", .8, .5, 8), ("w2", .6, .35, 18), ("w2", .4, .25, 31),
-                         ("w3", 1, .55, 0), ("w3", .6, .35, 10)):
-        over(line_color, SILK * op * line_fade * stroke(WAVES[k], w, .5, dy))
+    # тонкие линии рисуются не здесь, а векторно (SVG) — см. write_lines(): в сжатой картинке
+    # тонкая яркая линия рассыпается «лесенкой», а вектор телефон рисует идеально ровно
 
     # ---------- зерно: прячет «ступеньки» в плавных переходах ----------
     rng = np.random.default_rng(7)
@@ -105,6 +103,45 @@ def render(W, H, out):
     path_out = os.path.join(ASSETS, out)
     Image.fromarray(np.clip(np.round(img), 0, 255).astype(np.uint8)).save(path_out, "WEBP", quality=86, method=6)
     print("saved", out, f"{W}x{H}", os.path.getsize(path_out) // 1024, "KB")
+    write_lines(W, H, out.replace(".webp", "-lines.svg"))
+
+
+LINES = (("w1", 1, .32, 0), ("w1", .6, .22, 9), ("w1", .5, .15, 20),
+         ("w2", 1.3, .75, 0), ("w2", .8, .5, 8), ("w2", .6, .35, 18), ("w2", .4, .25, 31),
+         ("w3", 1, .55, 0), ("w3", .6, .35, 10))
+LINE_DEFS = {"w1": "M450 70 C 340 150, 320 300, 180 345 S -10 330, -60 460",
+             "w2": "M-60 545 C 50 495, 140 630, 245 650 S 385 585, 470 690",
+             "w3": "M150 870 C 240 770, 320 715, 470 735"}
+
+
+def write_lines(W, H, out):
+    """Тонкие светящиеся линии — векторный слой того же размера, что и картинка (накладывается поверх)."""
+    sx, sy = W / 400, H / 800
+    S = (sx * sy) ** 0.5
+
+    def scaled(d, dy):
+        nums = [float(v) for v in d.replace("M", " ").replace("C", " ").replace("S", " ").replace(",", " ").split()]
+        p = [(nums[i] * sx, (nums[i + 1] + dy) * sy) for i in range(0, len(nums), 2)]
+        f = lambda q: f"{q[0]:.1f} {q[1]:.1f}"
+        txt = f"M{f(p[0])} C{f(p[1])} {f(p[2])} {f(p[3])}"
+        if len(p) > 4:
+            txt += f" S{f(p[4])} {f(p[5])}"
+        return txt
+
+    paths = "\n".join(
+        f'<path d="{scaled(LINE_DEFS[k], dy)}" stroke-width="{max(.8, w * S):.2f}" stroke-opacity="{SILK * op:.3f}"/>'
+        for k, w, op, dy in LINES)
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="0">
+<stop offset="0" stop-color="#ece8e0" stop-opacity="0"/><stop offset=".3" stop-color="#e8e2d6" stop-opacity=".95"/>
+<stop offset=".7" stop-color="#ddd3c3" stop-opacity=".6"/><stop offset="1" stop-color="#d6cab6" stop-opacity="0"/>
+</linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-linecap="round">
+{paths}
+</g></svg>'''
+    with open(os.path.join(ASSETS, out), "w", encoding="utf-8") as fh:
+        fh.write(svg)
+    print("saved", out)
 
 
 if __name__ == "__main__":
