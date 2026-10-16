@@ -1,5 +1,6 @@
 {
   "name": "AIR LOUNGE & BAR",
+  "showPhotos": false,
   "wifi": {
     "show": true,
     "name": "AirLounge",

@@ -101,7 +101,11 @@
     }
   }
 
+  // «Показывать фото позиций» выключено в админке — карточки без фото (классический вид меню)
+  const photosOn = () => settings.showPhotos !== false;
+
   function photoHtml(it, sec) {
+    if (!photosOn()) return "";
     if (it.photo) {
       return `<button class="photo" type="button" data-photo="${esc(src(it.photo))}" data-caption="${esc(t(it.name))}" aria-label="${esc(t(it.name))}">
         <img src="${esc(src(it.thumb || it.photo))}" alt="" decoding="async"></button>`;
@@ -121,7 +125,7 @@
     return `<article class="item">
       ${photoHtml(it, sec)}
       <div class="item-body">
-        <div class="item-head"><div class="item-name">${esc(t(it.name))}</div>${price ? `<div class="item-price">${esc(price)}</div>` : ""}</div>
+        <div class="item-head"><div class="item-name">${esc(t(it.name))}</div>${price ? `<span class="lead"></span><div class="item-price">${esc(price)}</div>` : ""}</div>
         ${desc ? `<div class="item-desc">${esc(desc)}</div>` : ""}
         ${amt ? `<div class="item-amount">${esc(amt)}</div>` : ""}
         ${variants}
@@ -227,6 +231,7 @@
 
   function renderAll() {
     document.documentElement.lang = lang;
+    document.body.classList.toggle("no-photos", !photosOn());
     document.title = u("pageTitle");
     $("brand").textContent = settings.name;
     $("viewerClose").setAttribute("aria-label", u("close"));

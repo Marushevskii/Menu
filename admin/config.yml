@@ -240,6 +240,7 @@ collections:
         file: data/settings.json
         fields:
           - { name: name, label: "Название заведения (в шапке)", widget: string }
+          - { name: showPhotos, label: "Показывать фото позиций (выключено — классический вид меню без фото)", widget: boolean, default: true }
           - name: wifi
             label: "Wi-Fi"
             widget: object

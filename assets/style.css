@@ -1,21 +1,23 @@
 /* ==========================================================================
    ВСЕ ЦВЕТА И ШРИФТЫ — ЗДЕСЬ. Чтобы сменить стиль сайта, меняйте только этот блок.
-   Палитра взята из интерьера: винно-красные стены, тёплые лампы, дерево, светлые диваны.
+   Палитра «Warm Graphite» (графит + тёплый серо-бежевый). Фон-картинка — assets/bg.webp.
    ========================================================================== */
 :root {
-  --bg: #150b08;              /* самый тёмный фон (тёмный шоколад) */
-  --wine: #6e2119;            /* винно-красный, как стены */
-  --terracotta: #9a3a22;      /* тёплый красный */
-  --amber: #e9a85a;           /* свет ламп — акцент, цены */
-  --amber-soft: rgba(233,168,90,.14);
-  --wood: #5a3420;            /* дерево, коричневый */
-  --text: #f4e8d8;            /* кремовый, как диваны */
-  --muted: rgba(244,232,216,.62);
-  --faint: rgba(244,232,216,.12);
-  --card: rgba(255,236,214,.045);
-  --card-line: rgba(255,226,196,.09);
-  --item-bg: rgba(255,236,214,.009);  /* подложка карточек позиций и акций (почти прозрачная) */
-  --item-line: rgba(255,226,196,.065);
+  /* Палитра «Warm Graphite»: графит + тёплый серо-бежевый. Текст белый. */
+  --bg: #232323;              /* основной фон (#252525 из палитры, чуть глубже) */
+  --wine: #41403e;            /* карточки / тёплый графит */
+  --terracotta: #5a5650;      /* светлее графита */
+  --amber: #c5bbaa;           /* светлый акцент: цены, активные надписи */
+  --accent: #a99d8b;          /* акцент палитры: активная кнопка, линии */
+  --amber-soft: rgba(169,157,139,.14);
+  --wood: #303030;            /* вторичный фон */
+  --text: #f7f6f3;            /* текст — белый */
+  --muted: rgba(255,255,255,.62);
+  --faint: rgba(255,255,255,.12);
+  --card: rgba(255,255,255,.045);
+  --card-line: rgba(255,255,255,.09);
+  --item-bg: rgba(255,255,255,.009);  /* подложка карточек позиций и акций (почти прозрачная) */
+  --item-line: rgba(255,255,255,.065);
 
   --font: "Noto Sans", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif;
@@ -41,7 +43,7 @@ a { color: inherit; }
    100lvh — высота экрана, когда панель Safari спрятана, чтобы снизу не было пустой полосы. */
 .bg {
   position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: -1;
-  background: var(--bg) url("bg.webp") center top / cover no-repeat;
+  background: var(--bg) url("bg.webp?v=2") center top / cover no-repeat;
   transform: translateZ(0);
 }
 
@@ -87,7 +89,7 @@ a { color: inherit; }
 .chips-bg {
   position: absolute; inset: 0; pointer-events: none;
   opacity: var(--stuck, 0);
-  background: rgba(21,11,8,.72);
+  background: rgba(35,35,35,.72);
   -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3);
   box-shadow: 0 1px 0 var(--faint);
 }
@@ -100,7 +102,7 @@ a { color: inherit; }
   background: var(--card); border: 1px solid var(--card-line);
   font-size: 14px; color: var(--muted); white-space: nowrap; transition: all .2s;
 }
-.chip.active { color: var(--bg); background: var(--amber); border-color: var(--amber); font-weight: 600; }
+.chip.active { color: #1d1d1d; background: var(--accent); border-color: var(--accent); font-weight: 600; }
 
 /* ---------- разделы ---------- */
 .content { padding: 0 16px 8px; max-width: 720px; margin: 0 auto; }
@@ -109,7 +111,7 @@ a { color: inherit; }
   display: flex; align-items: center; gap: 14px; margin: 0 0 14px;
   font-family: var(--serif); font-weight: 600; font-size: 24px; line-height: 1.15; letter-spacing: .06em; color: var(--text);
 }
-.section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(233,168,90,.5), transparent); }
+.section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(169,157,139,.5), transparent); }
 .section-note { margin: -6px 0 14px; font-size: 13.5px; color: var(--muted); }
 
 /* ---------- карточка позиции ---------- */
@@ -121,9 +123,9 @@ a { color: inherit; }
 .photo {
   flex: none; width: var(--photo); height: var(--photo); border-radius: 10px; overflow: hidden;
   display: grid; place-items: center; color: var(--amber);
-  background: radial-gradient(circle at 30% 25%, rgba(233,168,90,.22), transparent 60%),
-              linear-gradient(145deg, rgba(110,33,25,.55), rgba(74,42,26,.45));
-  border: 1px solid rgba(233,168,90,.14);
+  background: radial-gradient(circle at 30% 25%, rgba(169,157,139,.22), transparent 60%),
+              linear-gradient(145deg, rgba(65,64,62,.55), rgba(48,48,48,.45));
+  border: 1px solid rgba(169,157,139,.14);
 }
 .photo svg { width: 40%; height: 40%; opacity: .75; }
 .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -145,7 +147,7 @@ button.photo { cursor: zoom-in; }
 .step { display: flex; gap: 12px; align-items: center; }
 .step-num {
   flex: none; width: 28px; height: 28px; border-radius: 50%;
-  border: 1px solid rgba(233,168,90,.5); color: var(--amber);
+  border: 1px solid rgba(169,157,139,.5); color: var(--amber);
   display: grid; place-items: center; font-size: 13px; font-weight: 600;
 }
 .step-title { font-weight: 500; font-size: 15px; }
@@ -156,7 +158,7 @@ button.photo { cursor: zoom-in; }
 .promo-icon {
   flex: none; width: 48px; height: 48px; border-radius: 14px; color: var(--amber);
   display: grid; place-items: center;
-  background: linear-gradient(145deg, rgba(110,33,25,.6), rgba(74,42,26,.5)); border: 1px solid rgba(233,168,90,.18);
+  background: linear-gradient(145deg, rgba(65,64,62,.6), rgba(48,48,48,.5)); border: 1px solid rgba(169,157,139,.18);
 }
 .promo-icon svg { width: 24px; height: 24px; }
 .promo-title { font-weight: 500; font-size: 17px; margin-bottom: 4px; }
@@ -186,7 +188,7 @@ button.photo { cursor: zoom-in; }
   max-width: 520px; margin: 0 auto; height: var(--tabbar-h);
   border-radius: 999px; padding: 6px;
   /* само стекло: размытие + усиление цвета того, что под ним */
-  background: linear-gradient(180deg, rgba(255,240,225,.13), rgba(255,240,225,.05));
+  background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.05));
   -webkit-backdrop-filter: blur(22px) saturate(1.8) brightness(1.05);
   backdrop-filter: blur(22px) saturate(1.8) brightness(1.05);
   /* блики по краю и мягкая тень */
@@ -224,17 +226,17 @@ button.photo { cursor: zoom-in; }
   border-radius: 999px;
   transform: translateX(calc(100% * var(--i, 0)));
   transition: transform .5s cubic-bezier(.32,1.35,.45,1);
-  background: linear-gradient(180deg, rgba(255,245,235,.20), rgba(255,245,235,.07));
+  background: linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.07));
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.45),
     inset 0 0 0 1px rgba(255,255,255,.14),
-    inset 0 -6px 12px -6px rgba(233,168,90,.35),
+    inset 0 -6px 12px -6px rgba(169,157,139,.35),
     0 4px 14px rgba(0,0,0,.25);
 }
 
 /* ---------- просмотр фото ---------- */
 .viewer {
-  position: fixed; inset: 0; z-index: 50; background: rgba(10,4,3,.9);
+  position: fixed; inset: 0; z-index: 50; background: rgba(12,12,12,.9);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px;
 }
@@ -276,3 +278,15 @@ button.photo { cursor: zoom-in; }
 .hero.single { padding-bottom: 0; }
 .hero.single::after { display: none; }
 .hero.single + .chips-wrap + .content > .section:first-child { padding-top: 10px; }
+
+/* ---------- вид без фото (галочка «Показывать фото позиций» выключена) ----------
+   название — пунктир — цена, как в классическом меню; состав ниже */
+.lead { display: none; }
+.no-photos .item { padding: 11px 14px; }
+.no-photos .item-body { padding-right: 0; gap: 3px; }
+.no-photos .item-head { align-items: baseline; gap: 0; }
+.no-photos .item-name { flex: 0 1 auto; }
+.no-photos .lead {
+  display: block; flex: 1 1 24px; min-width: 24px; margin: 0 8px;
+  border-bottom: 1px dotted rgba(169,157,139,.35); transform: translateY(-4px);
+}
