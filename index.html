@@ -11,14 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans:wght@400;500;600&family=Noto+Sans+Georgian:wght@400;500;600&family=Noto+Serif+Georgian:wght@500;600&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/bg.webp?v=6" as="image" media="(max-aspect-ratio: 1/1)">
   <link rel="preload" href="assets/bg-wide.webp?v=6" as="image" media="(min-aspect-ratio: 1/1)">
-  <link rel="stylesheet" href="assets/style.css?v=26">
+  <link rel="stylesheet" href="assets/style.css?v=29">
 </head>
 <body>
   <!-- фон: готовая картинка assets/bg.webp (рисует tools/render_background.py) -->
   <div class="bg" aria-hidden="true"></div>
 
   <header class="topbar">
-    <div class="brand" id="brand">AIR LOUNGE & BAR</div>
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name" id="brand">AIR LOUNGE & BAR</span></div>
     <nav class="langs" id="langs" aria-label="Language"></nav>
   </header>
 
@@ -52,6 +52,6 @@
 
   <div class="loading" id="loading"><span>AIR LOUNGE & BAR</span></div>
 
-  <script src="assets/app.js?v=26"></script>
+  <script src="assets/app.js?v=29"></script>
 </body>
 </html>
