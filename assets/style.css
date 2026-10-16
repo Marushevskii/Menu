@@ -266,7 +266,14 @@ button.photo { cursor: zoom-in; }
   position: fixed; inset: 0; z-index: 60; background: var(--bg);
   display: grid; place-items: center; transition: opacity .5s;
 }
-.loading span { font-family: var(--serif); font-size: 22px; letter-spacing: .3em; color: var(--amber); }
+.loading-box { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+/* большой значок пламени над названием, того же цвета */
+.loading-mark {
+  display: block; width: 66px; height: 92px; background: var(--amber);
+  -webkit-mask: url("flame-big.png?v=1") center / contain no-repeat; mask: url("flame-big.png?v=1") center / contain no-repeat;
+}
+/* padding-left = letter-spacing: иначе последний пробел-разрядка сдвигает надпись влево */
+.loading span { font-family: var(--serif); font-size: 22px; letter-spacing: .3em; padding-left: .3em; color: var(--amber); white-space: nowrap; }
 .loading.done { opacity: 0; pointer-events: none; }
 
 /* ---------- появление при смене вкладки ---------- */
