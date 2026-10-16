@@ -56,14 +56,14 @@ a { color: inherit; }
   display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;
   padding: calc(14px + env(safe-area-inset-top)) 10px 6px 16px;
 }
-/* низ значка и низ букв — на уровне чёрточки под выбранным языком (она в 7px от низа кнопки) */
-.brand { display: flex; align-items: flex-end; gap: 9px; min-width: 0; padding-bottom: 7px; }
+/* низ букв названия — на одной линии с низом букв RU EN GE TR; значок — по центру высоты букв */
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; padding-bottom: 3.25px; }
 /* значок пламени из логотипа; цвет берётся из текста (маска), картинка — assets/flame.png */
 .brand-mark {
-  flex: none; width: 25px; height: 34px; background: currentColor;
+  flex: none; width: 25px; height: 34px; background: currentColor; transform: translateY(-.7px);
   -webkit-mask: url("flame.png?v=1") center / contain no-repeat; mask: url("flame.png?v=1") center / contain no-repeat;
 }
-.brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; transform: translateY(3px); /* нижняя линия букв — на уровне низа значка */ white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .langs { display: flex; flex: none; }
 .langs button {
   position: relative; min-width: 31px; height: 40px;
