@@ -63,6 +63,7 @@ a { color: inherit; }
   flex: none; width: 25px; height: 34px; background: currentColor; transform: translateY(-.7px);
   -webkit-mask: url("flame.png?v=1") center / contain no-repeat; mask: url("flame.png?v=1") center / contain no-repeat;
 }
+.brand-name .amp { margin: 0 .16em 0 .118em; }
 .brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .langs { display: flex; flex: none; }
 .langs button {

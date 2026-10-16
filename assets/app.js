@@ -233,7 +233,8 @@
     document.documentElement.lang = lang;
     document.body.classList.toggle("no-photos", !photosOn());
     document.title = u("pageTitle");
-    $("brand").textContent = settings.name;
+    // «&» в названии стоит ближе к соседним словам (пробелы вокруг него вдвое уже)
+    $("brand").innerHTML = esc(settings.name).replace(/ &amp; /g, '<span class="amp">&amp;</span>');
     $("viewerClose").setAttribute("aria-label", u("close"));
     renderLangs();
     renderTabbar();
