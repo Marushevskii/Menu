@@ -86,17 +86,20 @@ line_color = np.dstack([np.interp(gx, [0, .5, 1], [236, 232, 224]),
 # градиент «складки»: по диагонали, ярче в середине
 band_fade = np.interp((xx / W + yy / H) / 2, [0, .5, 1], [0, .7, 0])
 
+# яркость всех волн (складки, блики, линии): 1 — исходная, 0.5 — вдвое тусклее
+SILK = 0.5
+
 # мягкие складки ткани
 for k, w, op in (("w1", 80, .28), ("w2", 100, .5), ("w3", 70, .4)):
-    over("#8f8576", op * band_fade * stroke(WAVES[k], w, 16))
+    over("#8f8576", SILK * op * band_fade * stroke(WAVES[k], w, 16))
 # блик вдоль складки
 for k, w, op, dy in (("w1", 6, .12, -14), ("w2", 8, .4, -18)):
-    over(line_color, op * line_fade * stroke(WAVES[k], w, 4, dy))
+    over(line_color, SILK * op * line_fade * stroke(WAVES[k], w, 4, dy))
 # тонкие светящиеся линии пучками
 for k, w, op, dy in (("w1", 1, .32, 0), ("w1", .6, .22, 9), ("w1", .5, .15, 20),
                      ("w2", 1.3, .75, 0), ("w2", .8, .5, 8), ("w2", .6, .35, 18), ("w2", .4, .25, 31),
                      ("w3", 1, .55, 0), ("w3", .6, .35, 10)):
-    over(line_color, op * line_fade * stroke(WAVES[k], w, .5, dy))
+    over(line_color, SILK * op * line_fade * stroke(WAVES[k], w, .5, dy))
 
 # ---------- зерно ----------
 rng = np.random.default_rng(7)

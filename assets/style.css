@@ -43,7 +43,7 @@ a { color: inherit; }
    100lvh — высота экрана, когда панель Safari спрятана, чтобы снизу не было пустой полосы. */
 .bg {
   position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: -1;
-  background: var(--bg) url("bg.webp?v=2") center top / cover no-repeat;
+  background: var(--bg) url("bg.webp?v=3") center top / cover no-repeat;
   transform: translateZ(0);
 }
 
