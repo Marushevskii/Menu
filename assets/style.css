@@ -43,9 +43,11 @@ a { color: inherit; }
    100lvh — высота экрана, когда панель Safari спрятана, чтобы снизу не было пустой полосы. */
 .bg {
   position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: -1;
-  background: var(--bg) url("bg.webp?v=3") center top / cover no-repeat;
+  background: var(--bg) url("bg.webp?v=4") center top / cover no-repeat;
   transform: translateZ(0);
 }
+/* на широких экранах (компьютер) — отдельная горизонтальная картинка, чтобы не растягивать телефонную */
+@media (min-aspect-ratio: 1/1) { .bg { background-image: url("bg-wide.webp?v=4"); background-position: center; } }
 
 /* ---------- шапка ---------- */
 .topbar {
