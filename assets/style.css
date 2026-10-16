@@ -53,24 +53,25 @@ a { color: inherit; }
 
 /* ---------- шапка ---------- */
 .topbar {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: calc(14px + env(safe-area-inset-top)) 12px 6px 16px;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;
+  padding: calc(14px + env(safe-area-inset-top)) 10px 6px 16px;
 }
-.brand { display: flex; align-items: center; gap: 8px; min-width: 0; }
+/* низ значка и низ букв — на уровне чёрточки под выбранным языком (она в 7px от низа кнопки) */
+.brand { display: flex; align-items: flex-end; gap: 9px; min-width: 0; padding-bottom: 7px; }
 /* значок пламени из логотипа; цвет берётся из текста (маска), картинка — assets/flame.png */
 .brand-mark {
-  flex: none; width: 18px; height: 25px; background: currentColor;
+  flex: none; width: 25px; height: 34px; background: currentColor;
   -webkit-mask: url("flame.png?v=1") center / contain no-repeat; mask: url("flame.png?v=1") center / contain no-repeat;
 }
-.brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(13px, 3.9vw, 15px); letter-spacing: .11em; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; transform: translateY(3px); /* нижняя линия букв — на уровне низа значка */ white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .langs { display: flex; flex: none; }
 .langs button {
-  position: relative; min-width: 34px; height: 40px;
+  position: relative; min-width: 31px; height: 40px;
   font-size: 13px; letter-spacing: .08em; color: var(--muted); transition: color .2s;
 }
 .langs button[aria-pressed="true"] { color: var(--amber); }
 .langs button[aria-pressed="true"]::after {
-  content: ""; position: absolute; left: 8px; right: 8px; bottom: 7px; height: 1.5px;
+  content: ""; position: absolute; left: 7px; right: 7px; bottom: 7px; height: 1.5px;
   background: var(--amber); border-radius: 1px;
 }
 
