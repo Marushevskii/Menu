@@ -10,12 +10,7 @@
     {
       "type": "instagram",
       "label": "Instagram",
-      "url": ""
-    },
-    {
-      "type": "telegram",
-      "label": "Telegram",
-      "url": ""
+      "url": "https://www.instagram.com/airbarlounge/"
     },
     {
       "type": "google",
@@ -25,7 +20,7 @@
     {
       "type": "yandex",
       "label": "Яндекс Карты",
-      "url": ""
+      "url": "https://yandex.com/maps/-/CXB-VC1l"
     }
   ]
 }
