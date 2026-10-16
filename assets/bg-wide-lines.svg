@@ -4,13 +4,13 @@
 <stop offset=".7" stop-color="#ddd3c3" stop-opacity=".6"/><stop offset="1" stop-color="#d6cab6" stop-opacity="0"/>
 </linearGradient></defs>
 <g fill="none" stroke="url(#g)" stroke-linecap="round">
-<path d="M2160.0 94.5 C1632.0 202.5 1536.0 405.0 864.0 465.8 S-48.0 445.5 -288.0 621.0" stroke-width="2.55" stroke-opacity="0.160"/>
-<path d="M2160.0 106.7 C1632.0 214.7 1536.0 417.2 864.0 477.9 S-48.0 457.7 -288.0 633.2" stroke-width="1.53" stroke-opacity="0.110"/>
-<path d="M2160.0 121.5 C1632.0 229.5 1536.0 432.0 864.0 492.8 S-48.0 472.5 -288.0 648.0" stroke-width="1.27" stroke-opacity="0.075"/>
-<path d="M-288.0 735.8 C240.0 668.2 672.0 850.5 1176.0 877.5 S1848.0 789.8 2256.0 931.5" stroke-width="3.31" stroke-opacity="0.375"/>
-<path d="M-288.0 746.6 C240.0 679.1 672.0 861.3 1176.0 888.3 S1848.0 800.6 2256.0 942.3" stroke-width="2.04" stroke-opacity="0.250"/>
-<path d="M-288.0 760.1 C240.0 692.6 672.0 874.8 1176.0 901.8 S1848.0 814.1 2256.0 955.8" stroke-width="1.53" stroke-opacity="0.175"/>
-<path d="M-288.0 777.6 C240.0 710.1 672.0 892.4 1176.0 919.4 S1848.0 831.6 2256.0 973.4" stroke-width="1.02" stroke-opacity="0.125"/>
-<path d="M720.0 1174.5 C1152.0 1039.5 1536.0 965.3 2256.0 992.3" stroke-width="2.55" stroke-opacity="0.275"/>
-<path d="M720.0 1188.0 C1152.0 1053.0 1536.0 978.8 2256.0 1005.8" stroke-width="1.53" stroke-opacity="0.175"/>
+<path d="M2160.0 94.5 C1632.0 202.5 1536.0 405.0 864.0 465.8 S-48.0 445.5 -288.0 621.0" stroke-width="2.55" stroke-opacity="0.080"/>
+<path d="M2160.0 106.7 C1632.0 214.7 1536.0 417.2 864.0 477.9 S-48.0 457.7 -288.0 633.2" stroke-width="1.53" stroke-opacity="0.055"/>
+<path d="M2160.0 121.5 C1632.0 229.5 1536.0 432.0 864.0 492.8 S-48.0 472.5 -288.0 648.0" stroke-width="1.27" stroke-opacity="0.037"/>
+<path d="M-288.0 735.8 C240.0 668.2 672.0 850.5 1176.0 877.5 S1848.0 789.8 2256.0 931.5" stroke-width="3.31" stroke-opacity="0.188"/>
+<path d="M-288.0 746.6 C240.0 679.1 672.0 861.3 1176.0 888.3 S1848.0 800.6 2256.0 942.3" stroke-width="2.04" stroke-opacity="0.125"/>
+<path d="M-288.0 760.1 C240.0 692.6 672.0 874.8 1176.0 901.8 S1848.0 814.1 2256.0 955.8" stroke-width="1.53" stroke-opacity="0.087"/>
+<path d="M-288.0 777.6 C240.0 710.1 672.0 892.4 1176.0 919.4 S1848.0 831.6 2256.0 973.4" stroke-width="1.02" stroke-opacity="0.062"/>
+<path d="M720.0 1174.5 C1152.0 1039.5 1536.0 965.3 2256.0 992.3" stroke-width="2.55" stroke-opacity="0.138"/>
+<path d="M720.0 1188.0 C1152.0 1053.0 1536.0 978.8 2256.0 1005.8" stroke-width="1.53" stroke-opacity="0.087"/>
 </g></svg>

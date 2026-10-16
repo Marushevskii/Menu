@@ -4,13 +4,13 @@
 <stop offset=".7" stop-color="#ddd3c3" stop-opacity=".6"/><stop offset="1" stop-color="#d6cab6" stop-opacity="0"/>
 </linearGradient></defs>
 <g fill="none" stroke="url(#g)" stroke-linecap="round">
-<path d="M1215.0 189.0 C918.0 405.0 864.0 810.0 486.0 931.5 S-27.0 891.0 -162.0 1242.0" stroke-width="2.70" stroke-opacity="0.160"/>
-<path d="M1215.0 213.3 C918.0 429.3 864.0 834.3 486.0 955.8 S-27.0 915.3 -162.0 1266.3" stroke-width="1.62" stroke-opacity="0.110"/>
-<path d="M1215.0 243.0 C918.0 459.0 864.0 864.0 486.0 985.5 S-27.0 945.0 -162.0 1296.0" stroke-width="1.35" stroke-opacity="0.075"/>
-<path d="M-162.0 1471.5 C135.0 1336.5 378.0 1701.0 661.5 1755.0 S1039.5 1579.5 1269.0 1863.0" stroke-width="3.51" stroke-opacity="0.375"/>
-<path d="M-162.0 1493.1 C135.0 1358.1 378.0 1722.6 661.5 1776.6 S1039.5 1601.1 1269.0 1884.6" stroke-width="2.16" stroke-opacity="0.250"/>
-<path d="M-162.0 1520.1 C135.0 1385.1 378.0 1749.6 661.5 1803.6 S1039.5 1628.1 1269.0 1911.6" stroke-width="1.62" stroke-opacity="0.175"/>
-<path d="M-162.0 1555.2 C135.0 1420.2 378.0 1784.7 661.5 1838.7 S1039.5 1663.2 1269.0 1946.7" stroke-width="1.08" stroke-opacity="0.125"/>
-<path d="M405.0 2349.0 C648.0 2079.0 864.0 1930.5 1269.0 1984.5" stroke-width="2.70" stroke-opacity="0.275"/>
-<path d="M405.0 2376.0 C648.0 2106.0 864.0 1957.5 1269.0 2011.5" stroke-width="1.62" stroke-opacity="0.175"/>
+<path d="M1215.0 189.0 C918.0 405.0 864.0 810.0 486.0 931.5 S-27.0 891.0 -162.0 1242.0" stroke-width="2.70" stroke-opacity="0.080"/>
+<path d="M1215.0 213.3 C918.0 429.3 864.0 834.3 486.0 955.8 S-27.0 915.3 -162.0 1266.3" stroke-width="1.62" stroke-opacity="0.055"/>
+<path d="M1215.0 243.0 C918.0 459.0 864.0 864.0 486.0 985.5 S-27.0 945.0 -162.0 1296.0" stroke-width="1.35" stroke-opacity="0.037"/>
+<path d="M-162.0 1471.5 C135.0 1336.5 378.0 1701.0 661.5 1755.0 S1039.5 1579.5 1269.0 1863.0" stroke-width="3.51" stroke-opacity="0.188"/>
+<path d="M-162.0 1493.1 C135.0 1358.1 378.0 1722.6 661.5 1776.6 S1039.5 1601.1 1269.0 1884.6" stroke-width="2.16" stroke-opacity="0.125"/>
+<path d="M-162.0 1520.1 C135.0 1385.1 378.0 1749.6 661.5 1803.6 S1039.5 1628.1 1269.0 1911.6" stroke-width="1.62" stroke-opacity="0.087"/>
+<path d="M-162.0 1555.2 C135.0 1420.2 378.0 1784.7 661.5 1838.7 S1039.5 1663.2 1269.0 1946.7" stroke-width="1.08" stroke-opacity="0.062"/>
+<path d="M405.0 2349.0 C648.0 2079.0 864.0 1930.5 1269.0 1984.5" stroke-width="2.70" stroke-opacity="0.138"/>
+<path d="M405.0 2376.0 C648.0 2106.0 864.0 1957.5 1269.0 2011.5" stroke-width="1.62" stroke-opacity="0.087"/>
 </g></svg>

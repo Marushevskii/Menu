@@ -14,6 +14,8 @@ from PIL import Image, ImageDraw, ImageFilter
 ASSETS = os.path.join(os.path.dirname(__file__), "..", "assets")
 # яркость всех волн (складки, блики, линии): 1 — исходная, 0.5 — вдвое тусклее
 SILK = 0.5
+# прозрачность тонких векторных линий поверх фона: 1 — как раньше, 0.5 — вдвое прозрачнее
+LINE_ALPHA = 0.5
 
 
 def hexrgb(h):
@@ -136,7 +138,7 @@ def write_lines(W, H, out):
         return txt
 
     paths = "\n".join(
-        f'<path d="{scaled(LINE_DEFS[k], dy)}" stroke-width="{max(.8, w * S):.2f}" stroke-opacity="{SILK * op:.3f}"/>'
+        f'<path d="{scaled(LINE_DEFS[k], dy)}" stroke-width="{max(.8, w * S):.2f}" stroke-opacity="{LINE_ALPHA * SILK * op:.3f}"/>'
         for k, w, op, dy in LINES)
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="0">
