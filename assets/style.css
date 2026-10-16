@@ -28,9 +28,13 @@
 /* ========================================================================== */
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; background: var(--bg); overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); overflow-x: clip; overscroll-behavior-y: none; }
 body {
   margin: 0; min-height: 100vh;
+  /* Короткие вкладки (Кальян, Снэки) почти помещаются в экран. Долистали до конца — Safari прячет
+     свою панель, экран становится выше, прокручивать уже нечего — панель возвращается — и так по кругу:
+     страница «трясётся». Поэтому страница всегда заметно выше самого большого экрана. */
+  min-height: calc(100lvh + 120px);
   color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.45;
   padding-bottom: calc(var(--tabbar-h) + 40px + env(safe-area-inset-bottom));
   -webkit-tap-highlight-color: transparent;
