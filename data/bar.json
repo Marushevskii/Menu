@@ -1255,10 +1255,10 @@
             "tr": "Tsinandali"
           },
           "desc": {
-            "ru": "белое полусладкое",
-            "en": "white, semi-sweet",
-            "ka": "თეთრი ნახევრადტკბილი",
-            "tr": "beyaz, yarı tatlı"
+            "ru": "белое сухое",
+            "en": "white, dry",
+            "ka": "თეთრი მშრალი",
+            "tr": "beyaz, sek"
           },
           "price": 45,
           "priceFrom": false,
