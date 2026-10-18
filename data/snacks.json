@@ -27,12 +27,12 @@
       },
       "items": [
         {
-          "id": "jerky-chicken",
+          "id": "jerky",
           "name": {
-            "ru": "Джерки куриные",
-            "en": "Chicken jerky",
-            "ka": "ქათმის ჯერკი",
-            "tr": "Tavuk jerky"
+            "ru": "Джерки",
+            "en": "Jerky",
+            "ka": "ჯერკი",
+            "tr": "Jerky"
           },
           "desc": {
             "ru": "",
@@ -40,45 +40,49 @@
             "ka": "",
             "tr": ""
           },
-          "price": 15,
+          "price": null,
           "amount": 50,
           "unit": "g",
           "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "jerky-pork",
-          "name": {
-            "ru": "Джерки свиные",
-            "en": "Pork jerky",
-            "ka": "ღორის ჯერკი",
-            "tr": "Domuz jerky"
-          },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 12,
-          "amount": 50,
-          "unit": "g",
-          "photo": "",
-          "hidden": false
+          "hidden": false,
+          "variants": [
+            {
+              "label": {
+                "ru": "куриные",
+                "en": "chicken",
+                "ka": "ქათმის",
+                "tr": "tavuk"
+              },
+              "amount": null,
+              "unit": "",
+              "price": 15
+            },
+            {
+              "label": {
+                "ru": "свиные",
+                "en": "pork",
+                "ka": "ღორის",
+                "tr": "domuz"
+              },
+              "amount": null,
+              "unit": "",
+              "price": 12
+            }
+          ]
         },
         {
           "id": "nuts",
           "name": {
-            "ru": "Орешки",
-            "en": "Nuts",
-            "ka": "თხილეული",
-            "tr": "Kuruyemiş"
+            "ru": "Арахис",
+            "en": "Peanuts",
+            "ka": "არაქისი",
+            "tr": "Yer fıstığı"
           },
           "desc": {
-            "ru": "арахис",
-            "en": "peanuts",
-            "ka": "არაქისი",
-            "tr": "yer fıstığı"
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": ""
           },
           "price": 7,
           "amount": 100,
@@ -101,8 +105,8 @@
             "tr": ""
           },
           "price": 13,
-          "amount": null,
-          "unit": null,
+          "amount": 80,
+          "unit": "g",
           "photo": "",
           "hidden": false
         },

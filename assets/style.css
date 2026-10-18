@@ -156,6 +156,10 @@ button.photo { cursor: zoom-in; }
 .variants { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .variant { display: inline-flex; gap: 6px; align-items: baseline; padding: 3px 9px; border-radius: 9px; background: var(--faint); font-size: 13px; }
 .variant b { color: var(--amber); font-weight: 600; }
+.vrows { display: grid; gap: 2px; margin-top: 2px; }
+.vrow { display: flex; align-items: baseline; font-size: 14px; color: var(--muted); }
+.vrow .lead { display: block; flex: 1 1 24px; min-width: 24px; margin: 0 8px; border-bottom: 1px dotted rgba(169,157,139,.35); transform: translateY(-4px); }
+.vrow b { color: var(--amber); font-weight: 600; font-size: 15.5px; }
 
 /* ---------- конструктор коктейля ---------- */
 .builder { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; }

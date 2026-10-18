@@ -119,16 +119,19 @@
     let price = "";
     if (has(it.price)) price = it.priceFrom ? u("priceFrom").replace("{price}", money(it.price)) : money(it.price);
     const vars = (it.variants || []).filter((v) => has(v.price));
-    const variants = vars.length
-      ? `<div class="variants">${vars.map((v) => `<span class="variant">${esc(amount(v.amount, v.unit))} <b>${esc(money(v.price))}</b></span>`).join("")}</div>`
-      : "";
+    // варианты с подписью (джерки: куриные / свиные) — строками «подпись ··· цена»;
+    // без подписи (лимонады 0,5 л / 1 л) — плашками
+    const labeled = vars.some((v) => t(v.label));
+    const variants = !vars.length ? "" : labeled
+      ? `<div class="vrows">${vars.map((v) => `<div class="vrow"><span>${esc(t(v.label) || amount(v.amount, v.unit))}</span><span class="lead"></span><b>${esc(money(v.price))}</b></div>`).join("")}</div>`
+      : `<div class="variants">${vars.map((v) => `<span class="variant">${esc(amount(v.amount, v.unit))} <b>${esc(money(v.price))}</b></span>`).join("")}</div>`;
+    const amtHtml = amt ? `<div class="item-amount">${esc(amt)}</div>` : "";
     return `<article class="item">
       ${photoHtml(it, sec)}
       <div class="item-body">
         <div class="item-head"><div class="item-name">${esc(t(it.name))}</div>${price ? `<span class="lead"></span><div class="item-price">${esc(price)}</div>` : ""}</div>
         ${desc ? `<div class="item-desc">${esc(desc)}</div>` : ""}
-        ${amt ? `<div class="item-amount">${esc(amt)}</div>` : ""}
-        ${variants}
+        ${labeled ? variants + amtHtml : amtHtml + variants}
       </div>
     </article>`;
   }
