@@ -160,6 +160,7 @@ button.photo { cursor: zoom-in; }
 .vrow { display: flex; align-items: baseline; font-size: 14px; color: var(--muted); }
 .vrow .lead { display: block; flex: 1 1 24px; min-width: 24px; margin: 0 8px; border-bottom: 1px dotted rgba(169,157,139,.35); transform: translateY(-4px); }
 .vrow b { color: var(--amber); font-weight: 600; font-size: 15.5px; }
+.vrow .vamt { font-style: normal; font-size: 12.5px; margin-left: 6px; opacity: .8; }
 
 /* ---------- конструктор коктейля ---------- */
 .builder { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; }

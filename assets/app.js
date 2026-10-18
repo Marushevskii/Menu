@@ -123,7 +123,7 @@
     // без подписи (лимонады 0,5 л / 1 л) — плашками
     const labeled = vars.some((v) => t(v.label));
     const variants = !vars.length ? "" : labeled
-      ? `<div class="vrows">${vars.map((v) => `<div class="vrow"><span>${esc(t(v.label) || amount(v.amount, v.unit))}</span><span class="lead"></span><b>${esc(money(v.price))}</b></div>`).join("")}</div>`
+      ? `<div class="vrows">${vars.map((v) => `<div class="vrow"><span>${t(v.label) ? esc(t(v.label)) + (amount(v.amount, v.unit) ? ` <i class="vamt">${esc(amount(v.amount, v.unit))}</i>` : "") : esc(amount(v.amount, v.unit))}</span><span class="lead"></span><b>${esc(money(v.price))}</b></div>`).join("")}</div>`
       : `<div class="variants">${vars.map((v) => `<span class="variant">${esc(amount(v.amount, v.unit))} <b>${esc(money(v.price))}</b></span>`).join("")}</div>`;
     const amtHtml = amt ? `<div class="item-amount">${esc(amt)}</div>` : "";
     return `<article class="item">

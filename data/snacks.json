@@ -35,80 +35,61 @@
             "tr": "Jerky"
           },
           "desc": {
+            "ru": "куриные, свиные",
+            "en": "chicken, pork",
+            "ka": "ქათმის, ღორის",
+            "tr": "tavuk, domuz"
+          },
+          "price": 15,
+          "amount": 50,
+          "unit": "g",
+          "photo": "",
+          "hidden": false,
+          "variants": []
+        },
+        {
+          "id": "nuts",
+          "name": {
+            "ru": "Орешки",
+            "en": "Nuts",
+            "ka": "თხილეული",
+            "tr": "Kuruyemiş"
+          },
+          "desc": {
             "ru": "",
             "en": "",
             "ka": "",
             "tr": ""
           },
           "price": null,
-          "amount": 50,
-          "unit": "g",
+          "amount": null,
+          "unit": null,
           "photo": "",
           "hidden": false,
           "variants": [
             {
               "label": {
-                "ru": "куриные",
-                "en": "chicken",
-                "ka": "ქათმის",
-                "tr": "tavuk"
+                "ru": "Арахис",
+                "en": "Peanuts",
+                "ka": "არაქისი",
+                "tr": "Yer fıstığı"
               },
-              "amount": null,
-              "unit": "",
-              "price": 15
+              "amount": 100,
+              "unit": "g",
+              "price": 7
             },
             {
               "label": {
-                "ru": "свиные",
-                "en": "pork",
-                "ka": "ღორის",
-                "tr": "domuz"
+                "ru": "Фисташки",
+                "en": "Pistachios",
+                "ka": "ფისტა",
+                "tr": "Antep fıstığı"
               },
-              "amount": null,
-              "unit": "",
-              "price": 12
+              "amount": 80,
+              "unit": "g",
+              "price": 13
             }
           ]
-        },
-        {
-          "id": "nuts",
-          "name": {
-            "ru": "Арахис",
-            "en": "Peanuts",
-            "ka": "არაქისი",
-            "tr": "Yer fıstığı"
-          },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 7,
-          "amount": 100,
-          "unit": "g",
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "pistachios",
-          "name": {
-            "ru": "Фисташки",
-            "en": "Pistachios",
-            "ka": "ფისტა",
-            "tr": "Antep fıstığı"
-          },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 13,
-          "amount": 80,
-          "unit": "g",
-          "photo": "",
-          "hidden": false
         },
         {
           "id": "chips",
