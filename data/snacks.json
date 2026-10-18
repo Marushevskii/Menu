@@ -27,18 +27,38 @@
       },
       "items": [
         {
-          "id": "jerky",
+          "id": "jerky-chicken",
           "name": {
-            "ru": "Джерки",
-            "en": "Jerky",
-            "ka": "ჯერკი",
-            "tr": "Jerky"
+            "ru": "Джерки куриные",
+            "en": "Chicken jerky",
+            "ka": "ქათმის ჯერკი",
+            "tr": "Tavuk jerky"
           },
           "desc": {
-            "ru": "куриные или свиные на выбор",
-            "en": "chicken or pork, your choice",
-            "ka": "ქათმის ან ღორის, თქვენი არჩევანით",
-            "tr": "tavuk veya domuz, tercihinize göre"
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": ""
+          },
+          "price": 15,
+          "amount": 50,
+          "unit": "g",
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "jerky-pork",
+          "name": {
+            "ru": "Джерки свиные",
+            "en": "Pork jerky",
+            "ka": "ღორის ჯერკი",
+            "tr": "Domuz jerky"
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": ""
           },
           "price": 12,
           "amount": 50,
@@ -63,6 +83,26 @@
           "price": 7,
           "amount": 100,
           "unit": "g",
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "pistachios",
+          "name": {
+            "ru": "Фисташки",
+            "en": "Pistachios",
+            "ka": "ფისტა",
+            "tr": "Antep fıstığı"
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": ""
+          },
+          "price": 13,
+          "amount": null,
+          "unit": null,
           "photo": "",
           "hidden": false
         },

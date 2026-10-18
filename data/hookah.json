@@ -59,7 +59,7 @@
             "ka": "კოლბაში რძის დამატებით, უფრო რბილი მოწევისთვის",
             "tr": "daha yumuşak bir içim için hazneye süt eklenir"
           },
-          "price": 60,
+          "price": 65,
           "amount": null,
           "unit": null,
           "photo": "",
@@ -80,6 +80,26 @@
             "tr": "daha canlı bir tat için hazneye meyve ve meyve suları eklenir"
           },
           "price": 95,
+          "amount": null,
+          "unit": null,
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "hookah-solo",
+          "name": {
+            "ru": "Соло",
+            "en": "Solo",
+            "ka": "სოლო",
+            "tr": "Solo"
+          },
+          "desc": {
+            "ru": "без замены углей, для быстрого покура",
+            "en": "no coal change, for a quick smoke",
+            "ka": "ნახშირის შეცვლის გარეშე, სწრაფი მოწევისთვის",
+            "tr": "kömür değişimi olmadan, kısa bir içim için"
+          },
+          "price": 40,
           "amount": null,
           "unit": null,
           "photo": "",
