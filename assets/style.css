@@ -19,8 +19,9 @@
   --item-bg: rgba(255,255,255,.009);  /* подложка карточек позиций и акций (почти прозрачная) */
   --item-line: rgba(255,255,255,.065);
 
-  --font: "Noto Sans", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --serif: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif;
+  --font: "Spectral", "Noto Sans Georgian", Georgia, serif;           /* весь текст меню */
+  --serif: "Spectral", "Noto Serif Georgian", Georgia, serif;          /* крупные заголовки */
+  --logo: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif; /* название в шапке и на заставке */
   --radius: 18px;
   --photo: 64px;
   --tabbar-h: 66px;
@@ -61,14 +62,14 @@ a { color: inherit; }
   padding: calc(14px + env(safe-area-inset-top)) 10px 6px 16px;
 }
 /* низ букв названия — на одной линии с низом букв RU EN GE TR; значок — по центру высоты букв */
-.brand { display: flex; align-items: center; gap: 9px; min-width: 0; padding-bottom: 3.25px; }
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; padding-bottom: 3.9px; }
 /* значок пламени из логотипа; цвет берётся из текста (маска), картинка — assets/flame.png */
 .brand-mark {
   flex: none; width: 25px; height: 34px; background: currentColor; transform: translateY(-.7px);
   -webkit-mask: url("flame.png?v=1") center / contain no-repeat; mask: url("flame.png?v=1") center / contain no-repeat;
 }
 .brand-name .amp { margin: 0 .16em 0 .118em; }
-.brand-name { font-family: var(--serif); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.brand-name { font-family: var(--logo); font-weight: 600; font-size: clamp(14px, 4.35vw, 17px); letter-spacing: .09em; line-height: 1; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .langs { display: flex; flex: none; }
 .langs button {
   position: relative; min-width: 31px; height: 40px;
@@ -125,7 +126,7 @@ a { color: inherit; }
 .section { padding-top: 26px; scroll-margin-top: 64px; }
 .section-title {
   display: flex; align-items: center; gap: 14px; margin: 0 0 14px;
-  font-family: var(--serif); font-weight: 600; font-size: 24px; line-height: 1.15; letter-spacing: .06em; color: var(--text);
+  font-family: var(--serif); font-weight: 600; font-size: 23px; line-height: 1.15; letter-spacing: .03em; color: var(--text);
 }
 .section-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(169,157,139,.5), transparent); }
 .section-note { margin: -6px 0 14px; font-size: 13.5px; color: var(--muted); }
@@ -273,7 +274,7 @@ button.photo { cursor: zoom-in; }
   -webkit-mask: url("flame-big.png?v=1") center / contain no-repeat; mask: url("flame-big.png?v=1") center / contain no-repeat;
 }
 /* padding-left = letter-spacing: иначе последний пробел-разрядка сдвигает надпись влево */
-.loading span { font-family: var(--serif); font-size: 22px; letter-spacing: .3em; padding-left: .3em; color: var(--amber); white-space: nowrap; }
+.loading span { font-family: var(--logo); font-size: 22px; letter-spacing: .3em; padding-left: .3em; color: var(--amber); white-space: nowrap; }
 .loading.done { opacity: 0; pointer-events: none; }
 
 /* ---------- появление при смене вкладки ---------- */
