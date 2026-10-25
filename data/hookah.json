@@ -102,6 +102,30 @@
           "hidden": false
         },
         {
+          "id": "19eb949f6991",
+          "name": {
+            "ru": "Двойное яблоко",
+            "en": "Double Apple",
+            "ka": "ორმაგი ვაშლი",
+            "tr": "Çift Elma",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "Для ценителей классики",
+            "en": "For lovers of the classics",
+            "ka": "კლასიკის მოყვარულთათვის",
+            "tr": "Klasik tutkunları için",
+            "auto": ""
+          },
+          "price": 50,
+          "priceFrom": false,
+          "amount": null,
+          "unit": "",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
           "id": "hookah-solo",
           "name": {
             "ru": "Соло чаша",

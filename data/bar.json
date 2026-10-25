@@ -5,7 +5,8 @@
     "ru": "Бар",
     "en": "Bar",
     "ka": "ბარი",
-    "tr": "Bar"
+    "tr": "Bar",
+    "auto": ""
   },
   "menuLabel": true,
   "sections": [
@@ -16,13 +17,15 @@
         "ru": "Классические коктейли",
         "en": "Classic cocktails",
         "ka": "კლასიკური კოქტეილები",
-        "tr": "Klasik kokteyller"
+        "tr": "Klasik kokteyller",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "cocktail",
       "items": [
@@ -32,13 +35,15 @@
             "ru": "Пина Колада",
             "en": "Piña Colada",
             "ka": "პინა კოლადა",
-            "tr": "Piña Colada"
+            "tr": "Piña Colada",
+            "auto": ""
           },
           "desc": {
             "ru": "сливки, ананас, кокос, ром",
             "en": "cream, pineapple, coconut, rum",
             "ka": "ნაღები, ანანასი, ქოქოსი, რომი",
-            "tr": "krema, ananas, hindistan cevizi, rom"
+            "tr": "krema, ananas, hindistan cevizi, rom",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -54,13 +59,15 @@
             "ru": "Джин Тоник",
             "en": "Gin & Tonic",
             "ka": "ჯინ-ტონიკი",
-            "tr": "Cin Tonik"
+            "tr": "Cin Tonik",
+            "auto": ""
           },
           "desc": {
             "ru": "джин, швепс, лимон",
             "en": "gin, Schweppes, lemon",
             "ka": "ჯინი, შვეპსი, ლიმონი",
-            "tr": "cin, Schweppes, limon"
+            "tr": "cin, Schweppes, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -76,13 +83,15 @@
             "ru": "Лонг Айленд",
             "en": "Long Island",
             "ka": "ლონგ აილენდი",
-            "tr": "Long Island"
+            "tr": "Long Island",
+            "auto": ""
           },
           "desc": {
             "ru": "водка, текила, трипл сек, ром, джин, кола, лимон, лайм",
             "en": "vodka, tequila, triple sec, rum, gin, cola, lemon, lime",
             "ka": "არაყი, ტეკილა, ტრიპლ სეკი, რომი, ჯინი, კოლა, ლიმონი, ლაიმი",
-            "tr": "votka, tekila, triple sec, rom, cin, kola, limon, misket limonu"
+            "tr": "votka, tekila, triple sec, rom, cin, kola, limon, misket limonu",
+            "auto": ""
           },
           "price": 25,
           "priceFrom": false,
@@ -98,13 +107,15 @@
             "ru": "Куба Либре",
             "en": "Cuba Libre",
             "ka": "კუბა ლიბრე",
-            "tr": "Cuba Libre"
+            "tr": "Cuba Libre",
+            "auto": ""
           },
           "desc": {
             "ru": "ром, кола, лимон, лайм",
             "en": "rum, cola, lemon, lime",
             "ka": "რომი, კოლა, ლიმონი, ლაიმი",
-            "tr": "rom, kola, limon, misket limonu"
+            "tr": "rom, kola, limon, misket limonu",
+            "auto": ""
           },
           "price": 19,
           "priceFrom": false,
@@ -120,13 +131,15 @@
             "ru": "Маргарита",
             "en": "Margarita",
             "ka": "მარგარიტა",
-            "tr": "Margarita"
+            "tr": "Margarita",
+            "auto": ""
           },
           "desc": {
             "ru": "текила, трипл сек, лимон",
             "en": "tequila, triple sec, lemon",
             "ka": "ტეკილა, ტრიპლ სეკი, ლიმონი",
-            "tr": "tekila, triple sec, limon"
+            "tr": "tekila, triple sec, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -142,13 +155,15 @@
             "ru": "Май Тай",
             "en": "Mai Tai",
             "ka": "მაი თაი",
-            "tr": "Mai Tai"
+            "tr": "Mai Tai",
+            "auto": ""
           },
           "desc": {
             "ru": "ром, трипл сек, миндаль, лайм, лимон",
             "en": "rum, triple sec, almond, lime, lemon",
             "ka": "რომი, ტრიპლ სეკი, ნუში, ლაიმი, ლიმონი",
-            "tr": "rom, triple sec, badem, misket limonu, limon"
+            "tr": "rom, triple sec, badem, misket limonu, limon",
+            "auto": ""
           },
           "price": 22,
           "priceFrom": false,
@@ -164,13 +179,15 @@
             "ru": "Негрони",
             "en": "Negroni",
             "ka": "ნეგრონი",
-            "tr": "Negroni"
+            "tr": "Negroni",
+            "auto": ""
           },
           "desc": {
             "ru": "кампари, джин, мартини россо, апельсин",
             "en": "Campari, gin, Martini Rosso, orange",
             "ka": "კამპარი, ჯინი, მარტინი როსო, ფორთოხალი",
-            "tr": "Campari, cin, Martini Rosso, portakal"
+            "tr": "Campari, cin, Martini Rosso, portakal",
+            "auto": ""
           },
           "price": 22,
           "priceFrom": false,
@@ -186,13 +203,15 @@
             "ru": "Текила Санрайз",
             "en": "Tequila Sunrise",
             "ka": "ტეკილა სანრაიზი",
-            "tr": "Tequila Sunrise"
+            "tr": "Tequila Sunrise",
+            "auto": ""
           },
           "desc": {
             "ru": "текила, апельсин, ананас, малина, гранат, лимон",
             "en": "tequila, orange, pineapple, raspberry, pomegranate, lemon",
             "ka": "ტეკილა, ფორთოხალი, ანანასი, ჟოლო, ბროწეული, ლიმონი",
-            "tr": "tekila, portakal, ananas, ahududu, nar, limon"
+            "tr": "tekila, portakal, ananas, ahududu, nar, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -208,13 +227,15 @@
             "ru": "Белый русский",
             "en": "White Russian",
             "ka": "თეთრი რუსი",
-            "tr": "White Russian"
+            "tr": "White Russian",
+            "auto": ""
           },
           "desc": {
             "ru": "сливки, водка, кофейный ликёр",
             "en": "cream, vodka, coffee liqueur",
             "ka": "ნაღები, არაყი, ყავის ლიქიორი",
-            "tr": "krema, votka, kahve likörü"
+            "tr": "krema, votka, kahve likörü",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -230,13 +251,15 @@
             "ru": "Олд фешн",
             "en": "Old Fashioned",
             "ka": "ოლდ ფეშენი",
-            "tr": "Old Fashioned"
+            "tr": "Old Fashioned",
+            "auto": ""
           },
           "desc": {
             "ru": "биттер, бурбон",
             "en": "bitters, bourbon",
             "ka": "ბიტერი, ბურბონი",
-            "tr": "bitter, burbon"
+            "tr": "bitter, burbon",
+            "auto": ""
           },
           "price": 22,
           "priceFrom": false,
@@ -252,13 +275,15 @@
             "ru": "Виски сауэр",
             "en": "Whiskey Sour",
             "ka": "ვისკი საუერი",
-            "tr": "Whiskey Sour"
+            "tr": "Whiskey Sour",
+            "auto": ""
           },
           "desc": {
             "ru": "виски, биттер, лимон",
             "en": "whiskey, bitters, lemon",
             "ka": "ვისკი, ბიტერი, ლიმონი",
-            "tr": "viski, bitter, limon"
+            "tr": "viski, bitter, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -274,13 +299,15 @@
             "ru": "Лимон Дроп",
             "en": "Lemon Drop",
             "ka": "ლემონ დროპი",
-            "tr": "Lemon Drop"
+            "tr": "Lemon Drop",
+            "auto": ""
           },
           "desc": {
             "ru": "красный вермут, джин, апельсиновый ликёр, гранат, лимон",
             "en": "red vermouth, gin, orange liqueur, pomegranate, lemon",
             "ka": "წითელი ვერმუტი, ჯინი, ფორთოხლის ლიქიორი, ბროწეული, ლიმონი",
-            "tr": "kırmızı vermut, cin, portakal likörü, nar, limon"
+            "tr": "kırmızı vermut, cin, portakal likörü, nar, limon",
+            "auto": ""
           },
           "price": 22,
           "priceFrom": false,
@@ -296,13 +323,15 @@
             "ru": "Бульвардье",
             "en": "Boulevardier",
             "ka": "ბულვარდიე",
-            "tr": "Boulevardier"
+            "tr": "Boulevardier",
+            "auto": ""
           },
           "desc": {
             "ru": "бурбон, кампари, россо",
             "en": "bourbon, Campari, Rosso",
             "ka": "ბურბონი, კამპარი, როსო",
-            "tr": "burbon, Campari, Rosso"
+            "tr": "burbon, Campari, Rosso",
+            "auto": ""
           },
           "price": 22,
           "priceFrom": false,
@@ -318,13 +347,15 @@
             "ru": "Секс на пляже",
             "en": "Sex on the Beach",
             "ka": "სექსი პლაჟზე",
-            "tr": "Sex on the Beach"
+            "tr": "Sex on the Beach",
+            "auto": ""
           },
           "desc": {
             "ru": "водка, персиковый ликёр, ананасовый сок, ягодный сок",
             "en": "vodka, peach liqueur, pineapple juice, berry juice",
             "ka": "არაყი, ატმის ლიქიორი, ანანასის წვენი, კენკრის წვენი",
-            "tr": "votka, şeftali likörü, ananas suyu, orman meyvesi suyu"
+            "tr": "votka, şeftali likörü, ananas suyu, orman meyvesi suyu",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -343,13 +374,15 @@
         "ru": "Авторские коктейли",
         "en": "Signature cocktails",
         "ka": "საავტორო კოქტეილები",
-        "tr": "İmza kokteyller"
+        "tr": "İmza kokteyller",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "cocktail",
       "items": [
@@ -359,13 +392,15 @@
             "ru": "Розовый кактус",
             "en": "Pink Cactus",
             "ka": "ვარდისფერი კაქტუსი",
-            "tr": "Pembe Kaktüs"
+            "tr": "Pembe Kaktüs",
+            "auto": ""
           },
           "desc": {
             "ru": "апероль, джин, алоэ, лимон",
             "en": "Aperol, gin, aloe, lemon",
             "ka": "აპეროლი, ჯინი, ალოე, ლიმონი",
-            "tr": "Aperol, cin, aloe vera, limon"
+            "tr": "Aperol, cin, aloe vera, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -381,13 +416,15 @@
             "ru": "Симпл милк",
             "en": "Simple Milk",
             "ka": "სიმპლ მილქი",
-            "tr": "Simple Milk"
+            "tr": "Simple Milk",
+            "auto": ""
           },
           "desc": {
             "ru": "сливочный ликёр, банан, сливки, молоко, кофе, корица",
             "en": "cream liqueur, banana, cream, milk, coffee, cinnamon",
             "ka": "ნაღების ლიქიორი, ბანანი, ნაღები, რძე, ყავა, დარიჩინი",
-            "tr": "krema likörü, muz, krema, süt, kahve, tarçın"
+            "tr": "krema likörü, muz, krema, süt, kahve, tarçın",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -403,13 +440,15 @@
             "ru": "Космо Флауэр",
             "en": "Cosmo Flower",
             "ka": "კოსმო ფლაუერი",
-            "tr": "Cosmo Flower"
+            "tr": "Cosmo Flower",
+            "auto": ""
           },
           "desc": {
             "ru": "ром, блю кюрасао, манго, лимон, чёрная смородина",
             "en": "rum, Blue Curaçao, mango, lemon, blackcurrant",
             "ka": "რომი, ბლუ კიურასაო, მანგო, ლიმონი, შავი მოცხარი",
-            "tr": "rom, Blue Curaçao, mango, limon, siyah frenk üzümü"
+            "tr": "rom, Blue Curaçao, mango, limon, siyah frenk üzümü",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -425,13 +464,15 @@
             "ru": "Лимончелло Шприц",
             "en": "Limoncello Spritz",
             "ka": "ლიმონჩელო სპრიცი",
-            "tr": "Limoncello Spritz"
+            "tr": "Limoncello Spritz",
+            "auto": ""
           },
           "desc": {
             "ru": "лимончелло, швепс, содовая, апельсин, мартини",
             "en": "limoncello, Schweppes, soda, orange, Martini",
             "ka": "ლიმონჩელო, შვეპსი, სოდა, ფორთოხალი, მარტინი",
-            "tr": "limoncello, Schweppes, soda, portakal, Martini"
+            "tr": "limoncello, Schweppes, soda, portakal, Martini",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -447,13 +488,15 @@
             "ru": "Кузнечик",
             "en": "Grasshopper",
             "ka": "გრასჰოპერი",
-            "tr": "Grasshopper"
+            "tr": "Grasshopper",
+            "auto": ""
           },
           "desc": {
             "ru": "мятный ликёр, кофейный ликёр, сливки",
             "en": "mint liqueur, coffee liqueur, cream",
             "ka": "პიტნის ლიქიორი, ყავის ლიქიორი, ნაღები",
-            "tr": "nane likörü, kahve likörü, krema"
+            "tr": "nane likörü, kahve likörü, krema",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -469,13 +512,15 @@
             "ru": "Лимонный пирог",
             "en": "Lemon Pie",
             "ka": "ლიმონის ღვეზელი",
-            "tr": "Limonlu Turta"
+            "tr": "Limonlu Turta",
+            "auto": ""
           },
           "desc": {
             "ru": "ликёр Адвокат, лимон, ванильный сироп, корица",
             "en": "Advocaat liqueur, lemon, vanilla syrup, cinnamon",
             "ka": "ადვოკაატის ლიქიორი, ლიმონი, ვანილის სიროფი, დარიჩინი",
-            "tr": "Advocaat likörü, limon, vanilya şurubu, tarçın"
+            "tr": "Advocaat likörü, limon, vanilya şurubu, tarçın",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -491,13 +536,15 @@
             "ru": "Порн стар мартини",
             "en": "Pornstar Martini",
             "ka": "პორნსტარ მარტინი",
-            "tr": "Pornstar Martini"
+            "tr": "Pornstar Martini",
+            "auto": ""
           },
           "desc": {
             "ru": "малина, маракуйя, водка, ваниль, лимон",
             "en": "raspberry, passion fruit, vodka, vanilla, lemon",
             "ka": "ჟოლო, პასიფლორა, არაყი, ვანილი, ლიმონი",
-            "tr": "ahududu, çarkıfelek, votka, vanilya, limon"
+            "tr": "ahududu, çarkıfelek, votka, vanilya, limon",
+            "auto": ""
           },
           "price": 23,
           "priceFrom": false,
@@ -513,13 +560,15 @@
             "ru": "Эспрессо мартини",
             "en": "Espresso Martini",
             "ka": "ესპრესო მარტინი",
-            "tr": "Espresso Martini"
+            "tr": "Espresso Martini",
+            "auto": ""
           },
           "desc": {
             "ru": "водка, кофейный ликёр, эспрессо, ваниль",
             "en": "vodka, coffee liqueur, espresso, vanilla",
             "ka": "არაყი, ყავის ლიქიორი, ესპრესო, ვანილი",
-            "tr": "votka, kahve likörü, espresso, vanilya"
+            "tr": "votka, kahve likörü, espresso, vanilya",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -535,13 +584,15 @@
             "ru": "Эспрессо тоник",
             "en": "Espresso Tonic",
             "ka": "ესპრესო ტონიკი",
-            "tr": "Espresso Tonik"
+            "tr": "Espresso Tonik",
+            "auto": ""
           },
           "desc": {
             "ru": "эспрессо, тоник, ром",
             "en": "espresso, tonic, rum",
             "ka": "ესპრესო, ტონიკი, რომი",
-            "tr": "espresso, tonik, rom"
+            "tr": "espresso, tonik, rom",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -557,13 +608,15 @@
             "ru": "Немецкие каникулы",
             "en": "German Holidays",
             "ka": "გერმანული არდადეგები",
-            "tr": "Alman Tatili"
+            "tr": "Alman Tatili",
+            "auto": ""
           },
           "desc": {
             "ru": "Егермейстер, ром, имбирь, миндаль, лимон",
             "en": "Jägermeister, rum, ginger, almond, lemon",
             "ka": "იაგერმაისტერი, რომი, ჯანჯაფილი, ნუში, ლიმონი",
-            "tr": "Jägermeister, rom, zencefil, badem, limon"
+            "tr": "Jägermeister, rom, zencefil, badem, limon",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -579,13 +632,15 @@
             "ru": "Апероль Шприц AIR",
             "en": "Aperol Spritz AIR",
             "ka": "აპეროლ სპრიცი AIR",
-            "tr": "Aperol Spritz AIR"
+            "tr": "Aperol Spritz AIR",
+            "auto": ""
           },
           "desc": {
             "ru": "апероль, швепс, содовая, апельсин, мартини",
             "en": "Aperol, Schweppes, soda, orange, Martini",
             "ka": "აპეროლი, შვეპსი, სოდა, ფორთოხალი, მარტინი",
-            "tr": "Aperol, Schweppes, soda, portakal, Martini"
+            "tr": "Aperol, Schweppes, soda, portakal, Martini",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -601,13 +656,15 @@
             "ru": "Карамельный бамбл",
             "en": "Caramel Bumble",
             "ka": "კარამელ ბამბლი",
-            "tr": "Karamel Bumble"
+            "tr": "Karamel Bumble",
+            "auto": ""
           },
           "desc": {
             "ru": "ром, апельсин, кофе, карамель",
             "en": "rum, orange, coffee, caramel",
             "ka": "რომი, ფორთოხალი, ყავა, კარამელი",
-            "tr": "rom, portakal, kahve, karamel"
+            "tr": "rom, portakal, kahve, karamel",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -626,13 +683,15 @@
         "ru": "Шоты",
         "en": "Shots",
         "ka": "შოტები",
-        "tr": "Shot'lar"
+        "tr": "Shot'lar",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "shot",
       "items": [
@@ -642,13 +701,15 @@
             "ru": "Малиновый скандал",
             "en": "Raspberry Scandal",
             "ka": "ჟოლოს სკანდალი",
-            "tr": "Ahududu Skandalı"
+            "tr": "Ahududu Skandalı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -664,13 +725,15 @@
             "ru": "Кино и титры",
             "en": "Movie & Credits",
             "ka": "კინო და ტიტრები",
-            "tr": "Film ve Jenerik"
+            "tr": "Film ve Jenerik",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -686,13 +749,15 @@
             "ru": "Холодный флирт",
             "en": "Cold Flirt",
             "ka": "ცივი ფლირტი",
-            "tr": "Soğuk Flört"
+            "tr": "Soğuk Flört",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -708,13 +773,15 @@
             "ru": "Ягодный детектив",
             "en": "Berry Detective",
             "ka": "კენკრის დეტექტივი",
-            "tr": "Meyveli Dedektif"
+            "tr": "Meyveli Dedektif",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -730,13 +797,15 @@
             "ru": "Слишком вкусный для тебя",
             "en": "Too Tasty for You",
             "ka": "შენთვის ზედმეტად გემრიელი",
-            "tr": "Sana Fazla Lezzetli"
+            "tr": "Sana Fazla Lezzetli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -752,13 +821,15 @@
             "ru": "Жара на Бали",
             "en": "Bali Heat",
             "ka": "სიცხე ბალიზე",
-            "tr": "Bali Sıcağı"
+            "tr": "Bali Sıcağı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 6,
           "priceFrom": false,
@@ -774,13 +845,15 @@
             "ru": "Сет шотов",
             "en": "Shot set",
             "ka": "შოტების სეტი",
-            "tr": "Shot seti"
+            "tr": "Shot seti",
+            "auto": ""
           },
           "desc": {
             "ru": "6 шотов с разными настойками",
             "en": "6 shots with different infusions",
             "ka": "6 შოტი სხვადასხვა ნაყენით",
-            "tr": "farklı aromalarda 6 shot"
+            "tr": "farklı aromalarda 6 shot",
+            "auto": ""
           },
           "price": 30,
           "priceFrom": false,
@@ -799,31 +872,89 @@
         "ru": "Пиво",
         "en": "Beer",
         "ka": "ლუდი",
-        "tr": "Bira"
+        "tr": "Bira",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "beer",
       "items": [
         {
+          "id": "f63e1457a36d",
+          "name": {
+            "ru": "Corona Extra",
+            "en": "Corona Extra",
+            "ka": "Corona Extra",
+            "tr": "Corona Extra",
+            "auto": ""
+          },
+          "desc": null,
+          "price": 15,
+          "priceFrom": false,
+          "amount": null,
+          "unit": "",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "70de2452ca6d",
+          "name": {
+            "ru": "Paulaner Weissbier",
+            "en": "Paulaner Weissbier",
+            "ka": "Paulaner Weissbier",
+            "tr": "Paulaner Weissbier",
+            "auto": ""
+          },
+          "desc": null,
+          "price": 15,
+          "priceFrom": false,
+          "amount": null,
+          "unit": "",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "600dda1ff9b3",
+          "name": {
+            "ru": "Paulaner Lager",
+            "en": "Paulaner Lager",
+            "ka": "Paulaner Lager",
+            "tr": "Paulaner Lager",
+            "auto": ""
+          },
+          "desc": null,
+          "price": 15,
+          "priceFrom": false,
+          "amount": null,
+          "unit": "",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
           "id": "beer-wheat",
           "name": {
-            "ru": "Пшеничное",
-            "en": "Wheat",
-            "ka": "ხორბლის",
-            "tr": "Buğday birası"
+            "ru": "Pilsner",
+            "en": "Pilsner",
+            "ka": "Pilsner",
+            "tr": "Pilsner",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 10,
+          "price": 12,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -834,16 +965,18 @@
         {
           "id": "beer-dark",
           "name": {
-            "ru": "Тёмное",
-            "en": "Dark",
-            "ka": "მუქი",
-            "tr": "Koyu bira"
+            "ru": "Löwenbräu",
+            "en": "Löwenbräu",
+            "ka": "Löwenbräu",
+            "tr": "Löwenbräu",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 12,
           "priceFrom": false,
@@ -854,20 +987,88 @@
           "hidden": false
         },
         {
-          "id": "beer-lager",
+          "id": "beer-cider",
           "name": {
-            "ru": "Лагер",
-            "en": "Lager",
-            "ka": "ლაგერი",
-            "tr": "Lager"
+            "ru": "Natakhtari",
+            "en": "Natakhtari",
+            "ka": "ნატახტარი",
+            "tr": "Natakhtari",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 12,
+          "priceFrom": false,
+          "amount": null,
+          "unit": null,
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "276cd30e84b1",
+          "name": {
+            "ru": "Жигулёвское 6.5%",
+            "en": "Zhigulevskoye",
+            "ka": "Zhigulevskoye",
+            "tr": "Zhigulevskoye",
+            "auto": ""
+          },
+          "desc": null,
+          "price": 10,
+          "priceFrom": false,
+          "amount": null,
+          "unit": "",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "beer-lager",
+          "name": {
+            "ru": "Калекцыя Майстра Вечер в Брюгге",
+            "en": "Dark cherry",
+            "ka": "Dark cherry",
+            "tr": "Dark cherry",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": "",
+            "auto": ""
+          },
+          "price": 12,
+          "priceFrom": false,
+          "amount": null,
+          "unit": null,
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "beer-mead",
+          "name": {
+            "ru": "Калекцыя Майстра IPA",
+            "en": "IPA",
+            "ka": "IPA",
+            "tr": "IPA",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": "",
+            "auto": ""
+          },
+          "price": 10,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -881,13 +1082,15 @@
             "ru": "Квас алкогольный",
             "en": "Alcoholic kvass",
             "ka": "ალკოჰოლური კვასი",
-            "tr": "Alkollü kvas"
+            "tr": "Alkollü kvas",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 10,
           "priceFrom": false,
@@ -898,67 +1101,37 @@
           "hidden": false
         },
         {
-          "id": "beer-mead",
+          "id": "68438d3fedf7",
           "name": {
-            "ru": "Медовуха",
-            "en": "Mead",
-            "ka": "მედოვუხა",
-            "tr": "Bal şarabı"
+            "ru": "Лидское Нулёвачка Пшеничное б/а",
+            "en": "n/a wheat beer",
+            "ka": "n/a wheat beer",
+            "tr": "n/a wheat beer",
+            "auto": ""
           },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 15,
+          "desc": null,
+          "price": 9,
           "priceFrom": false,
           "amount": null,
-          "unit": null,
+          "unit": "",
           "variants": [],
           "photo": "",
           "hidden": false
         },
         {
-          "id": "beer-cider",
+          "id": "3d20b8ee647a",
           "name": {
-            "ru": "Сидр",
-            "en": "Cider",
-            "ka": "სიდრი",
-            "tr": "Elma şarabı"
+            "ru": "Лидское Нулёвочка б/а",
+            "en": "n/a beer",
+            "ka": "n/a beer",
+            "tr": "n/a beer",
+            "auto": ""
           },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 15,
+          "desc": null,
+          "price": 9,
           "priceFrom": false,
           "amount": null,
-          "unit": null,
-          "variants": [],
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "beer-special",
-          "name": {
-            "ru": "Специальное предложение",
-            "en": "Special offer",
-            "ka": "სპეციალური შეთავაზება",
-            "tr": "Özel teklif"
-          },
-          "desc": {
-            "ru": "Все новые позиции + возвращение полюбившихся напитков. Ассортимент уточняйте у бармена",
-            "en": "New arrivals + the return of favourite drinks. Ask the bartender about today's selection",
-            "ka": "ახალი პოზიციები + საყვარელი სასმელების დაბრუნება. ასორტიმენტი დააზუსტეთ ბარმენთან",
-            "tr": "Yeni ürünler + sevilen içeceklerin dönüşü. Çeşitler için barmene danışın"
-          },
-          "price": 8,
-          "priceFrom": true,
-          "amount": null,
-          "unit": null,
+          "unit": "",
           "variants": [],
           "photo": "",
           "hidden": false
@@ -972,31 +1145,47 @@
         "ru": "Крепкий алкоголь",
         "en": "Spirits",
         "ka": "მაგარი სასმელი",
-        "tr": "Sert içkiler"
+        "tr": "Sert içkiler",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "spirits",
       "items": [
         {
-          "id": "justerini-and-brooks",
+          "id": "6d60f04874eb",
           "name": {
-            "ru": "Justerini & Brooks",
-            "en": "Justerini & Brooks",
-            "ka": "Justerini & Brooks",
-            "tr": "Justerini & Brooks"
+            "ru": "Monkey Shoulder",
+            "en": "Monkey Shoulder",
+            "ka": "Monkey Shoulder",
+            "tr": "Monkey Shoulder",
+            "auto": ""
           },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
+          "desc": null,
+          "price": 22,
+          "priceFrom": false,
+          "amount": 50,
+          "unit": "ml",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "b2ae57745033",
+          "name": {
+            "ru": "Chivas Regal 12",
+            "en": "Chivas Regal 12",
+            "ka": "Chivas Regal 12",
+            "tr": "Chivas Regal 12",
+            "auto": ""
           },
-          "price": 12,
+          "desc": null,
+          "price": 25,
           "priceFrom": false,
           "amount": 50,
           "unit": "ml",
@@ -1010,13 +1199,105 @@
             "ru": "Jameson",
             "en": "Jameson",
             "ka": "Jameson",
-            "tr": "Jameson"
+            "tr": "Jameson",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
+          },
+          "price": 15,
+          "priceFrom": false,
+          "amount": 50,
+          "unit": "ml",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "ballantines",
+          "name": {
+            "ru": "Ballantine's",
+            "en": "Ballantine's",
+            "ka": "Ballantine's",
+            "tr": "Ballantine's",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": "",
+            "auto": ""
+          },
+          "price": 12,
+          "priceFrom": false,
+          "amount": 50,
+          "unit": "ml",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "justerini-and-brooks",
+          "name": {
+            "ru": "Justerini & Brooks",
+            "en": "Justerini & Brooks",
+            "ka": "Justerini & Brooks",
+            "tr": "Justerini & Brooks",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": "",
+            "auto": ""
+          },
+          "price": 12,
+          "priceFrom": false,
+          "amount": 50,
+          "unit": "ml",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "0db6a2d585db",
+          "name": {
+            "ru": "Jägermeister",
+            "en": "Jägermeister",
+            "ka": "Jägermeister",
+            "tr": "Jägermeister",
+            "auto": ""
+          },
+          "desc": null,
+          "price": 13,
+          "priceFrom": false,
+          "amount": 50,
+          "unit": "ml",
+          "variants": [],
+          "photo": "",
+          "hidden": false
+        },
+        {
+          "id": "olmeca",
+          "name": {
+            "ru": "Olmeca",
+            "en": "Olmeca",
+            "ka": "Olmeca",
+            "tr": "Olmeca",
+            "auto": ""
+          },
+          "desc": {
+            "ru": "",
+            "en": "",
+            "ka": "",
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1032,37 +1313,17 @@
             "ru": "Askaneli",
             "en": "Askaneli",
             "ka": "ასკანელი",
-            "tr": "Askaneli"
+            "tr": "Askaneli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 10,
-          "priceFrom": false,
-          "amount": 50,
-          "unit": "ml",
-          "variants": [],
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "ballantines",
-          "name": {
-            "ru": "Ballantine's",
-            "en": "Ballantine's",
-            "ka": "Ballantine's",
-            "tr": "Ballantine's"
-          },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 12,
           "priceFrom": false,
           "amount": 50,
           "unit": "ml",
@@ -1076,13 +1337,15 @@
             "ru": "Havana Club",
             "en": "Havana Club",
             "ka": "Havana Club",
-            "tr": "Havana Club"
+            "tr": "Havana Club",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 12,
           "priceFrom": false,
@@ -1098,37 +1361,17 @@
             "ru": "Captain Morgan",
             "en": "Captain Morgan",
             "ka": "Captain Morgan",
-            "tr": "Captain Morgan"
+            "tr": "Captain Morgan",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 10,
-          "priceFrom": false,
-          "amount": 50,
-          "unit": "ml",
-          "variants": [],
-          "photo": "",
-          "hidden": false
-        },
-        {
-          "id": "olmeca",
-          "name": {
-            "ru": "Olmeca",
-            "en": "Olmeca",
-            "ka": "Olmeca",
-            "tr": "Olmeca"
-          },
-          "desc": {
-            "ru": "",
-            "en": "",
-            "ka": "",
-            "tr": ""
-          },
-          "price": 15,
           "priceFrom": false,
           "amount": 50,
           "unit": "ml",
@@ -1142,13 +1385,15 @@
             "ru": "Sarajishvili",
             "en": "Sarajishvili",
             "ka": "სარაჯიშვილი",
-            "tr": "Sarajishvili"
+            "tr": "Sarajishvili",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 10,
           "priceFrom": false,
@@ -1164,13 +1409,15 @@
             "ru": "Nemiroff",
             "en": "Nemiroff",
             "ka": "Nemiroff",
-            "tr": "Nemiroff"
+            "tr": "Nemiroff",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 9,
           "priceFrom": false,
@@ -1189,13 +1436,15 @@
         "ru": "Вино",
         "en": "Wine",
         "ka": "ღვინო",
-        "tr": "Şarap"
+        "tr": "Şarap",
+        "auto": ""
       },
       "note": {
         "ru": "Цена за бутылку 0,7 л",
         "en": "Price per 0.7 l bottle",
         "ka": "ფასი 0,7 ლ ბოთლზე",
-        "tr": "Fiyat 0,7 lt şişe içindir"
+        "tr": "Fiyat 0,7 lt şişe içindir",
+        "auto": ""
       },
       "icon": "wine",
       "items": [
@@ -1205,13 +1454,15 @@
             "ru": "Киндзмараули",
             "en": "Kindzmarauli",
             "ka": "ქინძმარაული",
-            "tr": "Kindzmarauli"
+            "tr": "Kindzmarauli",
+            "auto": ""
           },
           "desc": {
             "ru": "красное полусладкое",
             "en": "red, semi-sweet",
             "ka": "წითელი ნახევრადტკბილი",
-            "tr": "kırmızı, yarı tatlı"
+            "tr": "kırmızı, yarı tatlı",
+            "auto": ""
           },
           "price": 45,
           "priceFrom": false,
@@ -1227,13 +1478,15 @@
             "ru": "Саперави",
             "en": "Saperavi",
             "ka": "საფერავი",
-            "tr": "Saperavi"
+            "tr": "Saperavi",
+            "auto": ""
           },
           "desc": {
             "ru": "красное сухое",
             "en": "red, dry",
             "ka": "წითელი მშრალი",
-            "tr": "kırmızı, sek"
+            "tr": "kırmızı, sek",
+            "auto": ""
           },
           "price": 45,
           "priceFrom": false,
@@ -1249,13 +1502,15 @@
             "ru": "Цинандали",
             "en": "Tsinandali",
             "ka": "წინანდალი",
-            "tr": "Tsinandali"
+            "tr": "Tsinandali",
+            "auto": ""
           },
           "desc": {
             "ru": "белое сухое",
             "en": "white, dry",
             "ka": "თეთრი მშრალი",
-            "tr": "beyaz, sek"
+            "tr": "beyaz, sek",
+            "auto": ""
           },
           "price": 45,
           "priceFrom": false,
@@ -1271,13 +1526,15 @@
             "ru": "Киси",
             "en": "Kisi",
             "ka": "ქისი",
-            "tr": "Kisi"
+            "tr": "Kisi",
+            "auto": ""
           },
           "desc": {
             "ru": "белое сухое",
             "en": "white, dry",
             "ka": "თეთრი მშრალი",
-            "tr": "beyaz, sek"
+            "tr": "beyaz, sek",
+            "auto": ""
           },
           "price": 45,
           "priceFrom": false,
@@ -1296,13 +1553,15 @@
         "ru": "Лимонады",
         "en": "Lemonades",
         "ka": "ლიმონათები",
-        "tr": "Limonatalar"
+        "tr": "Limonatalar",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "lemonade",
       "items": [
@@ -1312,13 +1571,15 @@
             "ru": "Ягодный",
             "en": "Berry",
             "ka": "კენკრის",
-            "tr": "Orman meyveli"
+            "tr": "Orman meyveli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": null,
           "priceFrom": false,
@@ -1326,11 +1587,13 @@
           "unit": null,
           "variants": [
             {
+              "label": null,
               "amount": 0.5,
               "unit": "l",
               "price": 10
             },
             {
+              "label": null,
               "amount": 1,
               "unit": "l",
               "price": 20
@@ -1345,13 +1608,15 @@
             "ru": "Фруктовый",
             "en": "Fruit",
             "ka": "ხილის",
-            "tr": "Meyveli"
+            "tr": "Meyveli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": null,
           "priceFrom": false,
@@ -1359,11 +1624,13 @@
           "unit": null,
           "variants": [
             {
+              "label": null,
               "amount": 0.5,
               "unit": "l",
               "price": 10
             },
             {
+              "label": null,
               "amount": 1,
               "unit": "l",
               "price": 20
@@ -1378,13 +1645,15 @@
             "ru": "Тропический",
             "en": "Tropical",
             "ka": "ტროპიკული",
-            "tr": "Tropikal"
+            "tr": "Tropikal",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": null,
           "priceFrom": false,
@@ -1392,11 +1661,13 @@
           "unit": null,
           "variants": [
             {
+              "label": null,
               "amount": 0.5,
               "unit": "l",
               "price": 10
             },
             {
+              "label": null,
               "amount": 1,
               "unit": "l",
               "price": 20
@@ -1411,13 +1682,15 @@
             "ru": "Цитрусовый",
             "en": "Citrus",
             "ka": "ციტრუსის",
-            "tr": "Narenciyeli"
+            "tr": "Narenciyeli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": null,
           "priceFrom": false,
@@ -1425,11 +1698,13 @@
           "unit": null,
           "variants": [
             {
+              "label": null,
               "amount": 0.5,
               "unit": "l",
               "price": 10
             },
             {
+              "label": null,
               "amount": 1,
               "unit": "l",
               "price": 20
@@ -1447,13 +1722,15 @@
         "ru": "Холодные напитки",
         "en": "Cold drinks",
         "ka": "ცივი სასმელები",
-        "tr": "Soğuk içecekler"
+        "tr": "Soğuk içecekler",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "soda",
       "items": [
@@ -1463,15 +1740,17 @@
             "ru": "Кока-Кола",
             "en": "Coca-Cola",
             "ka": "კოკა-კოლა",
-            "tr": "Coca-Cola"
+            "tr": "Coca-Cola",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 5,
+          "price": 6,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -1485,15 +1764,17 @@
             "ru": "Кока-Кола Зеро",
             "en": "Coca-Cola Zero",
             "ka": "კოკა-კოლა ზერო",
-            "tr": "Coca-Cola Zero"
+            "tr": "Coca-Cola Zero",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 5,
+          "price": 6,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -1507,15 +1788,17 @@
             "ru": "Фанта классическая",
             "en": "Fanta Classic",
             "ka": "ფანტა კლასიკი",
-            "tr": "Fanta"
+            "tr": "Fanta",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 5,
+          "price": 6,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -1529,15 +1812,17 @@
             "ru": "Спрайт",
             "en": "Sprite",
             "ka": "სპრაიტი",
-            "tr": "Sprite"
+            "tr": "Sprite",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 5,
+          "price": 6,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -1551,15 +1836,17 @@
             "ru": "Швепс",
             "en": "Schweppes",
             "ka": "შვეპსი",
-            "tr": "Schweppes"
+            "tr": "Schweppes",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
-          "price": 5,
+          "price": 6,
           "priceFrom": false,
           "amount": null,
           "unit": null,
@@ -1573,13 +1860,15 @@
             "ru": "Вода газированная",
             "en": "Sparkling water",
             "ka": "გაზიანი წყალი",
-            "tr": "Maden suyu"
+            "tr": "Maden suyu",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 5,
           "priceFrom": false,
@@ -1595,13 +1884,15 @@
             "ru": "Вода негазированная",
             "en": "Still water",
             "ka": "უგაზო წყალი",
-            "tr": "Su"
+            "tr": "Su",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 5,
           "priceFrom": false,
@@ -1617,13 +1908,15 @@
             "ru": "Квас Лидский",
             "en": "Lidskiy Kvass",
             "ka": "ლიდსკის კვასი",
-            "tr": "Lidskiy Kvas"
+            "tr": "Lidskiy Kvas",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 8,
           "priceFrom": false,
@@ -1639,13 +1932,15 @@
             "ru": "Лимонад CHILLZ",
             "en": "CHILLZ Lemonade",
             "ka": "ლიმონათი CHILLZ",
-            "tr": "CHILLZ Limonata"
+            "tr": "CHILLZ Limonata",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 8,
           "priceFrom": false,
@@ -1661,13 +1956,15 @@
             "ru": "Энергетик",
             "en": "Energy drink",
             "ka": "ენერგეტიკული სასმელი",
-            "tr": "Enerji içeceği"
+            "tr": "Enerji içeceği",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 8,
           "priceFrom": false,
@@ -1686,13 +1983,15 @@
         "ru": "Чаи классические",
         "en": "Classic teas",
         "ka": "კლასიკური ჩაი",
-        "tr": "Klasik çaylar"
+        "tr": "Klasik çaylar",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "tea",
       "items": [
@@ -1702,13 +2001,15 @@
             "ru": "Сенча",
             "en": "Sencha",
             "ka": "სენჩა",
-            "tr": "Sencha"
+            "tr": "Sencha",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1724,13 +2025,15 @@
             "ru": "Ассам",
             "en": "Assam",
             "ka": "ასამი",
-            "tr": "Assam"
+            "tr": "Assam",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1746,13 +2049,15 @@
             "ru": "Эрл Грей",
             "en": "Earl Grey",
             "ka": "ერლ გრეი",
-            "tr": "Earl Grey"
+            "tr": "Earl Grey",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1768,13 +2073,15 @@
             "ru": "Молочный улун",
             "en": "Milk Oolong",
             "ka": "რძიანი ულუნი",
-            "tr": "Sütlü Oolong"
+            "tr": "Sütlü Oolong",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1790,13 +2097,15 @@
             "ru": "Да Хун Пао",
             "en": "Da Hong Pao",
             "ka": "და-ჰონ-პაო",
-            "tr": "Da Hong Pao"
+            "tr": "Da Hong Pao",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1812,13 +2121,15 @@
             "ru": "Пуэр",
             "en": "Pu-erh",
             "ka": "პუერი",
-            "tr": "Pu-erh"
+            "tr": "Pu-erh",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1834,13 +2145,15 @@
             "ru": "Жасмин",
             "en": "Jasmine",
             "ka": "ჟასმინი",
-            "tr": "Yasemin"
+            "tr": "Yasemin",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1859,13 +2172,15 @@
         "ru": "Чаи травяные",
         "en": "Herbal teas",
         "ka": "მცენარეული ჩაი",
-        "tr": "Bitki çayları"
+        "tr": "Bitki çayları",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "tea",
       "items": [
@@ -1875,13 +2190,15 @@
             "ru": "Гречишный",
             "en": "Buckwheat",
             "ka": "წიწიბურას",
-            "tr": "Karabuğday"
+            "tr": "Karabuğday",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1897,13 +2214,15 @@
             "ru": "Каркаде",
             "en": "Hibiscus",
             "ka": "ჰიბისკუსი",
-            "tr": "Hibiskus"
+            "tr": "Hibiskus",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1919,13 +2238,15 @@
             "ru": "Вишня Миндаль",
             "en": "Cherry Almond",
             "ka": "ალუბალი და ნუში",
-            "tr": "Vişne Badem"
+            "tr": "Vişne Badem",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1941,13 +2262,15 @@
             "ru": "Ромашковый",
             "en": "Chamomile",
             "ka": "გვირილა",
-            "tr": "Papatya"
+            "tr": "Papatya",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1963,13 +2286,15 @@
             "ru": "Сокровища природы",
             "en": "Treasures of Nature",
             "ka": "ბუნების საგანძური",
-            "tr": "Doğanın Hazineleri"
+            "tr": "Doğanın Hazineleri",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 15,
           "priceFrom": false,
@@ -1988,13 +2313,15 @@
         "ru": "Чаи фирменные",
         "en": "Signature teas",
         "ka": "საფირმო ჩაი",
-        "tr": "Özel çaylar"
+        "tr": "Özel çaylar",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "tea",
       "items": [
@@ -2004,13 +2331,15 @@
             "ru": "Лесная история",
             "en": "Forest Tale",
             "ka": "ტყის ამბავი",
-            "tr": "Orman Masalı"
+            "tr": "Orman Masalı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2026,13 +2355,15 @@
             "ru": "Апельсин без повода",
             "en": "Orange for No Reason",
             "ka": "ფორთოხალი უმიზეზოდ",
-            "tr": "Sebepsiz Portakal"
+            "tr": "Sebepsiz Portakal",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2048,13 +2379,15 @@
             "ru": "Манго, ты где был?",
             "en": "Mango, Where Have You Been?",
             "ka": "მანგო, სად იყავი?",
-            "tr": "Mango, Neredeydin?"
+            "tr": "Mango, Neredeydin?",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2070,13 +2403,15 @@
             "ru": "Десерт притворился чаем",
             "en": "Dessert Pretending to Be Tea",
             "ka": "დესერტი ვითომ ჩაია",
-            "tr": "Çay Kılığında Tatlı"
+            "tr": "Çay Kılığında Tatlı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2092,13 +2427,15 @@
             "ru": "Имбирь кусается",
             "en": "Ginger Bites",
             "ka": "ჯანჯაფილი იკბინება",
-            "tr": "Zencefil Isırır"
+            "tr": "Zencefil Isırır",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2117,13 +2454,15 @@
         "ru": "Милкшейки",
         "en": "Milkshakes",
         "ka": "მილქშეიქები",
-        "tr": "Milkshake'ler"
+        "tr": "Milkshake'ler",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "milkshake",
       "items": [
@@ -2133,13 +2472,15 @@
             "ru": "Банановый",
             "en": "Banana",
             "ka": "ბანანის",
-            "tr": "Muzlu"
+            "tr": "Muzlu",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 18,
           "priceFrom": false,
@@ -2155,13 +2496,15 @@
             "ru": "Сникерс",
             "en": "Snickers",
             "ka": "სნიკერსი",
-            "tr": "Snickers"
+            "tr": "Snickers",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 18,
           "priceFrom": false,
@@ -2177,13 +2520,15 @@
             "ru": "Фисташковый",
             "en": "Pistachio",
             "ka": "ფისტას",
-            "tr": "Antep fıstıklı"
+            "tr": "Antep fıstıklı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 18,
           "priceFrom": false,
@@ -2199,13 +2544,15 @@
             "ru": "Ванильный",
             "en": "Vanilla",
             "ka": "ვანილის",
-            "tr": "Vanilyalı"
+            "tr": "Vanilyalı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 18,
           "priceFrom": false,
@@ -2224,13 +2571,15 @@
         "ru": "Протеиновые шейки",
         "en": "Protein shakes",
         "ka": "პროტეინის კოქტეილები",
-        "tr": "Protein shake'ler"
+        "tr": "Protein shake'ler",
+        "auto": ""
       },
       "note": {
         "ru": "",
         "en": "",
         "ka": "",
-        "tr": ""
+        "tr": "",
+        "auto": ""
       },
       "icon": "milkshake",
       "items": [
@@ -2240,13 +2589,15 @@
             "ru": "Ванильный",
             "en": "Vanilla",
             "ka": "ვანილის",
-            "tr": "Vanilyalı"
+            "tr": "Vanilyalı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2262,13 +2613,15 @@
             "ru": "Шоколадный",
             "en": "Chocolate",
             "ka": "შოკოლადის",
-            "tr": "Çikolatalı"
+            "tr": "Çikolatalı",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2284,13 +2637,15 @@
             "ru": "Ягодный",
             "en": "Berry",
             "ka": "კენკრის",
-            "tr": "Orman meyveli"
+            "tr": "Orman meyveli",
+            "auto": ""
           },
           "desc": {
             "ru": "",
             "en": "",
             "ka": "",
-            "tr": ""
+            "tr": "",
+            "auto": ""
           },
           "price": 20,
           "priceFrom": false,
@@ -2305,20 +2660,22 @@
   ],
   "offMenu": {
     "id": "off-menu",
-    "layout": "builder",
+    "icon": "cocktail",
+    "after": "signature-cocktails",
     "title": {
       "ru": "Коктейль вне меню",
       "en": "Off-menu cocktail",
       "ka": "კოქტეილი მენიუს გარეთ",
-      "tr": "Menü dışı kokteyl"
+      "tr": "Menü dışı kokteyl",
+      "auto": ""
     },
     "note": {
       "ru": "",
       "en": "",
       "ka": "",
-      "tr": ""
+      "tr": "",
+      "auto": ""
     },
-    "icon": "cocktail",
     "items": [
       {
         "id": "custom-cocktail",
@@ -2326,13 +2683,15 @@
           "ru": "Коктейль вне меню",
           "en": "Off-menu cocktail",
           "ka": "კოქტეილი მენიუს გარეთ",
-          "tr": "Menü dışı kokteyl"
+          "tr": "Menü dışı kokteyl",
+          "auto": ""
         },
         "desc": {
           "ru": "Почувствуй себя барменом и собери свой коктейль самостоятельно",
           "en": "Feel like a bartender and build your own cocktail",
           "ka": "იგრძენით თავი ბარმენად და თავად შეადგინეთ თქვენი კოქტეილი",
-          "tr": "Kendini barmen gibi hisset ve kokteylini kendin oluştur"
+          "tr": "Kendini barmen gibi hisset ve kokteylini kendin oluştur",
+          "auto": ""
         },
         "price": 20,
         "steps": [
@@ -2341,13 +2700,15 @@
               "ru": "База",
               "en": "Base",
               "ka": "ბაზა",
-              "tr": "Baz"
+              "tr": "Baz",
+              "auto": ""
             },
             "options": {
               "ru": "водка / джин / ром / текила / виски",
               "en": "vodka / gin / rum / tequila / whiskey",
               "ka": "არაყი / ჯინი / რომი / ტეკილა / ვისკი",
-              "tr": "votka / cin / rom / tekila / viski"
+              "tr": "votka / cin / rom / tekila / viski",
+              "auto": ""
             }
           },
           {
@@ -2355,13 +2716,15 @@
               "ru": "Вкус",
               "en": "Flavour",
               "ka": "გემო",
-              "tr": "Tat"
+              "tr": "Tat",
+              "auto": ""
             },
             "options": {
               "ru": "сладкий / кислый / свежий / фруктовый",
               "en": "sweet / sour / fresh / fruity",
               "ka": "ტკბილი / მჟავე / გამაგრილებელი / ხილის",
-              "tr": "tatlı / ekşi / ferah / meyveli"
+              "tr": "tatlı / ekşi / ferah / meyveli",
+              "auto": ""
             }
           },
           {
@@ -2369,13 +2732,15 @@
               "ru": "Баланс",
               "en": "Balance",
               "ka": "ბალანსი",
-              "tr": "Denge"
+              "tr": "Denge",
+              "auto": ""
             },
             "options": {
               "ru": "кислота или сладость",
               "en": "sourness or sweetness",
               "ka": "სიმჟავე ან სიტკბო",
-              "tr": "ekşilik veya tatlılık"
+              "tr": "ekşilik veya tatlılık",
+              "auto": ""
             }
           },
           {
@@ -2383,13 +2748,15 @@
               "ru": "Миксер",
               "en": "Mixer",
               "ka": "მიქსერი",
-              "tr": "Mikser"
+              "tr": "Mikser",
+              "auto": ""
             },
             "options": {
               "ru": "сок / тоник / содовая / кола",
               "en": "juice / tonic / soda / cola",
               "ka": "წვენი / ტონიკი / სოდა / კოლა",
-              "tr": "meyve suyu / tonik / soda / kola"
+              "tr": "meyve suyu / tonik / soda / kola",
+              "auto": ""
             }
           },
           {
@@ -2397,13 +2764,15 @@
               "ru": "Формат",
               "en": "Format",
               "ka": "ფორმატი",
-              "tr": "Sunum"
+              "tr": "Sunum",
+              "auto": ""
             },
             "options": {
               "ru": "шейк / со льдом / лонг / шорт",
               "en": "shaken / on the rocks / long / short",
               "ka": "შეიკი / ყინულით / ლონგი / შორტი",
-              "tr": "shake / buzlu / long / short"
+              "tr": "shake / buzlu / long / short",
+              "auto": ""
             }
           }
         ],
@@ -2416,13 +2785,15 @@
           "ru": "Б/А коктейль вне меню",
           "en": "Off-menu mocktail",
           "ka": "უალკოჰოლო კოქტეილი მენიუს გარეთ",
-          "tr": "Alkolsüz menü dışı kokteyl"
+          "tr": "Alkolsüz menü dışı kokteyl",
+          "auto": ""
         },
         "desc": {
           "ru": "А для тех, кто «за рулём», действует специальное предложение",
           "en": "And for those who are driving, there's a special offer",
           "ka": "მათთვის, ვინც საჭესთანაა, მოქმედებს სპეციალური შეთავაზება",
-          "tr": "Araç kullananlar için özel bir teklifimiz var"
+          "tr": "Araç kullananlar için özel bir teklifimiz var",
+          "auto": ""
         },
         "price": 12,
         "steps": [],
@@ -2430,6 +2801,6 @@
         "hidden": false
       }
     ],
-    "after": "signature-cocktails"
+    "layout": "builder"
   }
 }
