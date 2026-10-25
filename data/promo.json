@@ -7,6 +7,12 @@
     "ka": "აქციები",
     "tr": "Kampanyalar"
   },
+  "tabLabel": {
+    "ru": "Акции",
+    "en": "Promos",
+    "ka": "აქციები",
+    "tr": "Kampanya"
+  },
   "menuLabel": false,
   "sections": [
     {

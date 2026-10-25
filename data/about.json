@@ -1,0 +1,477 @@
+{
+  "id": "about",
+  "icon": "flame",
+  "layout": "about",
+  "menuLabel": false,
+  "hideTitle": true,
+  "title": {
+    "ru": "О нас",
+    "en": "About us",
+    "ka": "ჩვენ შესახებ",
+    "tr": "Hakkımızda"
+  },
+  "tabLabel": {
+    "ru": "О нас",
+    "en": "About",
+    "ka": "ჩვენზე",
+    "tr": "Hakkında"
+  },
+  "welcome": {
+    "title": {
+      "ru": "Добро пожаловать в AIR LOUNGE & BAR",
+      "en": "Welcome to AIR LOUNGE & BAR",
+      "ka": "მოგესალმებით AIR LOUNGE & BAR-ში",
+      "tr": "AIR LOUNGE & BAR'a hoş geldiniz"
+    },
+    "text": {
+      "ru": "Место для неспешных вечеров: встретиться с друзьями, поработать за ноутбуком или просто выдохнуть под кальян и хороший коктейль.",
+      "en": "A place for unhurried evenings: meet up with friends, get some work done on your laptop, or simply unwind over a hookah and a good cocktail.",
+      "ka": "ადგილი აუჩქარებელი საღამოებისთვის: შეხვდით მეგობრებს, იმუშავეთ ლეპტოპით ან უბრალოდ დაისვენეთ ჩილიმითა და კარგი კოქტეილით.",
+      "tr": "Acelesiz akşamlar için bir yer: arkadaşlarınızla buluşun, dizüstü bilgisayarınızla çalışın ya da nargile ve güzel bir kokteyl eşliğinde dinlenin."
+    }
+  },
+  "features": [
+    {
+      "icon": "gamepad",
+      "title": {
+        "ru": "PlayStation 5",
+        "en": "PlayStation 5",
+        "ka": "PlayStation 5",
+        "tr": "PlayStation 5"
+      },
+      "text": {
+        "ru": "Две приставки и больше 100 игр — для турнира с друзьями или спокойной партии вдвоём.",
+        "en": "Two consoles and 100+ games — for a tournament with friends or a quiet match for two.",
+        "ka": "ორი კონსოლი და 100-ზე მეტი თამაში — მეგობრებთან ტურნირისთვის ან მშვიდი თამაშისთვის ორნი.",
+        "tr": "İki konsol ve 100'den fazla oyun — arkadaşlarla turnuva ya da iki kişilik sakin bir maç için."
+      }
+    },
+    {
+      "icon": "dice",
+      "title": {
+        "ru": "Настольные игры",
+        "en": "Board games",
+        "ka": "სამაგიდო თამაშები",
+        "tr": "Kutu oyunları"
+      },
+      "text": {
+        "ru": "Целая полка на любую компанию. Не знаете, что выбрать, — подскажем.",
+        "en": "A whole shelf for any group. Not sure what to pick? We'll help.",
+        "ka": "მთელი თარო ნებისმიერი კომპანიისთვის. არ იცით, რა აირჩიოთ? დაგეხმარებით.",
+        "tr": "Her gruba uygun koca bir raf. Ne seçeceğinizi bilmiyor musunuz? Yardımcı oluruz."
+      },
+      "listLabel": {
+        "ru": "Список игр",
+        "en": "Game list",
+        "ka": "თამაშების სია",
+        "tr": "Oyun listesi"
+      },
+      "list": [
+        {
+          "name": {
+            "ru": "Монополия",
+            "en": "Monopoly",
+            "ka": "მონოპოლია",
+            "tr": "Monopoly"
+          },
+          "players": "2–8"
+        },
+        {
+          "name": {
+            "ru": "Уно",
+            "en": "UNO",
+            "ka": "UNO",
+            "tr": "UNO"
+          },
+          "players": "2–10"
+        },
+        {
+          "name": {
+            "ru": "Мафия",
+            "en": "Mafia",
+            "ka": "მაფია",
+            "tr": "Mafya"
+          },
+          "players": "6–10"
+        },
+        {
+          "name": {
+            "ru": "Дженга",
+            "en": "Jenga",
+            "ka": "Jenga",
+            "tr": "Jenga"
+          },
+          "players": "2+"
+        },
+        {
+          "name": {
+            "ru": "Нарды",
+            "en": "Backgammon",
+            "ka": "ნარდი",
+            "tr": "Tavla"
+          },
+          "players": "2"
+        },
+        {
+          "name": {
+            "ru": "Шахматы",
+            "en": "Chess",
+            "ka": "ჭადრაკი",
+            "tr": "Satranç"
+          },
+          "players": "2"
+        },
+        {
+          "name": {
+            "ru": "Игральные карты",
+            "en": "Playing cards",
+            "ka": "სათამაშო ბანქო",
+            "tr": "İskambil kartları"
+          },
+          "players": "2+"
+        },
+        {
+          "name": {
+            "ru": "Катан",
+            "en": "Catan",
+            "ka": "Catan",
+            "tr": "Catan"
+          },
+          "players": "3–4"
+        },
+        {
+          "name": {
+            "ru": "Диксит",
+            "en": "Dixit",
+            "ka": "Dixit",
+            "tr": "Dixit"
+          },
+          "players": "3–6"
+        },
+        {
+          "name": {
+            "ru": "Покер (набор)",
+            "en": "Poker set",
+            "ka": "პოკერის ნაკრები",
+            "tr": "Poker seti"
+          },
+          "players": "2–10"
+        },
+        {
+          "name": {
+            "ru": "Ticket to Ride",
+            "en": "Ticket to Ride",
+            "ka": "Ticket to Ride",
+            "tr": "Ticket to Ride"
+          },
+          "players": "2–5"
+        },
+        {
+          "name": {
+            "ru": "Коднеймс. Картинки",
+            "en": "Codenames: Pictures",
+            "ka": "Codenames: Pictures",
+            "tr": "Codenames: Pictures"
+          },
+          "players": "3–6"
+        },
+        {
+          "name": {
+            "ru": "Секретный Гитлер",
+            "en": "Secret Hitler",
+            "ka": "Secret Hitler",
+            "tr": "Secret Hitler"
+          },
+          "players": "5–10"
+        },
+        {
+          "name": {
+            "ru": "Бэнг!",
+            "en": "Bang!",
+            "ka": "Bang!",
+            "tr": "Bang!"
+          },
+          "players": "4–7"
+        },
+        {
+          "name": {
+            "ru": "Домино",
+            "en": "Dominoes",
+            "ka": "დომინო",
+            "tr": "Domino"
+          },
+          "players": "2+"
+        },
+        {
+          "name": {
+            "ru": "Гномы-вредители",
+            "en": "Saboteur",
+            "ka": "Saboteur",
+            "tr": "Saboteur"
+          },
+          "players": "3–10"
+        },
+        {
+          "name": {
+            "ru": "Свинтус 2.0",
+            "en": "Svintus 2.0",
+            "ka": "Svintus 2.0",
+            "tr": "Svintus 2.0"
+          },
+          "players": "2–10"
+        },
+        {
+          "name": {
+            "ru": "Бункер",
+            "en": "Bunker",
+            "ka": "Bunker",
+            "tr": "Bunker"
+          },
+          "players": "5–16"
+        },
+        {
+          "name": {
+            "ru": "Экивоки",
+            "en": "Ekivoki",
+            "ka": "Ekivoki",
+            "tr": "Ekivoki"
+          },
+          "players": "2–16"
+        },
+        {
+          "name": {
+            "ru": "Нечто",
+            "en": "The Thing",
+            "ka": "The Thing",
+            "tr": "The Thing"
+          },
+          "players": "4–12"
+        },
+        {
+          "name": {
+            "ru": "Трамвай смерти",
+            "en": "Trial by Trolley",
+            "ka": "Trial by Trolley",
+            "tr": "Trial by Trolley"
+          },
+          "players": "3–9"
+        },
+        {
+          "name": {
+            "ru": "Рик и Морти",
+            "en": "Rick and Morty",
+            "ka": "Rick and Morty",
+            "tr": "Rick and Morty"
+          },
+          "players": "2–5"
+        },
+        {
+          "name": {
+            "ru": "Голливуд",
+            "en": "Hollywood",
+            "ka": "Hollywood",
+            "tr": "Hollywood"
+          },
+          "players": "2–6"
+        },
+        {
+          "name": {
+            "ru": "Дудл Друдл",
+            "en": "Doodle Droodle",
+            "ka": "Doodle Droodle",
+            "tr": "Doodle Droodle"
+          },
+          "players": "2–6"
+        },
+        {
+          "name": {
+            "ru": "Подложи свинью",
+            "en": "Slip a Pig",
+            "ka": "Slip a Pig",
+            "tr": "Slip a Pig"
+          },
+          "players": "4–8"
+        },
+        {
+          "name": {
+            "ru": "Чудесные башни",
+            "en": "Wonder Towers",
+            "ka": "Wonder Towers",
+            "tr": "Wonder Towers"
+          },
+          "players": "2–4"
+        },
+        {
+          "name": {
+            "ru": "Carta Impera Victoria",
+            "en": "Carta Impera Victoria",
+            "ka": "Carta Impera Victoria",
+            "tr": "Carta Impera Victoria"
+          },
+          "players": "2–4"
+        },
+        {
+          "name": {
+            "ru": "Битва полов",
+            "en": "Battle of the Sexes",
+            "ka": "Battle of the Sexes",
+            "tr": "Cinsiyetler Savaşı"
+          },
+          "players": "4+"
+        },
+        {
+          "name": {
+            "ru": "Чепуха",
+            "en": "Nonsense",
+            "ka": "Nonsense",
+            "tr": "Nonsense"
+          },
+          "players": "3+"
+        },
+        {
+          "name": {
+            "ru": "Скажи да или нет",
+            "en": "Say Yes or No",
+            "ka": "Say Yes or No",
+            "tr": "Say Yes or No"
+          },
+          "players": "2+"
+        },
+        {
+          "name": {
+            "ru": "Запутанные истории",
+            "en": "Tangled Stories",
+            "ka": "Tangled Stories",
+            "tr": "Tangled Stories"
+          },
+          "players": "2+"
+        },
+        {
+          "name": {
+            "ru": "Антибухер",
+            "en": "Antibukher",
+            "ka": "Antibukher",
+            "tr": "Antibukher"
+          },
+          "players": ""
+        },
+        {
+          "name": {
+            "ru": "Психушка",
+            "en": "Madhouse",
+            "ka": "Madhouse",
+            "tr": "Madhouse"
+          },
+          "players": ""
+        },
+        {
+          "name": {
+            "ru": "Бар лжецов",
+            "en": "Liar's Bar",
+            "ka": "Liar's Bar",
+            "tr": "Liar's Bar"
+          },
+          "players": ""
+        },
+        {
+          "name": {
+            "ru": "Где логика?",
+            "en": "Where's the Logic?",
+            "ka": "Where's the Logic?",
+            "tr": "Where's the Logic?"
+          },
+          "players": ""
+        },
+        {
+          "name": {
+            "ru": "Мемограм",
+            "en": "Memogram",
+            "ka": "Memogram",
+            "tr": "Memogram"
+          },
+          "players": ""
+        },
+        {
+          "name": {
+            "ru": "Meme Club",
+            "en": "Meme Club",
+            "ka": "Meme Club",
+            "tr": "Meme Club"
+          },
+          "players": ""
+        }
+      ]
+    }
+  ],
+  "hours": {
+    "label": {
+      "ru": "Время работы",
+      "en": "Opening hours",
+      "ka": "სამუშაო საათები",
+      "tr": "Çalışma saatleri"
+    },
+    "value": {
+      "ru": "Вс–Чт: 14:00–02:00\nПт–Сб: 14:00–04:00",
+      "en": "Sun–Thu: 14:00–02:00\nFri–Sat: 14:00–04:00",
+      "ka": "კვ–ხუთ: 14:00–02:00\nპარ–შაბ: 14:00–04:00",
+      "tr": "Paz–Per: 14:00–02:00\nCum–Cmt: 14:00–04:00"
+    }
+  },
+  "address": {
+    "label": {
+      "ru": "Адрес",
+      "en": "Address",
+      "ka": "მისამართი",
+      "tr": "Adres"
+    },
+    "value": {
+      "ru": "Батуми, ул. Казбеги, 13",
+      "en": "Batumi, 13 Kazbegi St.",
+      "ka": "ბათუმი, ყაზბეგის ქ. 13",
+      "tr": "Batum, Kazbegi Sk. 13"
+    }
+  },
+  "wifiHint": {
+    "ru": "Нажмите, чтобы скопировать пароль",
+    "en": "Tap to copy the password",
+    "ka": "შეეხეთ პაროლის დასაკოპირებლად",
+    "tr": "Şifreyi kopyalamak için dokunun"
+  },
+  "copied": {
+    "ru": "Пароль скопирован",
+    "en": "Password copied",
+    "ka": "პაროლი დაკოპირდა",
+    "tr": "Şifre kopyalandı"
+  },
+  "age": {
+    "title": {
+      "ru": "Только 18+",
+      "en": "18+ only",
+      "ka": "მხოლოდ 18+",
+      "tr": "Sadece 18+"
+    },
+    "text": {
+      "ru": "Посещение заведения строго с 18 лет.",
+      "en": "Entry strictly for guests aged 18 and over.",
+      "ka": "დაწესებულებაში შესვლა მკაცრად 18 წლიდან.",
+      "tr": "Mekâna giriş kesinlikle 18 yaş ve üzeri içindir."
+    },
+    "icon": "idcard"
+  },
+  "sections": [],
+  "booking": {
+    "label": {
+      "ru": "Забронировать стол",
+      "en": "Book a table",
+      "ka": "მაგიდის დაჯავშნა",
+      "tr": "Masa ayırt"
+    },
+    "url": "https://airloungebar.restoplace.ws/"
+  },
+  "playersLabel": {
+    "ru": "игроков",
+    "en": "players",
+    "ka": "მოთამაშე",
+    "tr": "oyuncu"
+  }
+}

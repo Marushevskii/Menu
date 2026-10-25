@@ -7,6 +7,12 @@
     "ka": "სნექები",
     "tr": "Atıştırmalık"
   },
+  "tabLabel": {
+    "ru": "Снэки",
+    "en": "Snacks",
+    "ka": "სნექები",
+    "tr": "Çerez"
+  },
   "menuLabel": false,
   "sections": [
     {

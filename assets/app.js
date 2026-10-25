@@ -17,7 +17,7 @@
     soda: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M7 7h10M7 17h10"/>',
     tea: '<path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1a3 3 0 0 1 0 6h-1"/><path d="M8 3v3M12 3v3"/>',
     milkshake: '<path d="M7 8h10l-1.5 13h-7z"/><path d="M6 8a6 4 0 0 1 12 0"/><path d="M13 4l2-2"/>',
-    snack: '<path d="M4 10h16l-2 10H6z"/><path d="M7 10c0-3 2-6 5-6s5 3 5 6"/>',
+    snack: '<path d="M5 11 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0"/><path d="M5 11c.9 3 .9 7.6 0 10.6"/><path d="M19 11c-.9 3-.9 7.6 0 10.6"/><path d="M5 21.6 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0 q0.70 -1 1.40 0 t1.40 0"/><path d="M6.8 18.2c2.6 0 3.6-1.6 5.2-2.8s3-1.8 5.2-1.6"/><path d="M5.6 3.2l4.8.6-2.8 3.9z"/><path d="M13.8 2.8l4.6 1.8-3.8 3z"/><path d="M7.6 4.6h.01M15.6 4.5h.01"/>',
     gift: '<rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13"/><path d="M12 8c-2 0-5-1-5-3s3-2 5 3c2-5 5-5 5-3s-3 3-5 3"/>',
     cake: '<path d="M4 21h16M5 21v-7h14v7"/><path d="M5 17c2 1 3-1 4.7 0s2.6 1 4.6 0 3 1 4.7 0"/><path d="M12 14v-4M12 7a1 1 0 0 0 1-1c0-1-1-2-1-2s-1 1-1 2a1 1 0 0 0 1 1z"/>',
     star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
@@ -27,6 +27,13 @@
     instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>',
     telegram: '<path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/>',
     google: '<path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
+    gamepad: '<path d="M7.5 8h9a4.5 4.5 0 0 1 4.3 5.8l-1 3.3a2.2 2.2 0 0 1-3.8.8L14.4 16H9.6l-1.6 1.9a2.2 2.2 0 0 1-3.8-.8l-1-3.3A4.5 4.5 0 0 1 7.5 8z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="15.5" cy="11.6" r=".5" fill="currentColor"/><circle cx="17.3" cy="13.4" r=".5" fill="currentColor"/>',
+    dice: '<rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><circle cx="8.3" cy="8.3" r="1" fill="currentColor"/><circle cx="15.7" cy="8.3" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.3" cy="15.7" r="1" fill="currentColor"/><circle cx="15.7" cy="15.7" r="1" fill="currentColor"/>',
+    idcard: '<rect x="2.5" y="5" width="19" height="14" rx="2.5"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5.2 16.2c.6-1.6 1.9-2.4 3.3-2.4s2.7.8 3.3 2.4"/><path d="M14.5 10h4.5M14.5 13.5h3"/>',
+    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+    pin: '<path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',
+    wifi: '<path d="M2.5 9a14 14 0 0 1 19 0"/><path d="M5.5 12.2a9.5 9.5 0 0 1 13 0"/><path d="M8.6 15.3a5 5 0 0 1 6.8 0"/><circle cx="12" cy="18.6" r=".9" fill="currentColor"/>',
+    copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
     yandex: '<path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><path d="M13 6v9M13 6h-1.5a2.5 2.5 0 0 0 0 5H13M11 11l-2 4"/>'
   };
   const icon = (name) =>
@@ -73,7 +80,9 @@
   function renderTabbar() {
     $("tabs").innerHTML = settings.tabs.map((id) => {
       const tab = tabs[id];
-      return `<a class="tab" href="#${id}" data-tab="${id}" ${id === currentTab ? 'aria-current="page"' : ""}>${icon(tab.icon)}<span>${esc(t(tab.title))}</span></a>`;
+      // значок «О нас» — пламя из логотипа (картинка-маска), остальные — линейные значки
+      const ic = tab.icon === "flame" ? '<i class="tab-flame" aria-hidden="true"></i>' : icon(tab.icon);
+      return `<a class="tab" href="#${id}" data-tab="${id}" ${id === currentTab ? 'aria-current="page"' : ""}>${ic}<span>${esc(t(tab.tabLabel) || t(tab.title))}</span></a>`;
     }).join("");
     // «линза» переезжает под активную вкладку
     const bar = $("tabbar");
@@ -84,7 +93,9 @@
   function renderHero() {
     const tab = tabs[currentTab];
     // подпись «Меню» под заголовком — только там, где она уместна (в файле вкладки "menuLabel": false убирает её)
-    $("hero").innerHTML = `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
+    // "hideTitle": true — страница без большого заголовка (например «О нас» начинается сразу с приветствия)
+    $("hero").hidden = !!tab.hideTitle;
+    $("hero").innerHTML = tab.hideTitle ? "" : `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
     fitHero();
   }
 
@@ -151,8 +162,50 @@
       <div><div class="promo-title">${esc(t(it.name))}</div><div class="promo-text">${esc(t(it.desc))}</div></div></article>`;
   }
 
+  // ---------- страница «О нас» ----------
+  function aboutHtml(tab) {
+    const row = (ic, label, value, extra = "") => `<div class="info-row">${icon(ic)}<div><div class="info-label">${esc(label)}</div><div class="info-value">${value}</div>${extra}</div></div>`;
+    const features = (tab.features || []).map((f, i) => [f, i]).filter(([f]) => t(f.title)).map(([f, i]) => {
+      const inner = `<div class="promo-icon">${icon(f.icon)}</div>
+        <div class="promo-title">${esc(t(f.title))}</div><div class="promo-text">${esc(t(f.text))}</div>`;
+      // у карточки есть список (настольные игры) — карточка нажимается и открывает его снизу
+      return f.list && f.list.length
+        ? `<button type="button" class="feature has-list" data-list="${i}">${inner}<span class="feature-more">${esc(t(f.listLabel))} ›</span></button>`
+        : `<article class="feature">${inner}</article>`;
+    }).join("");
+    const rows = [];
+    if (t(tab.hours && tab.hours.value)) rows.push(row("clock", t(tab.hours.label), esc(t(tab.hours.value))));
+    if (t(tab.address && tab.address.value)) {
+      const map = (settings.socials || []).find((x) => x.type === "google" && x.url);
+      const v = esc(t(tab.address.value));
+      rows.push(row("pin", t(tab.address.label), map ? `<a href="${esc(map.url)}" target="_blank" rel="noopener">${v}</a>` : v));
+    }
+    const w = settings.wifi || {};
+    if (w.show && w.name) rows.push(row("wifi", u("wifi"),
+      `${esc(w.name)}`,
+      w.password ? `<button type="button" class="wifi-pass" data-copy="${esc(w.password)}"><span>${esc(u("password"))}: <b>${esc(w.password)}</b></span>${icon("copy")}</button>
+        <div class="info-hint" data-hint="${esc(t(tab.wifiHint))}" data-done="${esc(t(tab.copied))}">${esc(t(tab.wifiHint))}</div>` : ""));
+    return `<section class="about">
+      <div class="welcome">
+        <h2>${esc(t(tab.welcome && tab.welcome.title)).replace(esc(settings.name), `<span class="nowrap">${esc(settings.name)}</span>`)}</h2>
+        <p>${esc(t(tab.welcome && tab.welcome.text))}</p>
+      </div>
+      ${rows.length ? `<div class="info-card">${rows.join("")}</div>` : ""}
+      ${tab.booking && tab.booking.url && t(tab.booking.label) ? `<a class="book-btn" href="${esc(tab.booking.url)}" target="_blank" rel="noopener">${esc(t(tab.booking.label))}</a>` : ""}
+      ${t(tab.age && tab.age.title) ? `<article class="promo"><div class="promo-icon">${icon(tab.age.icon || "idcard")}</div><div><div class="promo-title">${esc(t(tab.age.title))}</div><div class="promo-text">${esc(t(tab.age.text))}</div></div></article>` : ""}
+      ${features ? `<div class="features">${features}</div>` : ""}
+    </section>`;
+  }
+
   function renderTab() {
     const tab = tabs[currentTab];
+    if (tab.layout === "about") {
+      $("content").innerHTML = aboutHtml(tab);
+      $("chipsWrap").hidden = true;
+      $("hero").classList.add("single");
+      $("chips").innerHTML = "";
+      return;
+    }
     // «Коктейль вне меню» хранится отдельным блоком (в админке у него свои поля) — ставим его после нужного раздела
     let all = [...(tab.sections || [])];
     if (tab.offMenu) {
@@ -218,16 +271,11 @@
   }
 
   function renderFooter() {
-    const w = settings.wifi || {};
-    const wifi = w.show && w.name
-      ? `<div class="wifi"><span>${esc(u("wifi"))}: <b>${esc(w.name)}</b></span><span>${esc(u("password"))}: <b>${esc(w.password)}</b></span></div>`
-      : "";
     const socials = (settings.socials || []).map((s) =>
       `<a href="${esc(s.url || "#")}" class="${s.url ? "" : "empty"}" target="_blank" rel="noopener" aria-label="${esc(s.label)}">${icon(s.type)}</a>`).join("");
     $("footer").innerHTML = `
       <p class="rule">${esc(u("ownDrinks"))}</p>
       <p>${esc(u("orderHint"))}</p>
-      ${wifi}
       <p>${esc(u("followUs"))}</p>
       <div class="socials">${socials}</div>`;
   }
@@ -284,6 +332,15 @@
     updateSpy();
   }
 
+  // подложка под лентой разделов появляется плавно, по мере прокрутки.
+  // Считать заново и при смене вкладки: если страница уже вверху, события прокрутки не будет,
+  // и осталась бы подложка от прошлой вкладки (на «О нас» заголовка нет — там она тёмная сразу)
+  function updateChipsBg() {
+    const hero = $("hero");
+    const start = hero.offsetTop + hero.offsetHeight - 50;
+    $("chipsBg").style.opacity = Math.min(1, Math.max(0, (window.scrollY - start) / 50)).toFixed(3);
+  }
+
   function setTab(id, scroll) {
     if (!tabs[id]) id = settings.tabs[0];
     if (id === currentTab) return;
@@ -293,6 +350,7 @@
     renderTab();
     fadeIn();
     if (scroll) window.scrollTo({ top: 0 });
+    updateChipsBg();
   }
 
   function bind() {
@@ -304,6 +362,7 @@
       const y = window.scrollY;
       renderAll();
       window.scrollTo({ top: y });
+      updateChipsBg();
     });
 
     // на компьютере: ленту можно тянуть мышкой и крутить колёсиком (на телефоне — обычный свайп)
@@ -346,12 +405,79 @@
 
     const chips = $("chips");
     window.addEventListener("scroll", () => {
-      // подложка под лентой разделов появляется плавно, по мере прокрутки
-      const hero = $("hero");
-      const start = hero.offsetTop + hero.offsetHeight - 50;
-      $("chipsBg").style.opacity = Math.min(1, Math.max(0, (window.scrollY - start) / 50)).toFixed(3);
+      updateChipsBg();
       if (!spyTick) { spyTick = true; requestAnimationFrame(updateSpy); }
     }, { passive: true });
+
+    // «О нас»: нажатие на пароль Wi-Fi копирует его
+    $("content").addEventListener("click", async (e) => {
+      const b = e.target.closest(".wifi-pass");
+      if (!b) return;
+      try { await navigator.clipboard.writeText(b.dataset.copy); }
+      catch (err) {
+        const ta = document.createElement("textarea"); ta.value = b.dataset.copy; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand("copy"); } catch (x) { /* ничего */ } ta.remove();
+      }
+      const hint = b.parentNode.querySelector(".info-hint");
+      if (hint) { hint.textContent = hint.dataset.done; hint.classList.add("ok"); setTimeout(() => { hint.textContent = hint.dataset.hint; hint.classList.remove("ok"); }, 2000); }
+    });
+
+    // «О нас»: список настольных игр — выезжает снизу
+    const sheet = $("sheet");
+    const closeSheet = () => { sheet.classList.remove("open"); document.documentElement.classList.remove("locked"); setTimeout(() => { if (!sheet.classList.contains("open")) sheet.hidden = true; }, 300); };
+    $("content").addEventListener("click", (e) => {
+      const b = e.target.closest(".feature.has-list");
+      if (!b) return;
+      const tab = tabs[currentTab], f = tab.features[+b.dataset.list];
+      $("sheetTitle").textContent = t(f.title);
+      $("sheetCount").textContent = t(tab.playersLabel);
+      $("sheetList").innerHTML = f.list.filter((g) => t(g.name)).map((g) =>
+        `<li><span>${esc(t(g.name))}</span>${g.players ? `<i></i><b>${esc(g.players)}</b>` : ""}</li>`).join("");
+      $("sheetBody").scrollTop = 0;
+      fitSheet();
+      sheet.hidden = false;
+      document.documentElement.classList.add("locked");
+      void sheet.offsetHeight; // чтобы сработала анимация выезда
+      sheet.classList.add("open");
+    });
+    // высота — по видимой части экрана (на iPhone панели Safari могут быть развёрнуты)
+    const fitSheet = () => { sheet.firstElementChild.style.maxHeight = Math.round((window.visualViewport ? visualViewport.height : innerHeight) * 0.8) + "px"; };
+    (window.visualViewport || window).addEventListener("resize", () => { if (!sheet.hidden) fitSheet(); });
+    // страница под шторкой не прокручивается (иначе Safari прячет/показывает свои панели и всё съезжает)
+    sheet.addEventListener("touchmove", (e) => { if (!e.target.closest(".sheet-body")) e.preventDefault(); }, { passive: false });
+    // шторку можно потянуть вниз: за шапку или за список, когда он прокручен до самого верха
+    const box = sheet.firstElementChild, body = $("sheetBody");
+    let pull = null;
+    box.addEventListener("touchstart", (e) => {
+      if (e.target.closest(".sheet-close")) return;
+      pull = { y: e.touches[0].clientY, t: Date.now(), dy: 0, inList: !!e.target.closest(".sheet-body"), on: false };
+    }, { passive: true });
+    box.addEventListener("touchmove", (e) => {
+      if (!pull) return;
+      const dy = e.touches[0].clientY - pull.y;
+      if (!pull.on) {
+        // в списке тянем шторку, только если список уже наверху и палец идёт вниз; иначе — обычная прокрутка
+        if (pull.inList && (body.scrollTop > 0 || dy <= 0)) { pull = null; return; }
+        pull.on = true; box.style.transition = "none";
+      }
+      e.preventDefault();
+      pull.dy = Math.max(0, dy);
+      box.style.transform = `translateY(${pull.dy}px)`;
+      sheet.style.background = `rgba(10,10,10,${(.6 * (1 - Math.min(1, pull.dy / box.offsetHeight))).toFixed(3)})`;
+    }, { passive: false });
+    const endDrag = () => {
+      if (!pull) return;
+      const d = pull; pull = null;
+      if (!d.on) return;
+      box.style.transition = ""; sheet.style.background = "";
+      const fast = d.dy / Math.max(1, Date.now() - d.t) > 0.6;           // быстрый взмах вниз
+      if (d.dy > Math.min(120, box.offsetHeight * 0.25) || (fast && d.dy > 30)) closeSheet();
+      box.style.transform = "";                                           // доедет вниз (закрытие) или вернётся на место
+    };
+    box.addEventListener("touchend", endDrag);
+    box.addEventListener("touchcancel", endDrag);
+    sheet.addEventListener("click", (e) => { if (e.target === sheet || e.target.closest(".sheet-close")) closeSheet(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sheet.hidden) closeSheet(); });
 
     // просмотр фото
     $("content").addEventListener("click", (e) => {

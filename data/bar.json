@@ -45,9 +45,8 @@
           "amount": null,
           "unit": "",
           "variants": [],
-          "photo": "photos/pi-a-colada.webp",
-          "hidden": false,
-          "thumb": "photos/thumbs/pi-a-colada.webp"
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "gin-and-tonic",
@@ -68,9 +67,8 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "photo": "photos/gin-and-tonic.webp",
-          "hidden": false,
-          "thumb": "photos/thumbs/gin-and-tonic.webp"
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "long-island",
@@ -91,9 +89,8 @@
           "amount": null,
           "unit": null,
           "variants": [],
-          "photo": "photos/long-island.webp",
-          "hidden": false,
-          "thumb": "photos/thumbs/long-island.webp"
+          "photo": "",
+          "hidden": false
         },
         {
           "id": "cuba-libre",

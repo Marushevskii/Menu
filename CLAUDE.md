@@ -28,6 +28,33 @@
 - iPhone/Safari: нижняя панель не должна зависеть напрямую от `env(safe-area-inset-bottom)` (прыгает при скрытии панели Safari); подложка ленты разделов — плавная (`#chipsBg`, opacity из app.js); карточки ниже экрана проявляются при прокрутке (`.pre` → `.shown`).
 - После правок CSS/JS увеличивать `?v=N` в `index.html`, иначе браузеры покажут старую версию.
 
+## ⚠️ Переезд (18.10.2026) — рабочая копия теперь `D:\cafe-menuelease`
+
+- Боевой сайт: **https://airlounge.github.io/menu/**, хранилище **github.com/Airlounge/menu** (ветка main,
+  Pages из GitHub Actions). Это отдельный git-репозиторий в папке `release/` (в старом репо она в .gitignore).
+  Все правки сайта делать **в `release/`** и пушить туда. git на этом ПК вошёл как Airlounge.
+- В `release/` только файлы сайта (без заметок, tools кроме translate.py, без стоковых фото).
+  Заметки (этот файл, PROJECT.md, menu-audit.md), `tools/render_background.py`, `tools/photos.py`, `brand/` — в корне `D:\cafe-menu`.
+  Если перерисовываешь фон/фото инструментами из корня — копируй результат в `release/`.
+## 🚦 Порядок выкатки (правило пользователя, 25.10.2026) — соблюдать всегда
+
+- **airlounge.github.io/menu — РАБОЧИЙ.** На нём ничего не тестируем никогда. Пушить в `release/`
+  только после явного итогового подтверждения пользователя («да, переносим»).
+- **marushevskii.github.io/Menu — ТЕСТОВЫЙ стенд** (корень `D:\cafe-menu`, репо Marushevskii/Menu).
+  Всё, что пользователь хочет потрогать сам, сначала выкатывается сюда.
+- Вёрстку и мелкие визуальные правки показывать **скриншотами** (локальный preview, мобильный вид).
+- Путь фичи: правка → скриншот или тестовый стенд → «да» пользователя → те же файлы в `release/` → push.
+- Синхронизация тест ← рабочий: копировать все файлы из `release/` (кроме `.gitignore`), затем
+  в `admin/config.yml` вернуть `repo: Marushevskii/Menu`, `site_url`/`display_url` на marushevskii,
+  убрать `base_url` (посредник Cloudflare только для airlounge; на тесте вход по токену).
+  `admin/config.yml` — единственный файл, который **должен** отличаться; при переносе на рабочий его не копировать
+  целиком, а переносить только изменённые куски.
+- Автоперевод на тесте может перезаписать переводы при синхронизации: если после push появился
+  коммит «Автоперевод», вернуть `data/` из `release/` и запушить ещё раз.
+- Вход в админку кнопкой GitHub (19.10): посредник https://sveltia-cms-auth.airlounge-loyalty.workers.dev (Cloudflare аккаунт airloungebatumi, код в приватном репо Airlounge/sveltia-cms-auth, build var PNPM_VERSION=10; vars в wrangler.toml, секрет GITHUB_CLIENT_SECRET в панели), OAuth App «AIR LOUNGE Admin» на Airlounge, `backend.base_url` в config.yml.
+- Дальше:
+  затем переделка админки под телефон (разделы отдельными записями, главное поле сверху).
+
 ## Что делать дальше
 
 Этапы — PROJECT.md §10. Выбран **автоматический** автоперевод (GitHub Action), не кнопка в CMS.

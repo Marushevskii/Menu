@@ -319,3 +319,106 @@ button.photo { cursor: zoom-in; }
   display: block; flex: 1 1 24px; min-width: 24px; margin: 0 8px;
   border-bottom: 1px dotted rgba(169,157,139,.35); transform: translateY(-4px);
 }
+
+/* ==========================================================================
+   СТРАНИЦА «О НАС»
+   ========================================================================== */
+.tab-flame {
+  display: block; width: 18px; height: 24px; background: currentColor;
+  -webkit-mask: url("flame.png?v=1") center / contain no-repeat; mask: url("flame.png?v=1") center / contain no-repeat;
+  transition: transform .35s cubic-bezier(.3,1.6,.5,1);
+}
+.tab[aria-current="page"] .tab-flame { transform: scale(1.08); }
+
+.about { display: grid; gap: 14px; padding-top: 14px; }
+.welcome { text-align: center; padding: 6px 8px 10px; }
+.welcome-mark {
+  display: block; width: 46px; height: 64px; margin: 0 auto 16px; background: var(--amber);
+  -webkit-mask: url("flame-big.png?v=1") center / contain no-repeat; mask: url("flame-big.png?v=1") center / contain no-repeat;
+}
+.welcome h2 { margin: 0 0 10px; font-family: var(--serif); font-weight: 500; font-size: 23px; line-height: 1.25; letter-spacing: .02em; }
+.welcome p { margin: 0 auto; max-width: 30em; font-size: 15.5px; line-height: 1.55; color: var(--muted); }
+
+.info-card { background: var(--item-bg); border: 1px solid var(--item-line); border-radius: var(--radius); padding: 4px 16px; }
+.info-row { display: flex; gap: 14px; align-items: flex-start; padding: 13px 0; }
+.info-row + .info-row { border-top: 1px solid var(--faint); }
+.info-row > svg { flex: none; width: 22px; height: 22px; color: var(--amber); margin-top: 2px; }
+.info-label { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.info-value { font-size: 16.5px; margin-top: 2px; }
+.info-value a { text-decoration: none; border-bottom: 1px dotted rgba(197,187,170,.5); }
+.wifi-pass {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding: 8px 12px;
+  border-radius: 12px; background: var(--faint); font-size: 15px; color: var(--text);
+}
+.wifi-pass b { color: var(--amber); font-weight: 600; letter-spacing: .02em; }
+.wifi-pass svg { width: 17px; height: 17px; color: var(--muted); }
+.info-hint { font-size: 12.5px; color: var(--muted); margin-top: 6px; transition: color .2s; }
+.info-hint.ok { color: var(--amber); }
+
+.age { display: flex; gap: 14px; align-items: center; background: var(--item-bg); border: 1px solid var(--item-line); border-radius: var(--radius); padding: 16px; }
+.age-badge {
+  flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  border: 1.5px solid var(--amber); color: var(--amber); font-weight: 600; font-size: 16px;
+}
+.welcome .nowrap { white-space: nowrap; }
+
+/* «О нас»: те же отступы внутри блоков, что у позиций меню */
+.about .promo { padding: 11px 14px; gap: 12px; }
+.about .promo-icon { width: 42px; height: 42px; border-radius: 12px; }
+.about .promo-icon svg { width: 22px; height: 22px; }
+.about .info-card { padding: 0 14px; }
+.about .info-row { padding: 11px 0; gap: 12px; }
+.welcome { padding-top: 0; }
+.book-btn {
+  display: block; margin-top: 4px; padding: 15px 16px; border-radius: 16px; text-align: center; text-decoration: none;
+  background: var(--accent); color: #1d1d1d; font-weight: 600; font-size: 17px; letter-spacing: .02em;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.book-btn:active { transform: scale(.98); }
+.info-value { white-space: pre-line; }
+.hero[hidden] { display: none; }
+/* «О нас» без большого заголовка: приветствие — главный заголовок страницы */
+.hero[hidden] ~ .chips-wrap + .content .about { padding-top: 26px; }
+.hero[hidden] ~ .chips-wrap + .content .welcome h2 { font-size: 27px; }
+/* «О нас»: PlayStation и настольные игры — две карточки в одну строку */
+.about .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.about .feature { display: flex; flex-direction: column; gap: 8px; padding: 13px 13px 14px; background: var(--item-bg); border: 1px solid var(--item-line); border-radius: var(--radius); }
+.about .feature .promo-icon { width: 38px; height: 38px; border-radius: 11px; }
+.about .feature .promo-icon svg { width: 20px; height: 20px; }
+.about .feature .promo-title { font-size: 16px; margin: 2px 0 0; line-height: 1.2; }
+.about .feature .promo-text { font-size: 13.5px; line-height: 1.4; }
+/* карточки-половинки: всё по центру, компактнее */
+.about .feature { align-items: center; text-align: center; gap: 6px; padding: 10px 10px 11px; }
+.about .feature .promo-icon { width: 34px; height: 34px; border-radius: 10px; }
+.about .feature .promo-icon svg { width: 18px; height: 18px; }
+.about .feature .promo-title { font-size: 15px; margin-top: 1px; }
+.about .feature .promo-text { font-size: 12.5px; line-height: 1.38; }
+
+/* «О нас»: PlayStation и настолки — под кнопкой «Забронировать» */
+.about .promo + .features { margin-top: 0; }
+.about button.feature { font: inherit; color: inherit; cursor: pointer; transition: transform .15s, background .15s; -webkit-tap-highlight-color: transparent; }
+.about button.feature:active { transform: scale(.97); background: rgba(255,255,255,.05); }
+.feature-more { margin-top: auto; padding-top: 3px; font-size: 12.5px; color: var(--amber); letter-spacing: .02em; }
+
+/* ---------- список настольных игр (выезжает снизу) ---------- */
+html.locked, html.locked body { overflow: hidden; }
+.sheet { position: fixed; inset: 0; z-index: 60; background: rgba(10,10,10,0); transition: background .3s; display: flex; align-items: flex-end; justify-content: center; }
+.sheet[hidden] { display: none; }
+.sheet.open { background: rgba(10,10,10,.6); }
+.sheet-box {
+  width: 100%; max-width: 560px; max-height: 80vh; max-height: 80svh; display: flex; flex-direction: column;
+  background: #2a2a29; border: 1px solid var(--item-line); border-bottom: 0; border-radius: 22px 22px 0 0;
+  padding: 8px 18px 0; box-shadow: 0 -10px 30px rgba(0,0,0,.4);
+  transform: translateY(100%); transition: transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.sheet.open .sheet-box { transform: none; }
+.sheet-grip { width: 38px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.2); margin: 0 auto 8px; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sheet-head h3 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: 22px; color: var(--text); }
+.sheet-close { flex: none; width: 40px; height: 40px; margin-right: -10px; font-size: 28px; line-height: 1; color: var(--muted); background: none; border: 0; }
+.sheet-cols { display: flex; justify-content: flex-end; padding: 4px 0 6px; border-bottom: 1px solid var(--item-line); font-size: 11.5px; color: var(--muted); letter-spacing: .04em; }
+.sheet-body { margin-right: -18px; padding-right: 18px; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
+.sheet-list { list-style: none; margin: 0; padding: 0; }
+.sheet-list li { display: flex; align-items: baseline; gap: 6px; padding: 6px 0; font-size: 14px; line-height: 1.3; }
+.sheet-list li i { flex: 1; border-bottom: 1px dotted rgba(255,255,255,.18); transform: translateY(-3px); }
+.sheet-list li b { flex: none; font-weight: 500; font-size: 13px; color: var(--amber); }
