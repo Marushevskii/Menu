@@ -618,12 +618,14 @@ html.locked, html.locked body { overflow: hidden; }
 .theme-halloween .socials a { border-color: rgba(var(--hw-moon),.22); }
 
 /* основное меню в оформлении мероприятия: закреплённый фон — не прокручивается, виден на любой глубине страницы */
-.ev-bg-deco { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+/* высота — всегда «полный экран» (100lvh, как у .bg): iPhone прячет/показывает панели Safari при прокрутке,
+   и при высоте по видимой части череп и дьявол пересчитывали положение и прыгали */
+.ev-bg-deco { position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh; z-index: -1; pointer-events: none; overflow: hidden; transform: translateZ(0); }
 .ev-bg-deco[hidden] { display: none; }
 .ev-bg-deco .hw-web { top: 52px; left: -4px; }   /* ниже липкой ленты разделов */
 .ev-bg-deco .hw-spider { top: 52px; }
 .ev-bg-deco .hw-skull { top: 38%; }
-.ev-bg-deco .hw-devil { top: auto; bottom: 120px; }
+.ev-bg-deco .hw-devil { top: auto; bottom: 175px; }   /* с запасом: при показанных панелях Safari низ экрана выше */
 
 /* фон за меню: большая паутина с пауком (лунного оттенка), мерцающие звёзды, привидения */
 .hw-web { top: 10px; left: -4px; width: 52vw; max-width: 300px; aspect-ratio: 1; color: rgba(var(--hw-moon),.12); }
