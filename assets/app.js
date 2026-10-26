@@ -402,11 +402,16 @@
   function applyEventMode() {
     const on = currentTab === "event";
     document.body.classList.toggle("is-event", on);
-    // оформление (тема) мероприятия: класс theme-<имя> и её CSS-переменные (рисунки подтёков и т.п.)
-    const th = on ? evTheme(tabs.event) : null;
-    document.body.className = document.body.className.replace(/theme-\S+/g, "").trim();
-    if (th) document.body.classList.add("theme-" + tabs.event.theme);
-    Object.entries((th && th.vars) || {}).forEach(([k, v]) => document.body.style.setProperty(k, v));
+    // оформление (тема) мероприятия: класс theme-<имя> и её CSS-переменные.
+    // Пока мероприятие идёт, в его оформлении всё меню (галочка «Оформлять всё меню» в админке, по умолчанию да);
+    // сцена, луна и крупные украшения — только на странице мероприятия.
+    const ev = tabs.event, th = evTheme(ev);
+    const themed = !!th && (on || ev.themeSite !== false);
+    [...document.body.classList].filter((c) => c.startsWith("theme-")).forEach((c) => document.body.classList.remove(c));
+    if (themed) {
+      document.body.classList.add("theme-" + ev.theme);
+      Object.entries(th.vars || {}).forEach(([k, v]) => document.body.style.setProperty(k, v));
+    }
     $("evBack").hidden = !on;
     if (on) lsSet(EV_SEEN, evKey());
     updateBubble();

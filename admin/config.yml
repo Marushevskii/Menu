@@ -359,6 +359,7 @@ collections:
       - { name: emoji, label: "Значок на кнопке", hint: "Один эмодзи: 🎃 🎄 🎆 ❤️ 🥂", widget: string, default: "🎃" }
       - { name: color, label: "Цвет ивента", hint: "Кнопка, цены и выделения на странице ивента", widget: color, default: "#E8742A" }
       - { name: cover, label: "Обложка страницы (необязательно)", hint: "Картинка вверху страницы ивента, горизонтальная. Если нет — крупный значок", widget: image, required: false }
+      - { name: themeSite, label: "Оформлять всё меню на время мероприятия", hint: "Включено — пока мероприятие идёт, всё меню в его оформлении (фон, цвета, рамки). Сцена и крупные украшения — только на странице мероприятия", widget: boolean, default: true, required: false }
       - name: theme
         label: "Оформление страницы"
         hint: "Украшения на странице ивента. Новые темы добавляются в assets/event-themes.js"

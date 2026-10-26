@@ -40,6 +40,8 @@ body {
   padding-bottom: calc(var(--tabbar-h) + 40px + env(safe-area-inset-bottom));
   -webkit-tap-highlight-color: transparent;
 }
+/* ничего не должно давать сдвинуть страницу вбок (iPhone слушается, только если запрет и у html, и у body) */
+body { overflow-x: clip; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 a { color: inherit; }
 
@@ -543,16 +545,16 @@ html.locked, html.locked body { overflow: hidden; }
 /* тёмная ночная часть сверху: от шапки до описания, ниже плавно уходит в основной фон */
 .theme-halloween .bg { background: var(--hw-stars) center top / 390px 640px repeat, radial-gradient(130% 70% at 50% 110%, #10130e 0%, #060706 62%) #060706; }
 .theme-halloween .bg::after { display: none; }
-.theme-halloween .topbar { background: #141812; position: relative; z-index: 2; }
-.theme-halloween .hero {
+.is-event.theme-halloween .topbar { background: #141812; position: relative; z-index: 2; }
+.is-event.theme-halloween .hero {
   padding: 0 0 46px; margin-bottom: -20px;
   /* под рисунком — тот же тёмный цвет, что у земли на рисунке (#060706); ниже он же — фон всей страницы со звёздами */
   background: linear-gradient(180deg, #060706 0, #060706 calc(100% - 60px), rgba(6,7,6,0) 100%);
 }
-.theme-halloween .hero::after { display: none; }
-.theme-halloween .hero h1 { color: #fff; padding-left: calc(.14em + 16px); padding-right: 16px; margin-top: 2px; }
-.theme-halloween .hero span { color: rgba(255,255,255,.72); padding: 0 24px; }
-.theme-halloween .ev-intro { color: rgba(255,255,255,.62); padding: 0 22px; }
+.is-event.theme-halloween .hero::after { display: none; }
+.is-event.theme-halloween .hero h1 { color: #fff; padding-left: calc(.14em + 16px); padding-right: 16px; margin-top: 2px; }
+.is-event.theme-halloween .hero span { color: rgba(255,255,255,.72); padding: 0 24px; }
+.is-event.theme-halloween .ev-intro { color: rgba(255,255,255,.62); padding: 0 22px; }
 
 /* сцена: луна, кривой замок, кладбище и тыквы-фонари на поле (во всю ширину), летучие мыши поверх */
 .hw-scene { position: relative; margin: 0; background: linear-gradient(180deg, #141812 0%, #0f120d 55%, #0a0c09 100%); }
