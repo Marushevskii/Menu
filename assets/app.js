@@ -477,8 +477,9 @@
     const end = (e) => {
       if (!drag || e.pointerId !== drag.id) return;
       const d = drag; drag = null;
-      if (!d.on) return;
-      b._dragged = true;
+      // палец отпустили, не перетаскивая, — это нажатие: открываем сразу, не дожидаясь «click»
+      // (iPhone после перетаскивания иногда не присылает click, и прежний флажок «съедал» следующее нажатие)
+      if (!d.on) { if (e.type === "pointerup") openEvent(); return; }
       // на время «приземления» не анимируем сдвиг, иначе пузырь дёргается от старого места к новому
       b.style.transition = "scale .25s, opacity .25s, box-shadow .2s";
       b.classList.remove("dragging", "near");
@@ -512,10 +513,8 @@
     b.addEventListener("pointerup", end);
     b.addEventListener("pointercancel", end);
     const openEvent = () => { evReturn = { tab: currentTab, y: window.scrollY }; location.hash = "event"; };
-    b.addEventListener("click", (e) => {
-      if (b._dragged) { b._dragged = false; e.preventDefault(); return; }
-      openEvent();
-    });
+    // нажатие пальцем/мышью обрабатывает pointerup выше; click здесь — только с клавиатуры (Enter/пробел)
+    b.addEventListener("click", (e) => { if (e.detail === 0) openEvent(); });
     $("evMini").addEventListener("click", openEvent);
     $("evMini").addEventListener("animationend", (e) => { if (e.animationName === "ev-pop") e.currentTarget.classList.remove("pop"); });
     // «Вернуться в меню»: если пришли из меню — шаг назад (на то же место), если по прямой ссылке — на первую вкладку
