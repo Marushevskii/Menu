@@ -382,7 +382,8 @@
   // Отдельная страница #event + плавающая кнопка-«пузырь». Включается в админке: галочка и даты «с/по».
   const EV_POS = "ev-pos", EV_SEEN = "ev-seen";
   let evReturn = null;     // откуда пришли на страницу ивента: { tab, y }
-  let evHidden = false;    // гость унёс пузырь в «×» — прячем до обновления страницы (не запоминаем)
+  let evHidden = false;
+  let evVisited = false;   // гость уже открывал страницу мероприятия (до перезагрузки) — меню в его оформлении    // гость унёс пузырь в «×» — прячем до обновления страницы (не запоминаем)
   const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const lsGet = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* приватный режим */ } };
@@ -403,10 +404,11 @@
     const on = currentTab === "event";
     document.body.classList.toggle("is-event", on);
     // оформление (тема) мероприятия: класс theme-<имя> и её CSS-переменные.
-    // Пока мероприятие идёт, в его оформлении всё меню (галочка «Оформлять всё меню» в админке, по умолчанию да);
-    // сцена, луна и крупные украшения — только на странице мероприятия.
+    // «Вау-эффект»: сайт открывается в обычном виде; после страницы мероприятия и всё меню остаётся в его оформлении
+    // (галочка в админке, по умолчанию да) — до перезагрузки страницы. Сцена и крупные украшения — только на странице мероприятия.
+    if (on) evVisited = true;
     const ev = tabs.event, th = evTheme(ev);
-    const themed = !!th && (on || ev.themeSite !== false);
+    const themed = !!th && (on || (evVisited && ev.themeSite !== false));
     [...document.body.classList].filter((c) => c.startsWith("theme-")).forEach((c) => document.body.classList.remove(c));
     if (themed) {
       document.body.classList.add("theme-" + ev.theme);
