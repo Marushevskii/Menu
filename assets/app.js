@@ -370,8 +370,9 @@
 
   // ---------------- ивент (Хеллоуин и т.п.) ----------------
   // Отдельная страница #event + плавающая кнопка-«пузырь». Включается в админке: галочка и даты «с/по».
-  const EV_POS = "ev-pos", EV_HIDDEN = "ev-hidden", EV_SEEN = "ev-seen";
-  let evReturn = null; // откуда пришли на страницу ивента: { tab, y }
+  const EV_POS = "ev-pos", EV_SEEN = "ev-seen";
+  let evReturn = null;     // откуда пришли на страницу ивента: { tab, y }
+  let evHidden = false;    // гость унёс пузырь в «×» — прячем до обновления страницы (не запоминаем)
   const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   const lsGet = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* приватный режим */ } };
@@ -395,7 +396,7 @@
 
   function updateBubble() {
     const b = $("evBubble");
-    const show = !!tabs.event && currentTab !== "event" && lsGet(EV_HIDDEN) !== `${evKey()}|${today()}`;
+    const show = !!tabs.event && currentTab !== "event" && !evHidden;
     if (show && b.hidden) {
       b.hidden = false;
       placeBubble();
@@ -405,24 +406,29 @@
     b.classList.toggle("seen", lsGet(EV_SEEN) === evKey());
   }
 
-  // положение пузыря: сторона (left/right) и расстояние от низа экрана; запоминается
+  // положение пузыря: где гость его отпустил (x — от левого края, b — от низа экрана); запоминается
   function bubblePos() {
     let p = null;
     try { p = JSON.parse(lsGet(EV_POS)); } catch (e) { /* ничего */ }
-    return p && (p.side === "left" || p.side === "right") && p.b > 0 ? p : { side: "right", b: 0 };
+    return p && typeof p.x === "number" && typeof p.b === "number" ? p : null;
   }
+  // ставит пузырь, не давая уйти за края экрана и на нижние вкладки; без сохранённого места — справа над вкладками
   function placeBubble(p = bubblePos()) {
-    const b = $("evBubble");
-    const minB = $("tabbar").offsetHeight + 34;            // не ниже нижних вкладок
-    const maxB = window.innerHeight - b.offsetHeight - 120; // не выше шапки
-    const bottom = Math.max(minB, Math.min(maxB, p.b || minB + 26));
+    const b = $("evBubble"), w = b.offsetWidth || 62;
+    const tb = $("tabbar").getBoundingClientRect();
+    const minB = (tb.height ? window.innerHeight - tb.top : 90) + 10;
+    const maxB = window.innerHeight - w - 12;
+    const x = Math.max(8, Math.min(window.innerWidth - w - 8, p ? p.x : window.innerWidth - w - 14));
+    const bottom = Math.max(minB, Math.min(maxB, p ? p.b : minB + 30));
+    b.style.left = x + "px";
+    b.style.right = "auto";
     b.style.bottom = bottom + "px";
-    b.classList.toggle("left", p.side === "left");
-    return bottom;
+    return { x, b: bottom };
   }
 
   function bindBubble() {
     const b = $("evBubble"), trash = $("evTrash");
+    try { localStorage.removeItem("ev-hidden"); } catch (e) { /* прежняя версия прятала пузырь до завтра */ }
     let drag = null;
     // анимация появления держит размер пузыря — снимаем её, когда доиграла, иначе не сработает «увеличение при перетаскивании»
     b.addEventListener("animationend", (e) => { if (e.animationName === "ev-pop") b.classList.remove("pop"); });
@@ -458,18 +464,16 @@
       trash.classList.remove("show", "near");
       setTimeout(() => { if (!trash.classList.contains("show")) trash.hidden = true; }, 250);
       if (e.type === "pointerup" && overTrash(e.clientX, e.clientY)) {
-        // спрятать до завтра
-        lsSet(EV_HIDDEN, `${evKey()}|${today()}`);
+        // спрятать до обновления страницы
+        evHidden = true;
         b.classList.add("gone");
         setTimeout(() => { b.hidden = true; b.classList.remove("gone"); b.style.transform = ""; }, 260);
         return;
       }
-      // «прилипает» к ближайшему краю: плавно из того места, где отпустили
+      // остаётся там, где отпустили (если задел край или вкладки — мягко отъезжает внутрь)
       const r = b.getBoundingClientRect();
-      const side = r.left + r.width / 2 < window.innerWidth / 2 ? "left" : "right";
-      const p = { side, b: window.innerHeight - r.bottom };
       b.style.transform = "";
-      p.b = placeBubble(p);
+      const p = placeBubble({ x: r.left, b: window.innerHeight - r.bottom });
       lsSet(EV_POS, JSON.stringify(p));
       const r2 = b.getBoundingClientRect();
       b.style.transition = "none";
