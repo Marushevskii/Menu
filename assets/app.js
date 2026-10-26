@@ -572,6 +572,12 @@
     const unpin = () => { if (pinned) { pinned = null; updateSpy(); } };
     ["touchstart", "wheel", "keydown"].forEach((ev) => window.addEventListener(ev, unpin, { passive: true }));
 
+    // логотип/название в шапке — открыть сайт заново, как по ссылке из QR: с заставкой, первой вкладкой и с самого верха
+    document.querySelector(".brand").addEventListener("click", (e) => {
+      if (e.target.closest(".ev-mini")) return; // мини-кнопка ивента в шапке — своя
+      window.scrollTo(0, 0);
+      location.href = location.pathname;
+    });
     window.addEventListener("hashchange", () => setTab(location.hash.slice(1), true));
     window.addEventListener("resize", fitHero);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHero); // шрифт догрузился — пересчитать

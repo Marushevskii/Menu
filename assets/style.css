@@ -62,7 +62,7 @@ a { color: inherit; }
   padding: calc(14px + env(safe-area-inset-top)) 10px 6px 16px;
 }
 /* низ букв названия — на одной линии с низом букв RU EN GE TR; значок — по центру высоты букв */
-.brand { display: flex; align-items: center; gap: 9px; min-width: 0; padding-bottom: 3.9px; }
+.brand { display: flex; align-items: center; gap: 9px; min-width: 0; padding-bottom: 3.9px; cursor: pointer; user-select: none; -webkit-user-select: none; }
 /* значок пламени из логотипа; цвет берётся из текста (маска), картинка — assets/flame.png */
 .brand-mark {
   flex: none; width: 25px; height: 34px; background: currentColor; transform: translateY(-.7px);
