@@ -58,9 +58,12 @@ window.EVENT_THEMES = (function () {
     for (let i = 0; i < 26; i++) {
       const x = r() * 400, y = r() * 96;
       if (Math.hypot(x - 200, y - 80) < 84) continue; // не на луне
-      // каждая вторая звезда мерцает (размер тот же, меняется только яркость)
-      const tw = i % 2 ? "" : ` class="hw-star" style="animation-duration:${(2.6 + r() * 2.4).toFixed(1)}s;animation-delay:-${(r() * 5).toFixed(1)}s"`;
-      stars += `<circle${tw} cx="${f(x)}" cy="${f(y)}" r="${f(0.5 + r() * 0.8)}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`;
+      // каждая вторая звезда мерцает (размер тот же, меняется только яркость);
+      // самые крупные (радиус от 1) мерцают быстро. Порядок вызовов r() прежний — положения и размеры звёзд не меняются
+      let tw = i % 2 ? "" : ` class="hw-star" style="animation-duration:${(2.6 + r() * 2.4).toFixed(1)}s;animation-delay:-${(r() * 5).toFixed(1)}s"`;
+      const rad = 0.5 + r() * 0.8;
+      if (rad >= 1) tw = ` class="hw-star" style="animation-duration:${(1.2 + (i % 5) * 0.2).toFixed(1)}s;animation-delay:-${((i * 0.37) % 2).toFixed(2)}s"`;
+      stars += `<circle${tw} cx="${f(x)}" cy="${f(y)}" r="${f(rad)}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`;
     }
     const K = "#060706";                       // силуэты
     const W = "#f2b45a";                       // горящие окна
