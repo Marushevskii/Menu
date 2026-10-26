@@ -296,7 +296,8 @@
     $("viewerClose").setAttribute("aria-label", u("close"));
     $("evBackLabel").textContent = u("eventBack");
     $("evTrashLabel").textContent = u("eventHide");
-    $("evFace").textContent = tabs.event ? tabs.event.emoji || "★" : "";
+    $("evFace").textContent = $("evMiniFace").textContent = tabs.event ? tabs.event.emoji || "★" : "";
+    $("evMini").setAttribute("aria-label", $("evBubble").getAttribute("aria-label") || "");
     $("evBubble").setAttribute("aria-label", u("eventOpen") + (tabs.event ? ": " + t(tabs.event.title) : ""));
     renderLangs();
     renderTabbar();
@@ -404,6 +405,12 @@
     }
     if (!show) b.hidden = true;
     b.classList.toggle("seen", lsGet(EV_SEEN) === evKey());
+    // гость спрятал пузырь — маленькая кнопка в шапке справа от названия (до обновления страницы)
+    const mini = !!tabs.event && currentTab !== "event" && evHidden;
+    const m = $("evMini");
+    if (mini && m.hidden) { m.hidden = false; m.classList.remove("pop"); void m.offsetWidth; m.classList.add("pop"); }
+    if (!mini) m.hidden = true;
+    document.body.classList.toggle("ev-mini-on", mini);
   }
 
   // положение пузыря: где гость его отпустил (x — от левого края, b — от низа экрана); запоминается
@@ -478,7 +485,7 @@
         // спрятать до обновления страницы
         evHidden = true;
         b.classList.add("gone");
-        setTimeout(() => { b.hidden = true; b.classList.remove("gone"); b.style.transform = ""; b.style.transition = ""; }, 260);
+        setTimeout(() => { b.hidden = true; b.classList.remove("gone"); b.style.transform = ""; b.style.transition = ""; updateBubble(); }, 260);
         return;
       }
       // остаётся ровно там, где отпустили. По центру пузыря: пока его тащат, он чуть увеличен
@@ -501,11 +508,13 @@
     };
     b.addEventListener("pointerup", end);
     b.addEventListener("pointercancel", end);
+    const openEvent = () => { evReturn = { tab: currentTab, y: window.scrollY }; location.hash = "event"; };
     b.addEventListener("click", (e) => {
       if (b._dragged) { b._dragged = false; e.preventDefault(); return; }
-      evReturn = { tab: currentTab, y: window.scrollY };
-      location.hash = "event";
+      openEvent();
     });
+    $("evMini").addEventListener("click", openEvent);
+    $("evMini").addEventListener("animationend", (e) => { if (e.animationName === "ev-pop") e.currentTarget.classList.remove("pop"); });
     // «Вернуться в меню»: если пришли из меню — шаг назад (на то же место), если по прямой ссылке — на первую вкладку
     $("evBack").addEventListener("click", (e) => {
       e.preventDefault();
