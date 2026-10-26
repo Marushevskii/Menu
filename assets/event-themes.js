@@ -57,20 +57,21 @@ window.EVENT_THEMES = (function () {
     for (let i = 0; i < 26; i++) {
       const x = r() * 400, y = r() * 96;
       if (Math.hypot(x - 200, y - 80) < 84) continue; // не на луне
-      stars += `<circle cx="${f(x)}" cy="${f(y)}" r="${f(0.5 + r() * 0.8)}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`;
+      const tw = i % 2 ? "" : ` class="hw-star" style="animation-duration:${(4 + r() * 4).toFixed(1)}s;animation-delay:-${(r() * 8).toFixed(1)}s"`;
+      stars += `<circle${tw} cx="${f(x)}" cy="${f(y)}" r="${f(0.5 + r() * 0.8)}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`;
     }
     const K = "#060706";                       // силуэты
     const W = "#f2b45a";                       // горящие окна
     // тыква-фонарь: тёмный силуэт, светится только вырезанное лицо
     // тыква-фонарь — такой же тёмный силуэт, как замок; светится только вырезанное лицо, отсвет падает на землю,
     // спереди её прикрывает трава (pumpkinGrass) — так она стоит в поле, а не наложена сверху
-    const pumpkin = (x, y, s, flip) => `<ellipse cx="${x}" cy="${f(y + 14 * s)}" rx="${f(30 * s)}" ry="${f(6 * s)}" fill="url(#hwFace)" opacity=".28"/>`
+    const pumpkin = (x, y, s, flip, blink) => `<ellipse cx="${x}" cy="${f(y + 14 * s)}" rx="${f(30 * s)}" ry="${f(6 * s)}" fill="url(#hwFace)" opacity=".28"/>`
       + `<g transform="translate(${x} ${y}) scale(${flip ? -s : s} ${s})">`
       + `<path d="M-17 2C-17-9-9-14 0-14S17-9 17 2 9 15 0 15-17 13-17 2z" fill="${K}"/>`
       + `<path d="M-6-13C-11-8-11 9-6 14M6-13C11-8 11 9 6 14" stroke="#2a170a" stroke-width="1.3" fill="none"/>`
       + `<path d="M0-13C0-17 2-20 6-20" stroke="${K}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`
       + `<path d="M6-20c3 0 4 2 3 4" stroke="${K}" stroke-width="1.2" fill="none"/>`
-      + `<g fill="url(#hwCarve)"><path d="M-11-4l7-3-2 6z"/><path d="M11-4l-7-3 2 6z"/><path d="M-1 0l1-3 1 3z"/>`
+      + `<g fill="url(#hwCarve)"><g class="hw-eyes" style="animation-delay:${blink || 0}s"><path d="M-11-4l7-3-2 6z"/><path d="M11-4l-7-3 2 6z"/></g><path d="M-1 0l1-3 1 3z"/>`
       + `<path d="M-12 4c3 6 21 6 24 0l-3 3-2-2-3 3-2-2-2 2-3-3-2 2-3-3-2 2z"/></g></g>`;
     // пучки травы перед тыквами (закрывают низ)
     const pumpkinGrass = (list) => list.map(([cx, y, w]) => {
@@ -116,7 +117,10 @@ window.EVENT_THEMES = (function () {
       + `<path d="M219 93L221 68 236 67 236 93z"/><path d="M216 70Q228 61 229 48Q230 41 237 40Q233 45 234 51Q236 60 241 68z"/>`
       + `<path d="M150 140L151 112 162 110 163 140z"/><path d="M147 113Q154 106 155 98Q160 104 166 111z"/>`
       + `</g>`
-      + `<g fill="${W}"><path d="M176 72h6v9h-6z"/><path d="M200 58h7v10h-7z"/><path d="M201 76h5v7h-5z"/><path d="M225 74h6v8h-6z"/><path d="M168 104h7v8h-7zM228 103h7v8h-7zM154 118h5v7h-5z"/></g>`
+      + `<g fill="${W}">` + [
+        ["M176 72h6v9h-6z", 0], ["M200 58h7v10h-7z", -2.5], ["M201 76h5v7h-5z", -5], ["M225 74h6v8h-6z", -7.5],
+        ["M168 104h7v8h-7z", -10], ["M228 103h7v8h-7z", -12.5], ["M154 118h5v7h-5z", -15]
+      ].map(([d, delay]) => `<path class="hw-win" style="animation-delay:${delay}s" d="${d}"/>`).join("") + `</g>`
       + `<path d="M188 140V120Q201 100 214 120V140z" fill="url(#hwDoor)"/>`
       + `<path d="M201 140v-25" stroke="#9a5418" stroke-width="1.1"/><circle cx="205" cy="130" r="1.1" fill="#9a5418"/>`
       // поле
@@ -128,7 +132,7 @@ window.EVENT_THEMES = (function () {
       + `<g fill="${K}">${[3, 13, 23, 33].map((x) => `<path d="M${x} 136V120l2-3 2 3v16z"/>`).join("")}</g>`
       + tomb(352, 132, 8) + cross(380, 132, 18)
       // тыквы-фонари на поле перед замком
-      + pumpkin(122, 141, 0.8) + pumpkin(274, 137, 0.88, true) + pumpkin(322, 143, 0.62)
+      + pumpkin(122, 141, 0.8, false, -1.2) + pumpkin(274, 137, 0.88, true, -3.6) + pumpkin(322, 143, 0.62, false, -5.4)
       + `<path d="${pumpkinGrass([[122, 152, 15], [274, 149, 17], [322, 151, 12]])}" fill="${K}"/>`
       + `</svg>`;
   }
@@ -289,7 +293,7 @@ window.EVENT_THEMES = (function () {
       },
       noIcon: true,   // большой значок сверху не показываем — тыквы стоят на поле в сцене
       scene: () => `<div class="hw-scene" aria-hidden="true">${scene()}`
-        + `<div class="hw-bats"><i class="b1">${BAT}</i><i class="b2">${BAT}</i><i class="b3">${BAT}</i><i class="b4">${BAT}</i></div></div>`,
+        + `<div class="hw-bats"><i class="b1"><b>${BAT}</b></i><i class="b2"><b>${BAT}</b></i><i class="b3"><b>${BAT}</b></i><i class="b4"><b>${BAT}</b></i></div></div>`,
       content: () =>
         `<div class="deco hw-web" aria-hidden="true">${web()}</div>`
         + `<div class="deco hw-spider" aria-hidden="true"><i></i>${SPIDER}</div>`
