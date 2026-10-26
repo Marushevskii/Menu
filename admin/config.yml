@@ -359,6 +359,15 @@ collections:
       - { name: emoji, label: "Значок на кнопке", hint: "Один эмодзи: 🎃 🎄 🎆 ❤️ 🥂", widget: string, default: "🎃" }
       - { name: color, label: "Цвет ивента", hint: "Кнопка, цены и выделения на странице ивента", widget: color, default: "#E8742A" }
       - { name: cover, label: "Обложка страницы (необязательно)", hint: "Картинка вверху страницы ивента, горизонтальная. Если нет — крупный значок", widget: image, required: false }
+      - name: theme
+        label: "Оформление страницы"
+        hint: "Украшения на странице ивента. Новые темы добавляются в assets/event-themes.js"
+        widget: select
+        default: ""
+        required: false
+        options:
+          - { label: "Без украшений", value: "" }
+          - { label: "Хеллоуин — кровь, привидения, летучие мыши, паутина", value: halloween }
       - { name: title, label: "Название", hint: "Крупно вверху страницы", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
       - { name: subtitle, label: "Подпись под названием", hint: "Например «31 октября · спецменю»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs }
       - { name: text, label: "Вступительный текст", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs_text }

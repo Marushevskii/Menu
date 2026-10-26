@@ -528,3 +528,120 @@ html.locked, html.locked body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .ev-bubble::before, .ev-mini::before, .ev-emoji { animation: none; }
 }
+
+/* ==========================================================================
+   ТЕМЫ МЕРОПРИЯТИЙ (поле «Оформление» у мероприятия в админке).
+   Украшения рисует assets/event-themes.js; здесь — где они стоят и как двигаются.
+   Всё декоративное: .deco не ловит нажатия и не читается экранным диктором.
+   ========================================================================== */
+.is-event .hero { position: relative; }
+.is-event .content { position: relative; }
+.deco { position: absolute; pointer-events: none; z-index: 0; }
+.is-event .hero > :not(.deco), .is-event .content > .section { position: relative; z-index: 1; }
+
+/* ---------- Хеллоуин ---------- */
+/* тёмная ночная часть сверху: от шапки до описания, ниже плавно уходит в основной фон */
+.theme-halloween .bg { background: var(--hw-stars) center top / 390px 640px repeat, radial-gradient(130% 70% at 50% 110%, #10130e 0%, #060706 62%) #060706; }
+.theme-halloween .bg::after { display: none; }
+.theme-halloween .topbar { background: #141812; position: relative; z-index: 2; }
+.theme-halloween .hero {
+  padding: 0 0 46px; margin-bottom: -20px;
+  /* под рисунком — тот же тёмный цвет, что у земли на рисунке (#060706); ниже он же — фон всей страницы со звёздами */
+  background: linear-gradient(180deg, #060706 0, #060706 calc(100% - 60px), rgba(6,7,6,0) 100%);
+}
+.theme-halloween .hero::after { display: none; }
+.theme-halloween .hero h1 { color: #fff; padding-left: calc(.14em + 16px); padding-right: 16px; margin-top: 2px; }
+.theme-halloween .hero span { color: rgba(255,255,255,.72); padding: 0 24px; }
+.theme-halloween .ev-intro { color: rgba(255,255,255,.62); padding: 0 22px; }
+
+/* сцена: луна, кривой замок, кладбище и тыквы-фонари на поле (во всю ширину), летучие мыши поверх */
+.hw-scene { position: relative; margin: 0; background: linear-gradient(180deg, #141812 0%, #0f120d 55%, #0a0c09 100%); }
+.hw-scene-svg { display: block; width: 100%; height: auto; max-height: 300px; }
+.hw-bats { position: absolute; inset: 0; color: #050505; }
+.hw-bats i { position: absolute; display: block; }
+.hw-bats svg { display: block; width: 100%; height: auto; animation: hw-flap .32s ease-in-out infinite alternate; transform-origin: 50% 40%; }
+.hw-bats .b1 { width: 30px; top: 18%; left: 64%; animation: hw-hover 5s ease-in-out infinite; }
+.hw-bats .b2 { width: 18px; top: 8%; left: 74%; animation: hw-hover 6.5s ease-in-out -2s infinite; }
+.hw-bats .b3 { width: 24px; top: 30%; left: 24%; animation: hw-hover 7s ease-in-out -4s infinite; }
+.hw-bats .b4 { width: 15px; top: 14%; left: 33%; animation: hw-hover 6s ease-in-out -1s infinite; }
+.hw-bats .b2 svg, .hw-bats .b4 svg { animation-duration: .26s; }
+@keyframes hw-flap { from { transform: scaleY(1); } to { transform: scaleY(.45); } }
+@keyframes hw-hover { 0%, 100% { translate: 0 0; } 50% { translate: -9px 6px; } }
+
+/* меню ниже — в той же ночной гамме: лунное золото (рамки, линии, кнопки) и тёплый свет окон (цены) */
+.theme-halloween { --amber: #f2c46d; --accent: #f0d9a3; --hw-moon: 240,217,163; }
+.theme-halloween .chips-bg { background: rgba(6,7,6,.78); box-shadow: 0 1px 0 rgba(var(--hw-moon),.14); }
+.theme-halloween .chip { background: rgba(var(--hw-moon),.04); border-color: rgba(var(--hw-moon),.22); color: rgba(255,255,255,.72); }
+.theme-halloween .chip.active { background: #f0d9a3; border-color: #f0d9a3; color: #141812; box-shadow: 0 0 14px rgba(var(--hw-moon),.35); }
+.theme-halloween .section-title { color: #f7efdc; }
+.theme-halloween .section-title::after { background: linear-gradient(90deg, rgba(var(--hw-moon),.55), transparent); }
+.theme-halloween .item, .theme-halloween .promo {
+  background: linear-gradient(160deg, rgba(var(--hw-moon),.06), rgba(var(--hw-moon),.015) 60%);
+  border-color: rgba(var(--hw-moon),.3);
+  box-shadow: 0 0 18px rgba(var(--hw-moon),.05), inset 0 1px 0 rgba(var(--hw-moon),.08);
+}
+.theme-halloween .item-head .lead { border-color: rgba(var(--hw-moon),.22); }
+.theme-halloween .item-price { color: #f2b45a; text-shadow: 0 0 10px rgba(242,180,90,.35); }
+.theme-halloween .item-old { color: rgba(255,255,255,.4); text-decoration-color: rgba(var(--hw-moon),.7); text-shadow: none; }
+.theme-halloween .item-desc, .theme-halloween .item-amount { color: rgba(255,255,255,.58); }
+.theme-halloween .promo-icon { color: #f2b45a; background: rgba(var(--hw-moon),.05); border-color: rgba(var(--hw-moon),.25); }
+.theme-halloween .footer { color: rgba(255,255,255,.6); }
+.theme-halloween .socials a { border-color: rgba(var(--hw-moon),.22); }
+
+/* фон за меню: большая паутина с пауком (лунного оттенка), мерцающие звёзды, привидения */
+.hw-web { top: 10px; left: -4px; width: 52vw; max-width: 300px; aspect-ratio: 1; color: rgba(var(--hw-moon),.12); }
+.hw-web svg { display: block; width: 100%; height: 100%; }
+.hw-spider { top: 10px; left: min(24vw, 140px); width: 22px; color: #0d0d0d; transform-origin: 50% 0; animation: hw-swing 5s ease-in-out infinite; }
+.hw-spider i { display: block; width: 1px; height: 120px; margin: 0 auto; background: linear-gradient(rgba(var(--hw-moon),.06), rgba(var(--hw-moon),.3)); }
+.hw-spider svg { display: block; width: 22px; height: auto; margin-top: -2px; filter: drop-shadow(0 0 1.5px rgba(242,180,90,.6)); }
+@keyframes hw-swing { 0%, 100% { transform: rotate(4deg); } 50% { transform: rotate(-4deg) translateY(8px); } }
+
+/* несколько звёзд мерцают (остальные — неподвижный звёздный фон страницы) */
+.hw-twinkle { inset: 0; }
+.hw-twinkle i { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff8e4; box-shadow: 0 0 6px 1px rgba(246,226,176,.7); opacity: .15; animation: hw-twinkle 3.6s ease-in-out infinite; }
+.hw-twinkle i:nth-child(1) { top: 4%; left: 88%; }
+.hw-twinkle i:nth-child(2) { top: 17%; left: 6%; animation-delay: -1.2s; }
+.hw-twinkle i:nth-child(3) { top: 29%; left: 95%; animation-delay: -2.4s; animation-duration: 4.4s; }
+.hw-twinkle i:nth-child(4) { top: 41%; left: 2%; animation-delay: -.6s; }
+.hw-twinkle i:nth-child(5) { top: 53%; left: 92%; animation-delay: -3s; animation-duration: 5s; }
+.hw-twinkle i:nth-child(6) { top: 64%; left: 48%; animation-delay: -1.8s; width: 2px; height: 2px; }
+.hw-twinkle i:nth-child(7) { top: 76%; left: 4%; animation-delay: -2.8s; animation-duration: 4.2s; }
+.hw-twinkle i:nth-child(8) { top: 87%; left: 90%; animation-delay: -.3s; }
+.hw-twinkle i:nth-child(9) { top: 96%; left: 30%; animation-delay: -2s; width: 2px; height: 2px; }
+@keyframes hw-twinkle { 0%, 100% { opacity: .12; transform: scale(.7); } 50% { opacity: .9; transform: scale(1.15); } }
+
+/* подвал: привидение слева и мумия справа от иконок соцсетей (там всегда пусто, при любой высоте экрана) */
+.theme-halloween .footer { position: relative; }
+.theme-halloween .footer::before, .theme-halloween .footer::after {
+  content: ""; position: absolute; pointer-events: none; background: center / contain no-repeat;
+}
+.theme-halloween .footer::before { width: 62px; height: 82px; left: 8px; bottom: 0; background-image: var(--hw-ghost); rotate: -8deg; opacity: .9; animation: hw-float 7s ease-in-out infinite; }
+.theme-halloween .footer::after { width: 46px; height: 54px; right: 12px; bottom: 10px; background-image: var(--hw-mummy); rotate: 12deg; opacity: .8; }
+
+/* предметы в конце строки с названием раздела — справа, на месте линии, текст не закрывают */
+.hw-title-item { order: 2; flex: none; display: block; height: 40px; margin: -10px -2px -8px 0; opacity: .9; }
+.hw-title-item svg { display: block; height: 100%; width: auto; filter: drop-shadow(0 0 6px rgba(242,180,90,.18)); }
+
+.hw-item svg { display: block; width: 100%; height: auto; }
+.hw-item { opacity: .8; }
+/* коса — слева над заголовком второго раздела, в промежутке между карточками */
+.theme-halloween .section-title { position: relative; }
+.hw-title-left { position: absolute; width: 52px; left: -42px; top: -88px; rotate: 6deg; opacity: .85; pointer-events: none; }
+.hw-title-left svg { display: block; width: 100%; height: auto; }
+/* бутылка яда — в подвале справа от строки «…свои напитки» */
+.theme-halloween .footer .rule::after {
+  content: ""; position: absolute; right: 4px; top: 14px; width: 26px; height: 42px; rotate: -14deg;
+  background: var(--hw-poison) center / contain no-repeat; opacity: .85; pointer-events: none;
+}
+/* ближе к середине, под текстом — почти прозрачные, чтобы текст читался */
+.hw-faint { opacity: .13; }
+.hw-skull { width: 92px; top: 44%; left: 50%; margin-left: -46px; rotate: -8deg; }
+.hw-devil { width: 104px; top: 77%; left: 50%; margin-left: -10px; rotate: 10deg; }
+/* внизу меню: зомби выглядывает из-за левого края у последней карточки (на краю нет текста) */
+.hw-zombie { z-index: 2; width: 60px; bottom: 22px; left: -27px; rotate: -10deg; animation: hw-peek 6s ease-in-out infinite; }
+@keyframes hw-peek { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+@keyframes hw-float { 0%, 100% { translate: 0 0; } 50% { translate: 6px -14px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-bats i, .hw-bats svg, .hw-spider, .hw-ghost, .hw-twinkle i, .hw-zombie, .theme-halloween .footer::before { animation: none; }
+}

@@ -100,7 +100,10 @@
       // обложка ивента (картинка из админки) — вместо большого значка
       const top = tab.cover ? `<img class="ev-cover" src="${esc(src(tab.cover))}" alt="" decoding="async">`
         : tab.emoji ? `<div class="ev-emoji" aria-hidden="true">${esc(tab.emoji)}</div>` : "";
-      $("hero").innerHTML = `${top}<h1>${esc(t(tab.title))}</h1>${t(tab.subtitle) ? `<span>${esc(t(tab.subtitle))}</span>` : ""}${t(tab.text) ? `<p class="ev-intro">${esc(t(tab.text))}</p>` : ""}`;
+      // тема оформления: украшения за значком (icon) и картинка-сцена под ним (scene)
+      const th = evTheme(tab) || {};
+      const icon = th.noIcon ? "" : top && th.icon ? `<div class="ev-top">${th.icon()}${top}</div>` : top;
+      $("hero").innerHTML = `${icon}${th.scene ? th.scene() : ""}<h1>${esc(t(tab.title))}</h1>${t(tab.subtitle) ? `<span>${esc(t(tab.subtitle))}</span>` : ""}${t(tab.text) ? `<p class="ev-intro">${esc(t(tab.text))}</p>` : ""}`;
       return fitHero();
     }
     $("hero").innerHTML = tab.hideTitle ? "" : `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
@@ -226,14 +229,17 @@
       .map((s) => ({ ...s, items: (s.items || []).filter((i) => !i.hidden) }))
       .filter((s) => s.items.length);
 
-    $("content").innerHTML = sections.map((s) => {
+    // украшения темы мероприятия (привидения и т.п.) — по краям, за карточками
+    const deco = tab.layout === "event" && evTheme(tab) && evTheme(tab).content ? evTheme(tab).content() : "";
+    const titleDeco = tab.layout === "event" && evTheme(tab) && evTheme(tab).titleDeco;
+    $("content").innerHTML = deco + sections.map((s, si) => {
       let body;
       if (s.layout === "builder") body = s.items.map((i) => (i.steps || []).length ? builderHtml(i) : `<div class="items">${itemHtml(i, s)}</div>`).join("");
       else if (s.layout === "promo") body = `<div class="items">${s.items.map(promoHtml).join("")}</div>`;
       else body = `<div class="items">${s.items.map((i) => itemHtml(i, s)).join("")}</div>`;
       const note = t(s.note);
       return `<section class="section" id="s-${s.id}" data-section="${s.id}">
-        <h2 class="section-title">${esc(t(s.title))}</h2>
+        <h2 class="section-title">${esc(t(s.title))}${titleDeco ? titleDeco(si) : ""}</h2>
         ${note ? `<p class="section-note">${esc(note)}</p>` : ""}
         ${body}
       </section>`;
@@ -383,6 +389,9 @@
   // «ключ» ивента: сменили название или даты — для гостей это новый ивент (снова видна точка «новое»)
   const evKey = () => tabs.event ? `${tabs.event.file}|${tabs.event.dateFrom || ""}|${(tabs.event.title || {}).ru || ""}` : "";
 
+  // тема оформления мероприятия из assets/event-themes.js (поле «Оформление» в админке)
+  const evTheme = (ev) => (ev && ev.theme && window.EVENT_THEMES && window.EVENT_THEMES[ev.theme]) || null;
+
   function eventActive(ev) {
     if (!ev || !ev.enabled || !t(ev.title)) return false;
     const d = today();
@@ -393,6 +402,11 @@
   function applyEventMode() {
     const on = currentTab === "event";
     document.body.classList.toggle("is-event", on);
+    // оформление (тема) мероприятия: класс theme-<имя> и её CSS-переменные (рисунки подтёков и т.п.)
+    const th = on ? evTheme(tabs.event) : null;
+    document.body.className = document.body.className.replace(/theme-\S+/g, "").trim();
+    if (th) document.body.classList.add("theme-" + tabs.event.theme);
+    Object.entries((th && th.vars) || {}).forEach(([k, v]) => document.body.style.setProperty(k, v));
     $("evBack").hidden = !on;
     if (on) lsSet(EV_SEEN, evKey());
     updateBubble();
