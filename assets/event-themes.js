@@ -4,6 +4,7 @@
      scene()   — картинка-сцена между значком и названием;
      content() — фон за меню (мерцающие звёзды, паутина, привидение, предметы по краям);
      titleDeco(i) — предмет в конце строки с названием i-го раздела;
+     fixed()   — закреплённый фон основного меню (когда меню в оформлении мероприятия, но это не его страница);
      vars      — CSS-переменные (необязательно).
    Всё векторное (SVG прямо в коде) — без картинок, чтобы страница не тормозила на телефоне.
    Стили тем — в assets/style.css, блок «ТЕМЫ МЕРОПРИЯТИЙ». */
@@ -304,6 +305,12 @@ window.EVENT_THEMES = (function () {
         + `<div class="deco hw-item hw-faint hw-devil" aria-hidden="true">${ITEMS.devil}</div>`
         // внизу меню, между последней карточкой и подвалом (привидение и мумия — в подвале, см. style.css)
         + `<div class="deco hw-item hw-zombie" aria-hidden="true">${ITEMS.zombie}</div>`,
+      // основное меню после страницы мероприятия: закреплённый фон (не прокручивается) — паутина с пауком, череп, дьявол
+      fixed: () =>
+        `<div class="deco hw-web" aria-hidden="true">${web()}</div>`
+        + `<div class="deco hw-spider" aria-hidden="true"><i></i>${SPIDER}</div>`
+        + `<div class="deco hw-item hw-faint hw-skull" aria-hidden="true">${ITEMS.skull}</div>`
+        + `<div class="deco hw-item hw-faint hw-devil" aria-hidden="true">${ITEMS.devil}</div>`,
       // предмет в конце строки с названием раздела (по очереди)
       titleDeco: (i) => {
         const list = ["cauldron", "voodoo", "lollipop", "jar"];

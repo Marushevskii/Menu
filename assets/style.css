@@ -563,22 +563,28 @@ html.locked, html.locked body { overflow: hidden; }
 .hw-bats { position: absolute; inset: 0; color: #050505; overflow: hidden; }
 /* каждая мышь — полоса во всю ширину сцены; полоса едет слева направо (или наоборот), мышь внутри машет крыльями
    и слегка ныряет вверх-вниз. Пролетает поверх луны и замка — там её хорошо видно */
-.hw-bats i { position: absolute; left: 0; width: 100%; display: block; animation: hw-fly 18s linear infinite; }
-.hw-bats b { display: block; animation: hw-dip 3s ease-in-out infinite; }
+.hw-bats i { position: absolute; left: 0; width: 100%; display: block; animation: hw-fly1 14s ease-in-out infinite; }
+.hw-bats b { display: block; animation: hw-dip 3s ease-in-out infinite, hw-face1 14s linear infinite; }
 .hw-bats svg { display: block; width: 100%; height: auto; animation: hw-flap .32s ease-in-out infinite alternate; transform-origin: 50% 40%; }
-.hw-bats .b1 { top: 26%; animation-duration: 17s; }
+/* координаты по горизонтали — доля ширины сцены (луна и замок — примерно 35–65%) */
+.hw-bats .b1 { top: 22%; }
 .hw-bats .b1 b { width: 30px; }
-.hw-bats .b2 { top: 44%; animation-name: hw-fly-back; animation-duration: 23s; animation-delay: -9s; }
-.hw-bats .b2 b { width: 24px; animation-duration: 3.6s; }
-.hw-bats .b3 { top: 12%; animation-duration: 27s; animation-delay: -15s; }
-.hw-bats .b3 b { width: 18px; animation-duration: 2.6s; }
-.hw-bats .b4 { top: 58%; animation-name: hw-fly-back; animation-duration: 20s; animation-delay: -3s; }
-.hw-bats .b4 b { width: 20px; animation-duration: 3.3s; }
+.hw-bats .b2 { top: 40%; animation-name: hw-fly2; animation-duration: 18s; animation-delay: -6s; }
+.hw-bats .b2 b { width: 24px; animation: hw-dip 3.6s ease-in-out infinite, hw-face2 18s linear -6s infinite; }
+.hw-bats .b3 { top: 9%; animation-name: hw-fly3; animation-duration: 22s; animation-delay: -11s; }
+.hw-bats .b3 b { width: 18px; animation: hw-dip 2.6s ease-in-out infinite, hw-face3 22s linear -11s infinite; }
+.hw-bats .b4 { top: 55%; animation-name: hw-fly4; animation-duration: 16s; animation-delay: -4s; }
+.hw-bats .b4 b { width: 20px; animation: hw-dip 3.3s ease-in-out infinite, hw-face4 16s linear -4s infinite; }
 .hw-bats .b2 svg, .hw-bats .b3 svg { animation-duration: .26s; }
-@keyframes hw-fly { from { translate: -14% 0; } to { translate: 104% 0; } }
-@keyframes hw-fly-back { from { translate: 104% 0; } to { translate: -14% 0; } }
-/* летящие справа налево смотрят влево */
-.hw-bats .b2 b, .hw-bats .b4 b { scale: -1 1; }
+/* полёт туда-обратно вокруг луны и замка; hw-faceN разворачивает мышь носом по ходу полёта */
+@keyframes hw-fly1 { 0%, 100% { translate: 28% 0; } 22% { translate: 45% -12px; } 45% { translate: 63% 4px; } 70% { translate: 49% 16px; } }
+@keyframes hw-face1 { 0%, 44.9% { scale: 1 1; } 45%, 100% { scale: -1 1; } }
+@keyframes hw-fly2 { 0%, 100% { translate: 64% 0; } 30% { translate: 44% -10px; } 55% { translate: 27% 6px; } 76% { translate: 42% 14px; } }
+@keyframes hw-face2 { 0%, 54.9% { scale: -1 1; } 55%, 100% { scale: 1 1; } }
+@keyframes hw-fly3 { 0%, 100% { translate: 38% 0; } 50% { translate: 60% 12px; } }
+@keyframes hw-face3 { 0%, 49.9% { scale: 1 1; } 50%, 100% { scale: -1 1; } }
+@keyframes hw-fly4 { 0%, 100% { translate: 60% 0; } 42% { translate: 33% -10px; } }
+@keyframes hw-face4 { 0%, 41.9% { scale: -1 1; } 42%, 100% { scale: 1 1; } }
 @keyframes hw-dip { 0%, 100% { translate: 0 0; } 50% { translate: 0 10px; } }
 @keyframes hw-flap { from { transform: scaleY(1); } to { transform: scaleY(.45); } }
 /* звёзды над замком медленно мерцают */
@@ -586,7 +592,7 @@ html.locked, html.locked body { overflow: hidden; }
 @keyframes hw-star { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
 /* окна замка: свет по очереди гаснет и снова загорается */
 .hw-win { animation: hw-win 17.5s ease-in-out infinite; }
-@keyframes hw-win { 0%, 30%, 100% { opacity: 1; } 36%, 52% { opacity: .12; } 58% { opacity: 1; } }
+@keyframes hw-win { 0%, 30%, 100% { opacity: 1; } 36%, 52% { opacity: 0; } 58% { opacity: 1; } }
 /* тыквы неспешно моргают */
 .hw-eyes { transform-box: fill-box; transform-origin: center; animation: hw-blink 6.5s ease-in-out infinite; }
 @keyframes hw-blink { 0%, 90%, 100% { scale: 1 1; } 94% { scale: 1 .12; } }
@@ -610,6 +616,14 @@ html.locked, html.locked body { overflow: hidden; }
 .theme-halloween .promo-icon { color: #f2b45a; background: rgba(var(--hw-moon),.05); border-color: rgba(var(--hw-moon),.25); }
 .theme-halloween .footer { color: rgba(255,255,255,.6); }
 .theme-halloween .socials a { border-color: rgba(var(--hw-moon),.22); }
+
+/* основное меню в оформлении мероприятия: закреплённый фон — не прокручивается, виден на любой глубине страницы */
+.ev-bg-deco { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.ev-bg-deco[hidden] { display: none; }
+.ev-bg-deco .hw-web { top: 52px; left: -4px; }   /* ниже липкой ленты разделов */
+.ev-bg-deco .hw-spider { top: 52px; }
+.ev-bg-deco .hw-skull { top: 38%; }
+.ev-bg-deco .hw-devil { top: auto; bottom: 120px; }
 
 /* фон за меню: большая паутина с пауком (лунного оттенка), мерцающие звёзды, привидения */
 .hw-web { top: 10px; left: -4px; width: 52vw; max-width: 300px; aspect-ratio: 1; color: rgba(var(--hw-moon),.12); }

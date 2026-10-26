@@ -414,6 +414,11 @@
       document.body.classList.add("theme-" + ev.theme);
       Object.entries(th.vars || {}).forEach(([k, v]) => document.body.style.setProperty(k, v));
     }
+    // основное меню в оформлении мероприятия — закреплённые фоновые украшения (видны при любой прокрутке)
+    const layer = $("evBgDeco"), wantLayer = themed && !on && th.fixed;
+    if (wantLayer && !layer.childElementCount) layer.innerHTML = th.fixed();
+    if (!wantLayer) layer.innerHTML = "";
+    layer.hidden = !wantLayer;
     $("evBack").hidden = !on;
     if (on) lsSet(EV_SEEN, evKey());
     updateBubble();
