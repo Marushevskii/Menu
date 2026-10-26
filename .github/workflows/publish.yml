@@ -1,7 +1,8 @@
 # Публикация сайта: при каждом сохранении (из админки или от Claude)
 # 1) переводит изменённые русские тексты на EN/KA/TR (tools/translate.py),
 # 2) сохраняет переводы в репозиторий,
-# 3) выкладывает сайт на GitHub Pages.
+# 3) собирает список мероприятий (tools/build_events.py),
+# 4) выкладывает сайт на GitHub Pages.
 name: Публикация
 
 on:
@@ -54,6 +55,10 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      # список включённых мероприятий для сайта (data/events.json, в git не хранится)
+      - name: Список мероприятий
+        run: python tools/build_events.py
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

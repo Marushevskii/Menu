@@ -26,7 +26,10 @@ import sys
 import urllib.request
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), ".."))
-FILES = ["data/hookah.json", "data/bar.json", "data/snacks.json", "data/promo.json", "data/event.json", "data/ui.json"]
+FILES = ["data/hookah.json", "data/bar.json", "data/snacks.json", "data/promo.json", "data/ui.json"]
+# мероприятия — каждое отдельным файлом в data/events/
+_EV = os.path.join(ROOT, "data", "events")
+FILES += sorted("data/events/" + f for f in os.listdir(_EV) if f.endswith(".json")) if os.path.isdir(_EV) else []
 TARGETS = ["en", "ka", "tr"]
 MARK = "🔄 изменено"
 API = "https://translation.googleapis.com/language/translate/v2"

@@ -97,7 +97,10 @@
     $("hero").hidden = !!tab.hideTitle;
     if (tab.layout === "event") {
       // страница ивента: эмодзи, название, подпись с датой
-      $("hero").innerHTML = `${tab.emoji ? `<div class="ev-emoji" aria-hidden="true">${esc(tab.emoji)}</div>` : ""}<h1>${esc(t(tab.title))}</h1>${t(tab.subtitle) ? `<span>${esc(t(tab.subtitle))}</span>` : ""}${t(tab.text) ? `<p class="ev-intro">${esc(t(tab.text))}</p>` : ""}`;
+      // обложка ивента (картинка из админки) — вместо большого значка
+      const top = tab.cover ? `<img class="ev-cover" src="${esc(src(tab.cover))}" alt="" decoding="async">`
+        : tab.emoji ? `<div class="ev-emoji" aria-hidden="true">${esc(tab.emoji)}</div>` : "";
+      $("hero").innerHTML = `${top}<h1>${esc(t(tab.title))}</h1>${t(tab.subtitle) ? `<span>${esc(t(tab.subtitle))}</span>` : ""}${t(tab.text) ? `<p class="ev-intro">${esc(t(tab.text))}</p>` : ""}`;
       return fitHero();
     }
     $("hero").innerHTML = tab.hideTitle ? "" : `<h1>${esc(t(tab.title))}</h1>${tab.menuLabel === false ? "" : `<span>${esc(u("menu"))}</span>`}`;
@@ -378,7 +381,7 @@
   const lsGet = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* приватный режим */ } };
   // «ключ» ивента: сменили название или даты — для гостей это новый ивент (снова видна точка «новое»)
-  const evKey = () => tabs.event ? `${tabs.event.dateFrom || ""}|${(tabs.event.title || {}).ru || ""}` : "";
+  const evKey = () => tabs.event ? `${tabs.event.file}|${tabs.event.dateFrom || ""}|${(tabs.event.title || {}).ru || ""}` : "";
 
   function eventActive(ev) {
     if (!ev || !ev.enabled || !t(ev.title)) return false;
@@ -678,14 +681,22 @@
     ui = uiData;
     tabData.forEach((tb) => { tabs[tb.id] = tb; });
     lang = pickLang();
-    // ивент — не вкладка внизу, а отдельная страница #event; без файла или вне дат его просто нет
+    // мероприятие — не вкладка внизу, а отдельная страница #event.
+    // data/events.json — список включённых (собирается при публикации), сами ивенты — data/events/<имя>.json.
+    // Подходят по датам несколько — показываем тот, что начался позже.
     try {
-      const ev = await load("event");
-      if (eventActive(ev)) {
-        tabs.event = ev;
+      const d = today();
+      const list = ((await load("events")).events || [])
+        .filter((x) => (!x.dateFrom || d >= x.dateFrom) && (!x.dateTo || d <= x.dateTo))
+        .sort((a, b) => (b.dateFrom || "").localeCompare(a.dateFrom || ""));
+      for (const x of list) {
+        const ev = await load("events/" + x.file).catch(() => null);
+        if (!eventActive(ev)) continue;
+        tabs.event = { ...ev, id: "event", layout: "event", file: x.file };
         if (ev.color) document.documentElement.style.setProperty("--ev", ev.color);
+        break;
       }
-    } catch (e) { /* ивента нет */ }
+    } catch (e) { /* мероприятий нет */ }
     const fromHash = location.hash.slice(1);
     currentTab = tabs[fromHash] ? fromHash : settings.tabs[0];
     // настоящее преломление стекла — только там, где браузер это умеет (Chrome, не iPhone)

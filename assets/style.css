@@ -484,6 +484,7 @@ html.locked, html.locked body { overflow: hidden; }
 }
 .is-event .section-title::after { background: linear-gradient(90deg, color-mix(in srgb, var(--ev) 60%, transparent), transparent); }
 .is-event .hero span { font-style: normal; font-size: 17px; letter-spacing: .04em; color: var(--ev-light); margin-top: 10px; padding: 0 8px; white-space: normal; overflow-wrap: anywhere; }
+.ev-cover { display: block; width: 100%; max-width: 520px; aspect-ratio: 16 / 9; object-fit: cover; margin: -6px auto 18px; border-radius: var(--radius); box-shadow: 0 12px 30px rgba(0,0,0,.4), 0 0 0 1px color-mix(in srgb, var(--ev) 35%, transparent); }
 .ev-emoji { font-size: 56px; line-height: 1; margin-bottom: 12px; animation: ev-float 4s ease-in-out infinite; }
 @keyframes ev-float { 50% { transform: translateY(-6px) rotate(-4deg); } }
 .ev-intro { font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 520px; margin: 14px auto 0; padding: 0 6px; }

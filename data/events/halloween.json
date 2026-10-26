@@ -1,12 +1,11 @@
 {
-  "id": "event",
-  "layout": "event",
-  "icon": "star",
+  "code": "halloween",
   "enabled": true,
   "dateFrom": "2026-10-24",
   "dateTo": "2026-11-01",
   "emoji": "🎃",
   "color": "#E8742A",
+  "cover": "",
   "title": {
     "ru": "Хеллоуин",
     "en": "Halloween",
