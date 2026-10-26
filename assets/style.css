@@ -451,9 +451,9 @@ html.locked, html.locked body { overflow: hidden; }
 .ev-bubble.seen .ev-dot { display: none; }
 .ev-bubble.pop { animation: ev-pop .6s cubic-bezier(.3,1.5,.5,1) .6s both; }
 @keyframes ev-pop { from { opacity: 0; scale: .3; } to { opacity: 1; scale: 1; } }
-.ev-bubble.dragging { transition: scale .2s, opacity .2s; scale: 1.1; box-shadow: 0 16px 34px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.45); }
+/* пока тащат — никаких анимаций и смены размера: только движение точно под пальцем */
+.ev-bubble.dragging { transition: none; will-change: transform; box-shadow: 0 16px 34px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.45); }
 .ev-bubble.dragging::before { animation: none; opacity: 0; }
-.ev-bubble.near { scale: .85; opacity: .8; }
 .ev-bubble.gone { scale: .2; opacity: 0; }
 
 /* зона «×» — видна только пока пузырь тащат. Стоит над нижними вкладками, а не у самого края:
@@ -471,9 +471,10 @@ html.locked, html.locked body { overflow: hidden; }
 .ev-x {
   width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
   font-size: 30px; line-height: 1; border: 1.5px solid rgba(255,255,255,.7); background: rgba(255,255,255,.08);
-  transition: transform .2s, background .2s;
+  transition: background .12s, border-color .12s;
 }
-.ev-trash.near .ev-x { transform: scale(1.2); background: rgba(255,255,255,.28); }
+/* пузырь над «×» — подсвечивается крестик (сам пузырь не меняется, чтобы не дёргался) */
+.ev-trash.near .ev-x { background: rgba(255,255,255,.3); border-color: #fff; }
 
 /* ---------- страница ивента ---------- */
 .is-event { --amber: var(--ev-light); --accent: var(--ev); }

@@ -460,19 +460,17 @@
         try { b.setPointerCapture(e.pointerId); } catch (err) { /* ничего */ }
         // пока тащат — привязка к верху экрана: если Safari меняет высоту видимой части,
         // пузырь не уезжает от пальца (привязка к низу двигала бы его вместе с панелью)
-        const r = b.getBoundingClientRect();
-        b.style.transform = "";
-        const r0 = b.getBoundingClientRect();
-        b.style.top = r0.top + "px";
-        b.style.bottom = "auto";
-        drag.x -= r.left - r0.left; drag.y -= r.top - r0.top;
+        // сначала снять анимацию появления (она меняет размер) и включить «без анимаций», потом замерять
+        b.classList.remove("pop");
         b.classList.add("dragging");
+        b.style.transform = "";
+        b.style.top = b.getBoundingClientRect().top + "px";
+        b.style.bottom = "auto";
         trash.hidden = false; void trash.offsetWidth; trash.classList.add("show");
       }
-      b.style.transform = `translate(${dx}px, ${dy}px)`;
+      b.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
       const near = overTrash(e.clientX, e.clientY);
-      trash.classList.toggle("near", near);
-      b.classList.toggle("near", near);
+      if (near !== trash.classList.contains("near")) trash.classList.toggle("near", near);
     });
     const end = (e) => {
       if (!drag || e.pointerId !== drag.id) return;
@@ -482,7 +480,7 @@
       if (!d.on) { if (e.type === "pointerup") openEvent(); return; }
       // на время «приземления» не анимируем сдвиг, иначе пузырь дёргается от старого места к новому
       b.style.transition = "scale .25s, opacity .25s, box-shadow .2s";
-      b.classList.remove("dragging", "near");
+      b.classList.remove("dragging");
       trash.classList.remove("show", "near");
       setTimeout(() => { if (!trash.classList.contains("show")) trash.hidden = true; }, 250);
       if (e.type === "pointerup" && overTrash(e.clientX, e.clientY)) {
