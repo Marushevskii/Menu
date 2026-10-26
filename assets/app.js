@@ -422,6 +422,7 @@
     const bottom = Math.max(minB, Math.min(maxB, p ? p.b : minB + 30));
     b.style.left = x + "px";
     b.style.right = "auto";
+    b.style.top = "auto";
     b.style.bottom = bottom + "px";
     return { x, b: bottom };
   }
@@ -447,6 +448,14 @@
         if (Math.hypot(dx, dy) < 8) return;                 // это ещё нажатие, а не перетаскивание
         drag.on = true;
         try { b.setPointerCapture(e.pointerId); } catch (err) { /* ничего */ }
+        // пока тащат — привязка к верху экрана: если Safari меняет высоту видимой части,
+        // пузырь не уезжает от пальца (привязка к низу двигала бы его вместе с панелью)
+        const r = b.getBoundingClientRect();
+        b.style.transform = "";
+        const r0 = b.getBoundingClientRect();
+        b.style.top = r0.top + "px";
+        b.style.bottom = "auto";
+        drag.x -= r.left - r0.left; drag.y -= r.top - r0.top;
         b.classList.add("dragging");
         trash.hidden = false; void trash.offsetWidth; trash.classList.add("show");
       }
