@@ -334,6 +334,60 @@ collections:
                   - { name: desc, label: "Текст", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs_text }
                   - { name: hidden, label: "Скрыть с сайта", widget: boolean, default: false, required: false }
 
+      # Ивент (Хеллоуин, Новый год…): отдельная страница + плавающая кнопка на сайте.
+      # Вне дат «с/по» или без галочки «Включено» — кнопки и страницы нет.
+      - name: event
+        label: "Ивент (спецпредложения)"
+        file: data/event.json
+        fields:
+          - { name: id, widget: hidden, default: event }
+          - { name: layout, widget: hidden, default: event }
+          - { name: icon, widget: hidden, default: star }
+          - { name: enabled, label: "Включено", hint: "Выключите — кнопка и страница пропадут с сайта", widget: boolean, default: false }
+          - { name: dateFrom, label: "Показывать с", hint: "Можно оставить пустым — тогда сразу", widget: datetime, date_format: "DD.MM.YYYY", time_format: false, format: "YYYY-MM-DD", required: false }
+          - { name: dateTo, label: "Показывать по (включительно)", hint: "Можно оставить пустым — тогда пока не выключите", widget: datetime, date_format: "DD.MM.YYYY", time_format: false, format: "YYYY-MM-DD", required: false }
+          - { name: emoji, label: "Значок на кнопке", hint: "Один эмодзи: 🎃 🎄 🎆 ❤️ 🥂", widget: string, default: "🎃" }
+          - { name: color, label: "Цвет ивента", hint: "Кнопка, цены и выделения на странице ивента", widget: color, default: "#E8742A" }
+          - { name: title, label: "Название", hint: "Крупно вверху страницы", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+          - { name: subtitle, label: "Подпись под названием", hint: "Например «31 октября · спецменю»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs }
+          - { name: text, label: "Вступительный текст", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs_text }
+          - name: sections
+            label: "Разделы"
+            label_singular: "раздел"
+            widget: list
+            allow_duplicate: false
+            collapsed: true
+            summary: "{{fields.title.ru}}   {{fields.title.auto}}"
+            fields:
+              - { name: id, widget: hidden, default: "{{uuid_short}}" }
+              - name: layout
+                label: "Вид раздела"
+                widget: select
+                default: list
+                options:
+                  - { label: "Позиции с ценой", value: list }
+                  - { label: "Карточки-акции (без цены)", value: promo }
+              - { name: title, label: "Название раздела", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+              - { name: note, label: "Примечание под названием", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs_text }
+              - *icon
+              - name: items
+                label: "Позиции"
+                label_singular: "позицию"
+                widget: list
+                allow_duplicate: false
+                collapsed: true
+                summary: "{{fields.name.ru}}   {{fields.price}} ₾   {{fields.name.auto}}{{fields.desc.auto}}"
+                fields:
+                  - { name: id, widget: hidden, default: "{{uuid_short}}" }
+                  - { name: name, label: "Название", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+                  - { name: desc, label: "Описание", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", required: false, fields: *langs_text }
+                  - { name: price, label: "Цена, ₾", hint: "Для карточек-акций не нужна", widget: number, value_type: float, required: false }
+                  - { name: oldPrice, label: "Старая цена, ₾ (зачёркнутая)", hint: "Можно оставить пустым", widget: number, value_type: float, required: false }
+                  - { name: amount, label: "Объём / вес (число)", widget: number, value_type: float, required: false }
+                  - *unit
+                  - *icon
+                  - { name: hidden, label: "Скрыть с сайта", hint: "Например, если закончилось", widget: boolean, default: false, required: false }
+
   - name: site
     label: "Настройки сайта"
     icon: settings
@@ -387,3 +441,6 @@ collections:
           - { name: unit_ml, label: "Единица «мл»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
           - { name: unit_l, label: "Единица «л»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
           - { name: unit_g, label: "Единица «г»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+          - { name: eventBack, label: "Ивент: кнопка «Вернуться в меню»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+          - { name: eventHide, label: "Ивент: «Отпустите, чтобы скрыть»", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }
+          - { name: eventOpen, label: "Ивент: подсказка для незрячих на кнопке", widget: object, collapsed: true, summary: "{{fields.ru}}   {{fields.auto}}", fields: *langs }

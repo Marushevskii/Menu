@@ -76,5 +76,23 @@
     "en": "g",
     "ka": "გ",
     "tr": "gr"
+  },
+  "eventBack": {
+    "ru": "Вернуться в меню",
+    "en": "Back to menu",
+    "ka": "მენიუში დაბრუნება",
+    "tr": "Menüye dön"
+  },
+  "eventHide": {
+    "ru": "Отпустите, чтобы скрыть",
+    "en": "Release to hide",
+    "ka": "გაუშვით დასამალად",
+    "tr": "Gizlemek için bırakın"
+  },
+  "eventOpen": {
+    "ru": "Открыть спецпредложения",
+    "en": "Open special offers",
+    "ka": "სპეციალური შეთავაზებების გახსნა",
+    "tr": "Özel teklifleri aç"
   }
 }

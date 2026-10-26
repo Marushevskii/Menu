@@ -26,7 +26,7 @@ import sys
 import urllib.request
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), ".."))
-FILES = ["data/hookah.json", "data/bar.json", "data/snacks.json", "data/promo.json", "data/ui.json"]
+FILES = ["data/hookah.json", "data/bar.json", "data/snacks.json", "data/promo.json", "data/event.json", "data/ui.json"]
 TARGETS = ["en", "ka", "tr"]
 MARK = "🔄 изменено"
 API = "https://translation.googleapis.com/language/translate/v2"

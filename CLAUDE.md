@@ -36,6 +36,16 @@
 - В `release/` только файлы сайта (без заметок, tools кроме translate.py, без стоковых фото).
   Заметки (этот файл, PROJECT.md, menu-audit.md), `tools/render_background.py`, `tools/photos.py`, `brand/` — в корне `D:\cafe-menu`.
   Если перерисовываешь фон/фото инструментами из корня — копируй результат в `release/`.
+## Ивент-страница (26.10.2026, пока ТОЛЬКО на тесте)
+
+- `data/event.json` (админка: Меню → «Ивент (спецпредложения)»): `enabled`, `dateFrom`/`dateTo` (YYYY-MM-DD,
+  включительно, по дате телефона гостя), `emoji`, `color` (→ CSS `--ev`), `title`/`subtitle`/`text`, `sections`
+  (layout `list` | `promo`), у позиций есть `oldPrice` (зачёркнутая).
+- Страница `#event` — не вкладка: нижние вкладки скрыты, вместо них «Вернуться в меню» (history.back → то же место меню).
+- Пузырь как у Wolt (`#evBubble`): тащится пальцем, прилипает к краю (localStorage `ev-pos`), унести в «×» —
+  скрыт до завтра (`ev-hidden`), точка «новое» до первого открытия (`ev-seen`). Ключ ивента = dateFrom + title.ru.
+- `data/event.json` добавлен в `tools/translate.py` FILES. При переносе на рабочий — тоже.
+
 ## 🚦 Порядок выкатки (правило пользователя, 25.10.2026) — соблюдать всегда
 
 - **airlounge.github.io/menu — РАБОЧИЙ.** На нём ничего не тестируем никогда. Пушить в `release/`

@@ -1,0 +1,164 @@
+{
+  "id": "event",
+  "layout": "event",
+  "icon": "star",
+  "enabled": true,
+  "dateFrom": "2026-10-24",
+  "dateTo": "2026-11-01",
+  "emoji": "🎃",
+  "color": "#E8742A",
+  "title": {
+    "ru": "Хеллоуин",
+    "en": "Halloween",
+    "ka": "ჰელოუინი",
+    "tr": "Cadılar Bayramı"
+  },
+  "subtitle": {
+    "ru": "31 октября · спецменю",
+    "en": "October 31 · special menu",
+    "ka": "31 ოქტომბერი · სპეციალური მენიუ",
+    "tr": "31 Ekim · özel menü"
+  },
+  "text": {
+    "ru": "Тыквенные кальяны, «кровавые» коктейли и подарки за лучший костюм. Предложения действуют до 1 ноября.",
+    "en": "Pumpkin hookahs, “bloody” cocktails and gifts for the best costume. Offers are valid until November 1.",
+    "ka": "გოგრის ჩილიმები, „სისხლიანი“ კოქტეილები და საჩუქრები საუკეთესო კოსტიუმისთვის. შეთავაზებები მოქმედებს 1 ნოემბრამდე.",
+    "tr": "Balkabaklı nargileler, “kanlı” kokteyller ve en iyi kostüme hediyeler. Teklifler 1 Kasım'a kadar geçerlidir."
+  },
+  "sections": [
+    {
+      "id": "ev-cocktails",
+      "layout": "list",
+      "icon": "cocktail",
+      "title": {
+        "ru": "Коктейли",
+        "en": "Cocktails",
+        "ka": "კოქტეილები",
+        "tr": "Kokteyller"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "ev-bloody-mary",
+          "name": {
+            "ru": "«Кровавая Мэри» ×2",
+            "en": "Bloody Mary ×2",
+            "ka": "„ბლადი მერი“ ×2",
+            "tr": "Bloody Mary ×2"
+          },
+          "desc": {
+            "ru": "Два коктейля по цене полутора",
+            "en": "Two cocktails for the price of one and a half",
+            "ka": "ორი კოქტეილი ერთნახევრის ფასად",
+            "tr": "Bir buçuk fiyatına iki kokteyl"
+          },
+          "price": 28,
+          "oldPrice": 36,
+          "amount": "",
+          "unit": "",
+          "hidden": false
+        },
+        {
+          "id": "ev-witch-brew",
+          "name": {
+            "ru": "Ведьмино зелье",
+            "en": "Witch's Brew",
+            "ka": "კუდიანის წამალი",
+            "tr": "Cadı İksiri"
+          },
+          "desc": {
+            "ru": "Ром, блю кюрасао, лайм, дым",
+            "en": "Rum, blue curaçao, lime, smoke",
+            "ka": "რომი, ბლუ კიურასაო, ლაიმი, კვამლი",
+            "tr": "Rom, blue curaçao, misket limonu, duman"
+          },
+          "price": 26,
+          "oldPrice": "",
+          "amount": 200,
+          "unit": "ml",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "ev-hookah",
+      "layout": "list",
+      "icon": "hookah",
+      "title": {
+        "ru": "Кальян",
+        "en": "Hookah",
+        "ka": "ჩილიმი",
+        "tr": "Nargile"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "ev-pumpkin-pie",
+          "name": {
+            "ru": "Кальян «Тыквенный пирог»",
+            "en": "“Pumpkin Pie” hookah",
+            "ka": "ჩილიმი „გოგრის ღვეზელი“",
+            "tr": "“Balkabağı Turtası” nargile"
+          },
+          "desc": {
+            "ru": "Пряная тыква, корица, ваниль",
+            "en": "Spiced pumpkin, cinnamon, vanilla",
+            "ka": "სანელებლიანი გოგრა, დარიჩინი, ვანილი",
+            "tr": "Baharatlı balkabağı, tarçın, vanilya"
+          },
+          "price": 55,
+          "oldPrice": "",
+          "amount": "",
+          "unit": "",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "ev-gifts",
+      "layout": "promo",
+      "icon": "gift",
+      "title": {
+        "ru": "Подарки",
+        "en": "Gifts",
+        "ka": "საჩუქრები",
+        "tr": "Hediyeler"
+      },
+      "note": {
+        "ru": "",
+        "en": "",
+        "ka": "",
+        "tr": ""
+      },
+      "items": [
+        {
+          "id": "ev-costume",
+          "icon": "crown",
+          "name": {
+            "ru": "Пришёл в костюме — шот в подарок",
+            "en": "Come in costume — get a free shot",
+            "ka": "მოდი კოსტიუმით — შოტი საჩუქრად",
+            "tr": "Kostümle gel — shot bizden"
+          },
+          "desc": {
+            "ru": "А за самый страшный образ вечера — кальян бесплатно.",
+            "en": "And the scariest look of the night gets a free hookah.",
+            "ka": "საღამოს ყველაზე საშიში იმიჯისთვის კი — ჩილიმი უფასოდ.",
+            "tr": "Gecenin en korkunç kostümüne nargile bedava."
+          },
+          "hidden": false
+        }
+      ]
+    }
+  ]
+}
