@@ -554,7 +554,7 @@ html.locked, html.locked body { overflow: hidden; }
 }
 .is-event.theme-halloween .hero::after { display: none; }
 .is-event.theme-halloween .hero h1 { color: #fff; padding-left: calc(.14em + 16px); padding-right: 16px; margin-top: 2px; }
-.is-event.theme-halloween .hero span { color: rgba(255,255,255,.72); padding: 0 24px; }
+.is-event.theme-halloween .hero span { color: #ffa63d; text-shadow: 0 0 12px rgba(255,154,50,.45); padding: 0 24px; }   /* цвет горящих глаз тыкв */
 .is-event.theme-halloween .ev-intro { color: rgba(255,255,255,.62); padding: 0 22px; }
 
 /* сцена: луна, кривой замок, кладбище и тыквы-фонари на поле (во всю ширину), летучие мыши поверх */
