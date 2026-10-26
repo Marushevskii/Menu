@@ -538,8 +538,9 @@ html.locked, html.locked body { overflow: hidden; }
    ========================================================================== */
 .is-event .hero { position: relative; }
 .is-event .content { position: relative; }
-.deco { position: absolute; pointer-events: none; z-index: 0; }
-.is-event .hero > :not(.deco), .is-event .content > .section { position: relative; z-index: 1; }
+/* украшения — задний фон: карточки и текст лежат поверх них (z-index -1 — ниже обычного содержимого, но выше фона .bg) */
+.deco { position: absolute; pointer-events: none; z-index: -1; }
+.is-event .hero > :not(.deco) { position: relative; z-index: 1; }
 
 /* ---------- Хеллоуин ---------- */
 /* тёмная ночная часть сверху: от шапки до описания, ниже плавно уходит в основной фон */
@@ -615,24 +616,36 @@ html.locked, html.locked body { overflow: hidden; }
 /* подвал: привидение слева и мумия справа от иконок соцсетей (там всегда пусто, при любой высоте экрана) */
 .theme-halloween .footer { position: relative; }
 .theme-halloween .footer::before, .theme-halloween .footer::after {
-  content: ""; position: absolute; pointer-events: none; background: center / contain no-repeat;
+  content: ""; position: absolute; z-index: -1; pointer-events: none; background: center / contain no-repeat;
 }
 .theme-halloween .footer::before { width: 62px; height: 82px; left: 8px; bottom: 0; background-image: var(--hw-ghost); rotate: -8deg; opacity: .9; animation: hw-float 7s ease-in-out infinite; }
 .theme-halloween .footer::after { width: 46px; height: 54px; right: 12px; bottom: 10px; background-image: var(--hw-mummy); rotate: 12deg; opacity: .8; }
 
 /* предметы в конце строки с названием раздела — справа, на месте линии, текст не закрывают */
-.hw-title-item { order: 2; flex: none; display: block; height: 40px; margin: -10px -2px -8px 0; opacity: .9; }
+.hw-title-item { order: 2; flex: none; display: block; height: 40px; margin: -10px -2px -8px 0; opacity: .9; position: relative; z-index: -1; }
+.hw-ti-lollipop svg { rotate: 45deg; }
 .hw-title-item svg { display: block; height: 100%; width: auto; filter: drop-shadow(0 0 6px rgba(242,180,90,.18)); }
 
 .hw-item svg { display: block; width: 100%; height: auto; }
 .hw-item { opacity: .8; }
 /* коса — слева над заголовком второго раздела, в промежутке между карточками */
 .theme-halloween .section-title { position: relative; }
-.hw-title-left { position: absolute; width: 52px; left: -42px; top: -88px; rotate: 6deg; opacity: .85; pointer-events: none; }
+.hw-title-left { position: absolute; z-index: -1; width: 52px; left: -42px; top: -88px; rotate: 6deg; opacity: .85; pointer-events: none; }
+/* коса — небольшой замах вокруг конца древка */
+.hw-title-left svg { transform-origin: 14% 94%; animation: hw-swing-scythe 3.2s ease-in-out infinite; }
+@keyframes hw-swing-scythe { 0%, 100% { rotate: -5deg; } 45% { rotate: 9deg; } 60% { rotate: 7deg; } }
+/* котёл — пузырьки поднимаются и мерцают, будто зелье бурлит */
+.hw-bub { transform-box: fill-box; transform-origin: center; animation: hw-bubble 2s ease-in-out infinite; }
+@keyframes hw-bubble { 0% { opacity: 0; translate: 0 3px; scale: .6; } 35% { opacity: .9; } 70% { opacity: .6; } 100% { opacity: 0; translate: 0 -4px; scale: 1.1; } }
+/* кукла вуду — левая и правая булавки втыкаются и вытаскиваются */
+.hw-pin-l, .hw-pin-r { transform-box: view-box; animation: hw-pin-l 2.4s ease-in-out infinite; }
+.hw-pin-r { animation-name: hw-pin-r; animation-delay: -1.2s; }
+@keyframes hw-pin-l { 0%, 100% { translate: 0 0; } 50% { translate: -3.4px -2.2px; } }
+@keyframes hw-pin-r { 0%, 100% { translate: 0 0; } 50% { translate: 3.6px -1.5px; } }
 .hw-title-left svg { display: block; width: 100%; height: auto; }
 /* бутылка яда — в подвале справа от строки «…свои напитки» */
 .theme-halloween .footer .rule::after {
-  content: ""; position: absolute; right: 4px; top: 14px; width: 26px; height: 42px; rotate: -14deg;
+  content: ""; position: absolute; z-index: -1; right: 4px; top: 14px; width: 26px; height: 42px; rotate: -14deg;
   background: var(--hw-poison) center / contain no-repeat; opacity: .85; pointer-events: none;
 }
 /* ближе к середине, под текстом — почти прозрачные, чтобы текст читался */
@@ -640,10 +653,10 @@ html.locked, html.locked body { overflow: hidden; }
 .hw-skull { width: 92px; top: 44%; left: 50%; margin-left: -46px; rotate: -8deg; }
 .hw-devil { width: 104px; top: 77%; left: 50%; margin-left: -10px; rotate: 10deg; }
 /* внизу меню: зомби выглядывает из-за левого края у последней карточки (на краю нет текста) */
-.hw-zombie { z-index: 2; width: 60px; bottom: 22px; left: -27px; rotate: -10deg; animation: hw-peek 6s ease-in-out infinite; }
+.hw-zombie { width: 60px; bottom: 22px; left: -27px; rotate: -10deg; animation: hw-peek 6s ease-in-out infinite; }
 @keyframes hw-peek { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
 @keyframes hw-float { 0%, 100% { translate: 0 0; } 50% { translate: 6px -14px; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .hw-bats i, .hw-bats svg, .hw-spider, .hw-ghost, .hw-twinkle i, .hw-zombie, .theme-halloween .footer::before { animation: none; }
+  .hw-bats i, .hw-bats svg, .hw-spider, .hw-ghost, .hw-twinkle i, .hw-zombie, .theme-halloween .footer::before, .hw-title-left svg, .hw-bub, .hw-pin-l, .hw-pin-r { animation: none; }
 }

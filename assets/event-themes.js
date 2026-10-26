@@ -188,7 +188,11 @@ window.EVENT_THEMES = (function () {
     cauldron: `<svg viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="hwPot"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="${LD}"/></radialGradient></defs>`
       + `<ellipse cx="32" cy="27" rx="22" ry="9" fill="${L}" opacity=".18"/>`
       + `<path d="M44 6l-9 28" stroke="${G}" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>`
-      + `<g fill="${L}"><circle cx="24" cy="18" r="3" opacity=".85"/><circle cx="31" cy="12" r="2.2" opacity=".7"/><circle cx="19" cy="11" r="1.6" opacity=".55"/><circle cx="37" cy="21" r="2" opacity=".8"/></g>`
+      + `<g fill="${L}">`
+      + `<circle class="hw-bub" style="animation-delay:0s" cx="24" cy="18" r="3"/><circle class="hw-bub" style="animation-delay:-.5s" cx="31" cy="12" r="2.2"/>`
+      + `<circle class="hw-bub" style="animation-delay:-1s" cx="19" cy="11" r="1.6"/><circle class="hw-bub" style="animation-delay:-1.5s" cx="37" cy="21" r="2"/>`
+      + `<circle class="hw-bub" style="animation-delay:-.25s" cx="27" cy="5" r="1.5"/><circle class="hw-bub" style="animation-delay:-.9s" cx="35" cy="7" r="1.2"/>`
+      + `<circle class="hw-bub" style="animation-delay:-1.7s" cx="22" cy="3.5" r="1.1"/></g>`
       + `<path d="M8 30C8 48 18 56 32 56S56 48 56 30z" fill="${D}" ${O}/>`
       + `<ellipse cx="32" cy="29" rx="25" ry="5.5" fill="${D}" ${O}/><ellipse cx="32" cy="29" rx="20" ry="3.4" fill="url(#hwPot)"/>`
       + `<path d="M16 54l-3 6M48 54l3 6M32 57v5" stroke="${G}" stroke-opacity=".5" stroke-width="2.4" stroke-linecap="round"/>`
@@ -209,8 +213,9 @@ window.EVENT_THEMES = (function () {
       + `<path d="M28 26v22M23 19h10" stroke="${G}" stroke-opacity=".5" stroke-width="1" stroke-dasharray="2 2"/>`
       + `<path d="M22 11l4 4M26 11l-4 4M30 11l4 4M34 11l-4 4" stroke="${L}" stroke-width="1.6" stroke-linecap="round"/>`
       + `<path d="M28 33c-1.6-2.2-5-1-3.6 1.6L28 38l3.6-3.4c1.4-2.6-2-3.8-3.6-1.6z" fill="${R}"/>`
-      + `<g stroke="${G}" stroke-opacity=".75" stroke-width="1.1"><path d="M20 30l-14-9M36 40l14-6M24 46l-10 9"/></g>`
-      + `<circle cx="6" cy="21" r="2.6" fill="${L}"/><circle cx="50" cy="34" r="2.6" fill="${G}"/><circle cx="14" cy="55" r="2.6" fill="${LD}"/></svg>`,
+      + `<g class="hw-pin-l"><path d="M20 30l-14-9" stroke="${G}" stroke-opacity=".75" stroke-width="1.1"/><circle cx="6" cy="21" r="2.6" fill="${L}"/></g>`
+      + `<g class="hw-pin-r"><path d="M36 40l14-6" stroke="${G}" stroke-opacity=".75" stroke-width="1.1"/><circle cx="50" cy="34" r="2.6" fill="${G}"/></g>`
+      + `<path d="M24 46l-10 9" stroke="${G}" stroke-opacity=".75" stroke-width="1.1"/><circle cx="14" cy="55" r="2.6" fill="${LD}"/></svg>`,
     // бутылка яда: светящаяся оранжевая жидкость, лунная этикетка с черепом
     poison: `<svg viewBox="0 0 40 64" aria-hidden="true"><defs><linearGradient id="hwPoison" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${L}"/><stop offset="1" stop-color="${LD}"/></linearGradient></defs>`
       + `<rect x="15" y="2" width="10" height="8" rx="2" fill="${D}" ${O}/>`
@@ -300,7 +305,8 @@ window.EVENT_THEMES = (function () {
         const list = ["cauldron", "voodoo", "lollipop", "jar"];
         // у второго раздела слева над заголовком — коса (в промежутке между карточками)
         const left = i === 1 ? `<span class="hw-title-left" aria-hidden="true">${ITEMS.scythe}</span>` : "";
-        return left + `<span class="hw-title-item" aria-hidden="true">${ITEMS[list[i % list.length]]}</span>`;
+        const name = list[i % list.length];
+        return left + `<span class="hw-title-item hw-ti-${name}" aria-hidden="true">${ITEMS[name]}</span>`;
       }
     }
   };
