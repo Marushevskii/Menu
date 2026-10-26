@@ -460,6 +460,8 @@
       const d = drag; drag = null;
       if (!d.on) return;
       b._dragged = true;
+      // на время «приземления» не анимируем сдвиг, иначе пузырь дёргается от старого места к новому
+      b.style.transition = "scale .25s, opacity .25s, box-shadow .2s";
       b.classList.remove("dragging", "near");
       trash.classList.remove("show", "near");
       setTimeout(() => { if (!trash.classList.contains("show")) trash.hidden = true; }, 250);
@@ -467,20 +469,26 @@
         // спрятать до обновления страницы
         evHidden = true;
         b.classList.add("gone");
-        setTimeout(() => { b.hidden = true; b.classList.remove("gone"); b.style.transform = ""; }, 260);
+        setTimeout(() => { b.hidden = true; b.classList.remove("gone"); b.style.transform = ""; b.style.transition = ""; }, 260);
         return;
       }
-      // остаётся там, где отпустили (если задел край или вкладки — мягко отъезжает внутрь)
-      const r = b.getBoundingClientRect();
+      // остаётся ровно там, где отпустили. По центру пузыря: пока его тащат, он чуть увеличен
+      const r = b.getBoundingClientRect(), w = b.offsetWidth;
+      const want = { x: r.left + r.width / 2 - w / 2, b: window.innerHeight - (r.top + r.height / 2 + w / 2) };
       b.style.transform = "";
-      const p = placeBubble({ x: r.left, b: window.innerHeight - r.bottom });
+      const p = placeBubble(want);
       lsSet(EV_POS, JSON.stringify(p));
-      const r2 = b.getBoundingClientRect();
-      b.style.transition = "none";
-      b.style.transform = `translate(${r.left - r2.left}px, ${r.top - r2.top}px)`;
-      void b.offsetWidth;
-      b.style.transition = "";
-      b.style.transform = "";
+      const dx = want.x - p.x, dy = p.b - want.b;
+      if (Math.abs(dx) > .5 || Math.abs(dy) > .5) {
+        // задел край экрана или вкладки — мягко отъезжает внутрь из того места, где отпустили
+        b.style.transform = `translate(${dx}px, ${dy}px)`;
+        void b.offsetWidth;
+        b.style.transition = "";
+        b.style.transform = "";
+      } else {
+        void b.offsetWidth;
+        b.style.transition = "";
+      }
     };
     b.addEventListener("pointerup", end);
     b.addEventListener("pointercancel", end);
