@@ -4,8 +4,8 @@
 (.github/workflows/publish.yml) этот скрипт пробегает по data/events/*.json и пишет
 короткий список включённых ивентов с датами. Сайт по нему выбирает, какой показать сейчас.
 
-data/events.json не хранится в git (.gitignore) — он собирается заново при каждой публикации.
-Для просмотра на своём компьютере: python tools/build_events.py
+data/events.json хранится в git и обновляется сам при каждой публикации (его коммитит publish.yml).
+Если правите мероприятия вручную, а не через админку, — запустите перед коммитом: python tools/build_events.py
 """
 import glob
 import json

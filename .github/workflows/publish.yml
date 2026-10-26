@@ -1,7 +1,7 @@
 # Публикация сайта: при каждом сохранении (из админки или от Claude)
 # 1) переводит изменённые русские тексты на EN/KA/TR (tools/translate.py),
 # 2) сохраняет переводы в репозиторий,
-# 3) собирает список мероприятий (tools/build_events.py),
+# 3) собирает список мероприятий (tools/build_events.py) и сохраняет его в репозиторий,
 # 4) выкладывает сайт на GitHub Pages.
 name: Публикация
 
@@ -45,20 +45,20 @@ jobs:
             python tools/translate.py --base HEAD~1
           fi
 
+      # список включённых мероприятий для сайта (data/events.json) — сохраняется вместе с переводами
+      - name: Список мероприятий
+        run: python tools/build_events.py
+
       - name: Сохранить переводы
         run: |
           if [ -n "$(git status --porcelain data)" ]; then
             git config user.name "Автоперевод"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
-            git commit -m "Автоперевод: EN / KA / TR"
+            git commit -m "Автообновление: переводы EN / KA / TR, список мероприятий"
             git pull --rebase
             git push
           fi
-
-      # список включённых мероприятий для сайта (data/events.json, в git не хранится)
-      - name: Список мероприятий
-        run: python tools/build_events.py
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
