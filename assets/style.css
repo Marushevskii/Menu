@@ -588,8 +588,9 @@ html.locked, html.locked body { overflow: hidden; }
 @keyframes hw-dip { 0%, 100% { translate: 0 0; } 50% { translate: 0 10px; } }
 @keyframes hw-flap { from { transform: scaleY(1); } to { transform: scaleY(.45); } }
 /* звёзды над замком медленно мерцают */
-.hw-star { animation: hw-star 6s ease-in-out infinite; }
-@keyframes hw-star { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
+/* звёзды над замком мерцают заметно: гаснут почти до нуля и вспыхивают до полной яркости (размер не меняется) */
+.hw-star { animation: hw-star 3.5s ease-in-out infinite; }
+@keyframes hw-star { 0%, 100% { opacity: .05; } 45%, 55% { opacity: 1; } }
 /* окна замка: свет по очереди гаснет и снова загорается */
 .hw-win { animation: hw-win 17.5s ease-in-out infinite; }
 @keyframes hw-win { 0%, 30%, 100% { opacity: 1; } 36%, 52% { opacity: 0; } 58% { opacity: 1; } }
