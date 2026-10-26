@@ -591,6 +591,9 @@ html.locked, html.locked body { overflow: hidden; }
 /* звёзды над замком мерцают заметно: гаснут почти до нуля и вспыхивают до полной яркости (размер не меняется) */
 .hw-star { animation: hw-star 3.5s ease-in-out infinite; }
 @keyframes hw-star { 0%, 100% { opacity: .05; } 45%, 55% { opacity: 1; } }
+/* крупные звёзды: большую часть времени тусклые, редкая плавная вспышка (~1,5 с) */
+.hw-star-big { animation-name: hw-star-big; animation-timing-function: ease-in-out; }
+@keyframes hw-star-big { 0%, 52%, 100% { opacity: .15; } 68%, 72% { opacity: 1; } 88% { opacity: .15; } }
 /* окна замка: свет по очереди гаснет и снова загорается */
 .hw-win { animation: hw-win 17.5s ease-in-out infinite; }
 @keyframes hw-win { 0%, 30%, 100% { opacity: 1; } 36%, 52% { opacity: 0; } 58% { opacity: 1; } }

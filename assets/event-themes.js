@@ -54,7 +54,7 @@ window.EVENT_THEMES = (function () {
   // низкая и широкая (400×160), чтобы верх страницы не занимал полэкрана
   function scene() {
     const r = rnd(7);
-    let stars = "";
+    let stars = "", big = 0;
     for (let i = 0; i < 26; i++) {
       const x = r() * 400, y = r() * 96;
       if (Math.hypot(x - 200, y - 80) < 84) continue; // не на луне
@@ -62,7 +62,14 @@ window.EVENT_THEMES = (function () {
       // самые крупные (радиус от 1) мерцают быстро. Порядок вызовов r() прежний — положения и размеры звёзд не меняются
       let tw = i % 2 ? "" : ` class="hw-star" style="animation-duration:${(2.6 + r() * 2.4).toFixed(1)}s;animation-delay:-${(r() * 5).toFixed(1)}s"`;
       const rad = 0.5 + r() * 0.8;
-      if (rad >= 1) tw = ` class="hw-star" style="animation-duration:${(1.2 + (i % 5) * 0.2).toFixed(1)}s;animation-delay:-${((i * 0.37) % 2).toFixed(2)}s"`;
+      if (rad >= 1) {
+        // крупные: редкая плавная вспышка (раз в 4–6 с); моменты вспышек разнесены, чтобы не загорались разом
+        // у всех крупных один ритм (вспышка раз в 6 с), k-я сдвинута на k·1.2 с — по очереди и никогда разом
+        const dur = 6, peak = 0.6 + big * 1.2;
+        const delay = (((0.7 * dur - peak) % dur) + dur) % dur;
+        tw = ` class="hw-star hw-star-big" style="animation-duration:${dur.toFixed(1)}s;animation-delay:-${delay.toFixed(2)}s"`;
+        big++;
+      }
       stars += `<circle${tw} cx="${f(x)}" cy="${f(y)}" r="${f(rad)}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`;
     }
     const K = "#060706";                       // силуэты
